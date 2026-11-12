@@ -248,7 +248,7 @@ When uncertain whether a feature is available, query the docs directly
   - Managed Airflow Composer 1/2 or Standard resilience (Composer 3 Highly Resilient Large/Custom only)
   - Filestore Basic/Zonal/Enterprise tiers or Private Services Access (Regional tier with Direct Peering only)
   - Storage Transfer Service agentless S3 or Azure transfers (agent-based S3 only)
-  - Pub/Sub dead-letter queues, exactly-once delivery, ordering keys, schemas
+  - Pub/Sub push subscription authentication, schemas, AI Inference SMTs, import topics from Kinesis, Event Hubs, MSK or Confluent Cloud, or Pub/Sub Lite
   - Cloud SQL Server engine (MySQL and PostgreSQL only)
   - Cloud Storage Insights
 - [ ] No reliance on Preview features (generally unavailable).

@@ -605,10 +605,10 @@ cross-region failover.
 **Architecture:** data is not globally available, only in the universe's region. Resource
 location restrictions are not supported.
 
-**No longer listed as unavailable** (this section listed them until October 2026): dead-letter
-topics, exactly-once delivery, filtering, ordering keys, snapshots and seek, BigQuery and Cloud
-Storage subscriptions, push payload unwrapping, and Cloud Storage import topics. The page lists
-only what is unavailable, so treat these as available, and test one before depending on it.
+**Not listed as unavailable:** dead-letter topics, exactly-once delivery, filtering, ordering
+keys, snapshots and seek, BigQuery and Cloud Storage subscriptions, push payload unwrapping,
+and Cloud Storage import topics. The page lists only what is unavailable, so treat these as
+available, and test one before depending on it.
 Features in preview are not available.
 
 ---
