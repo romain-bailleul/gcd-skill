@@ -108,6 +108,7 @@ gcd-skill/
     quotas.md                           # Quota management, monitoring, CLI
     gotchas.md                          # Critical pitfalls and common mistakes
     empirical-observations.md           # Dated facts from probing the live S3NS API surface
+    assessing-availability.md           # Which source answers "is X available", and how to word it
   scripts/
     scrape-gcd-docs.py                  # Documentation scraper (HTTP SSR + optional Playwright)
     sync-skill.py                       # Synchronizes SKILL.md, references/, and README.md from scraped docs

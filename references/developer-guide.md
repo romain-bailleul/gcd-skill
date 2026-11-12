@@ -219,6 +219,12 @@ Each Discovery document includes:
 > document lists global load balancing methods that S3NS does not offer. Check the
 > `tpc-differences` page, or see [empirical-observations.md](empirical-observations.md).
 
+> **Caveat (tools that read discovery documents):** a copied document keeps Google's
+> `rootUrl`, `https://<API>.googleapis.com/`. A tool that builds request URLs from it calls
+> public Google Cloud, with your universe credentials. Rewrite the host to the universe
+> domain (`<API>.s3nsapis.fr`, `<API>.apis-berlin-build0.goog`), and refuse to send a
+> credential to any other host, including after a redirect.
+
 ## Required Domains
 
 The following domains must be accessible for the sovereign cloud console and tools to function. Ensure your firewall or proxy allows traffic to these.
