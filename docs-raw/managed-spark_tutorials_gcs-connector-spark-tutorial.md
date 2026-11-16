@@ -1,7 +1,7 @@
 # Use the Cloud Storage connector with Apache Spark
 
 Source: https://berlin.devsitetest.how/managed-spark/docs/tutorials/gcs-connector-spark-tutorial
-Last updated: 2026-10-26
+Last updated: 2026-11-10
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 

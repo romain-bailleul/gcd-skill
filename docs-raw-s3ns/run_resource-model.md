@@ -1,7 +1,7 @@
 # Deployment options and resource model
 
 Source: https://documentation.s3ns.fr/run/docs/resource-model
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/run/docs/tpc-differences) for more details.
 

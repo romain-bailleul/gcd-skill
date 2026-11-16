@@ -1,7 +1,7 @@
 # Google Cloud SDK documentation
 
 Source: https://berlin.devsitetest.how/sdk/docs
-Last updated: 2026-10-26
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/sdk/docs/tpc-differences) for more details.
 

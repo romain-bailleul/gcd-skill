@@ -1,7 +1,7 @@
 # Managed Service for Apache Spark in Cloud de Confiance versus Google Cloud
 
 Source: https://documentation.s3ns.fr/managed-spark/docs/tpc-differences
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 - 
 

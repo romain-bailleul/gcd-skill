@@ -10,7 +10,7 @@ All products share these platform-wide constraints:
 - **No Cloud Shell:** Install `gcloud` and CLI tools locally or on a sovereign cloud VM.
 
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:START -->
-> **Auto-synced coverage:** 38 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-10`.
+> **Auto-synced coverage:** 38 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-13`.
 
 <details>
 <summary>Tracked <code>tpc-differences</code> inventory (38 guides)</summary>
@@ -25,36 +25,36 @@ All products share these platform-wide constraints:
 | Cloud Armor | Qualifié SecNumCloud 3.2 | `armor_tpc-differences.md` | 2026-11-10 | `82802e7d6b` |
 | Cloud Billing | — | `billing_tpc-differences.md` | 2026-11-10 | `c908f78403` |
 | Cloud DNS | Qualifié SecNumCloud 3.2 | `dns_tpc-differences.md` | 2026-11-10 | `fbb94d9e80` |
-| Cloud Interconnect | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-10-26 | `e8eefa543b` |
-| Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-10-27 | `407d108d82` |
-| Cloud Load Balancing | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-09 | `0b3869431a` |
-| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-06 | `3c7ede3f89` |
-| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-06 | `64c4c68e30` |
-| Cloud NAT | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-10-26 | `355f0cd2d2` |
+| Cloud Interconnect | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-10 | `e8eefa543b` |
+| Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-10 | `407d108d82` |
+| Cloud Load Balancing | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-10 | `0b3869431a` |
+| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-10 | `3c7ede3f89` |
+| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-10 | `64c4c68e30` |
+| Cloud NAT | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-10 | `355f0cd2d2` |
 | Cloud NGFW | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-10 | `b038ad3e50` |
 | Cloud Quotas | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-10 | `8ab8f5aa35` |
-| Cloud Router | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-10-26 | `539f8b73c2` |
-| Cloud Run | Qualification en cours | `run_tpc-differences.md` | 2026-11-09 | `a9f3e4b762` |
-| Cloud SQL | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-09 | `7ceca2ae72` |
-| Cloud Storage | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-09 | `69c6b665f8` |
-| Cloud VPN | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-10-26 | `09d1827aa5` |
+| Cloud Router | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-11-10 | `539f8b73c2` |
+| Cloud Run | Qualification en cours | `run_tpc-differences.md` | 2026-11-10 | `a9f3e4b762` |
+| Cloud SQL | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-12 | `7ceca2ae72` |
+| Cloud Storage | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-11 | `f5a3d260b4` |
+| Cloud VPN | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-10 | `09d1827aa5` |
 | Compute Engine | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-10 | `3c440f16c6` |
 | Container-Optimized OS | Qualifié SecNumCloud 3.2 | `container-optimized-os_tpc-differences.md` | 2026-11-10 | `e4ae3ed663` |
 | Filestore | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-10 | `63ca06de02` |
-| Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-02 | `2ae4c7ce33` |
-| IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-07 | `3d1ed47caa` |
+| Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-13 | `abc01a21ee` |
+| IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-13 | `bc966fb7ef` |
 | Managed Airflow (Cloud Composer 3) | Qualification en cours | `composer_tpc-differences.md` | 2026-11-10 | `8b00656c51` |
-| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-09 | `4fd95170bf` |
-| Network Service Tiers | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-10-26 | `2dbc42433d` |
-| Organization Policy | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-10-26 | `4208565439` |
-| Pub/Sub | Qualifié SecNumCloud 3.2 | `pubsub_tpc-differences.md` | 2026-10-26 | `d649238759` |
-| Resource Manager | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-07 | `4ae45cb244` |
-| Secret Manager | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-10-26 | `40aa632c10` |
-| Service Usage | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-10-26 | `c466abb91d` |
-| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-10-26 | `847b76ecde` |
+| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-10 | `4fd95170bf` |
+| Network Service Tiers | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-10 | `2dbc42433d` |
+| Organization Policy | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-11-10 | `4208565439` |
+| Pub/Sub | Qualifié SecNumCloud 3.2 | `pubsub_tpc-differences.md` | 2026-11-10 | `d649238759` |
+| Resource Manager | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-10 | `4ae45cb244` |
+| Secret Manager | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-11-10 | `40aa632c10` |
+| Service Usage | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-11-10 | `c466abb91d` |
+| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-10 | `847b76ecde` |
 | Terraform | — | `terraform_tpc-differences.md` | 2026-11-10 | `bcb0fd2998` |
-| VPC | Qualifié SecNumCloud 3.2 | `vpc_tpc-differences.md` | 2026-10-26 | `06a8de4766` |
-| VPC Service Controls | Qualifié SecNumCloud 3.2 | `vpc-service-controls_tpc-differences.md` | 2026-10-26 | `1f38179c73` |
+| VPC | Qualifié SecNumCloud 3.2 | `vpc_tpc-differences.md` | 2026-11-10 | `06a8de4766` |
+| VPC Service Controls | Qualifié SecNumCloud 3.2 | `vpc-service-controls_tpc-differences.md` | 2026-11-10 | `1f38179c73` |
 
 </details>
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:END -->
@@ -354,6 +354,23 @@ All products share these platform-wide constraints:
 - Supported on GKE >= 1.36.0-gke.1266000 with `custom-endpoint` and `skipCSIBucketAccessCheck` (see GKE section).
 - Standalone authentication must use a Compute Engine VM in the same project or a service account key file.
 
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:storage:START -->
+**Latest upstream documentation updates (`2026-11-11`):**
+- Cloud de Confiance does not support features that use multiple locations, such as dual-regions, bucket relocation, and turbo replication.
+- Cloud de Confiance does not support Storage Insights.
+- Cloud de Confiance does not support domain-named buckets.
+- **Locations, availability, and disaster recovery — Locations:** Cloud de Confiance has only a [single region](https://documentation.s3ns.fr/storage/docs/locations) as an available bucket location. Features that use more than one region are not supported, such as dual-regions, multi-regions, and bucket relocation. Rapid Bucket, which places buckets in zones, is also not supported.
+- **Locations, availability, and disaster recovery — Default location:** When creating a bucket in Cloud de Confiance, you must include a location parameter as part of the process. Cloud de Confiance does not support creating buckets in a default location.
+- **Integrations — Storage Insights:** The Storage Insights feature is not available in Cloud de Confiance.
+- **Integrations — Default projects:** You can't set a default project in Cloud de Confiance for interoperability access.
+- **Security and access control — User account HMAC keys:** User account HMAC keys are not available in Cloud de Confiance. Use service account HMAC keys instead.
+- **Network — Rapid Cache:** The Rapid Cache feature is not available in Cloud de Confiance.
+- **Network — Regional and locational endpoints:** Regional and locational endpoints are not available in Cloud de Confiance.
+- **Network — Custom domains:** Using buckets as backends for content serving to custom domains through `A` and `CNAME` redirects are not available in Cloud de Confiance. Additionlly, creating buckets with domain names is not supported.
+- **Workflows and tools — Cloud Storage FUSE:** When using [Cloud Storage FUSE](https://documentation.s3ns.fr/storage/docs/cloud-storage-fuse/overview), the authentication for the Cloud de Confiance bucket must be done either by using Cloud Storage FUSE in a Compute Engine virtual machine that's contained in the same project as the bucket or by specifying a service account key file for a service account that has permission to read and write data within the bucket. The service account key file can be specified either in the [configuration file](https://documentation.s3ns.fr/storage/docs/cloud-storage-fuse/config-file) or by using the `--key-file` flag in individual commands.
+- **Insights and observability — Cloud Storage usage logs and storage logs:** Usage logs and storage logs, which are legacy logging features specific to Cloud Storage, are not supported in Cloud de Confiance.
+- **Other differences — Legacy storage classes:** The legacy storage classes Multi-Regional storage, Regional storage, and Durable Reduced Availability (DRA) storage are not available in Cloud de Confiance.
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:storage:END -->
 
 ---
 
@@ -444,6 +461,24 @@ Google Accounts, Google Groups, and Cloud Identity are unavailable.
 - Compute default: `developer.eu0-system.iam.gserviceaccount.com` (Berlin) or `developer.s3ns-system.iam.gserviceaccount.com` (S3NS)
 - Service agents: `eu0-system.iam.gserviceaccount.com` / `eu0-system.system.gserviceaccount.com` (Berlin) or `s3ns-system.iam.gserviceaccount.com` / `s3ns-system.system.gserviceaccount.com` (S3NS)
 
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:iam:START -->
+**Latest upstream documentation updates (`2026-11-13`):**
+- Only Workforce Identity Federation and Workload Identity Federation identities can be used as [principal identifiers](https://documentation.s3ns.fr/iam/docs/principal-identifiers).
+- Policy Intelligence capabilities are unavailable.
+- Principal Access Boundary (PAB) policies are unavailable.
+- Privileged Access Manager (PAM) is unavailable.
+- **Integrations — Organization Policy Service:** Organization Policy gives you centralized, programmatic control over your organization's resources. In Cloud de Confiance, predefined organization policies are provided and can be used; however, you can't do the following: - You can't create and use your own custom constraints. - You can't use managed constraints.
+- **Security and access control — Supported principal types:** Only the following types of [principal types](https://documentation.s3ns.fr/iam/docs/principals-overview) are supported when creating policies in Cloud de Confiance: - Individual service accounts - Workforce Identity Federation identities - Workload Identity Federation identities - GKE service accounts
+- **Security and access control — SCIM provisioning for Workforce Identity Federation:** SCIM provisioning for Workforce Identity Federation is unavailable in Cloud de Confiance.
+- **Security and access control — Managed workload identities:** Managed workload identities let you bind strongly attested identities to your Compute Engine and GKE workloads. Managed workload identities are unavailable in Cloud de Confiance.
+- **Security and access control — Agent Identity:** Agent Identity provides strongly attested identities that are tied to the lifecycle of agentic workloads. Agent Identity is unavailable in Cloud de Confiance.
+- **Security and access control — Principal Access Boundary policies:** Principal Access Boundary policies let you define the resources that principals can access. These policies are unavailable in Cloud de Confiance.
+- **Security and access control — Privileged Access Manager:** You can use Privileged Access Manager to control just-in-time temporary privilege elevation for select principals, and to view audit logs afterwards to find out who had access to what and when. This feature is unavailable in Cloud de Confiance.
+- **Workflows and tools — Gemini assistance in the IAM role picker:** The IAM role picker lets you ask Gemini which roles to grant to your principals. In Cloud de Confiance, role suggestions from Gemini are unavailable.
+- **Workflows and tools — Permission error messages:** In the Cloud de Confiance console, permission error messages provide basic remediation guidance. They don't provide the option to resolve permission errors directly from the error message.
+- **Insights and observability — Policy Intelligence:** Policy Intelligence tools help you understand and manage your policies to proactively improve your security configuration. Policy Intelligence tools are unavailable in Cloud de Confiance. As a result, the following features are unavailable: - Activity Analyzer - Policy Analyzer - Policy Simulator - Policy Troubleshooter - Role recommendations - Service account insights
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:iam:END -->
+
 ---
 
 ## Kubernetes Engine (GKE)
@@ -492,6 +527,53 @@ Google Accounts, Google Groups, and Cloud Identity are unavailable.
 - Ray Operator, Parallelstore
 - Performance HPA profile, VPA InPlaceOrRecreate mode
 
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:kubernetes-engine:START -->
+**Latest upstream documentation updates (`2026-11-13`):**
+- **GKE modes:** Only GKE Autopilot clusters are available. GKE Standard clusters are unavailable.
+- **Storage:** Only Hyperdisk Balanced storage types are available. Other storage types are unavailable.
+- **Compute Engine virtual machines:** Only the C3 and A3 machine series are available. Other machine types are unavailable.
+- **GPUs and TPUs:** GPUs are available on A3 machine types only. TPUs are not available.
+- **Hardware and OS — Modes of operation:** Only GKE Autopilot clusters are available. GKE Standard clusters are unavailable.
+- **Hardware and OS — Compute Engine virtual machines:** Only the C3 and A3 machine series are available. Other machine types are unavailable.
+- **Hardware and OS — GPUs and TPUs:** GPUs are available on A3 machine types. The only available Edge machine type is `a3-edgegpu-8g-nolssd` and it must be set explicitly by using a [custom ComputeClass](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/autopilot-gpus#request-machine-custom). TPUs are unavailable.
+- **Hardware and OS — Release channels:** Only the Stable and Regular release channels are available. For clusters enrolled in the Rapid channel, the features might be available in preview.
+- **Hardware and OS — GKE Hypercluster:** GKE Hypercluster isn't available.
+- **Availability and disaster recovery — Regions and zones:** Cloud de Confiance has only a single region, though with multiple zones. Multi-region features and cross-region failover are not supported. Deployment across multiple zones for resiliency is supported.
+- **Availability and disaster recovery — Storage:** The only storage type available is Hyperdisk Balanced. All other storage types are unavailable. Because other storage types are unavailable, using automated disk type selection with a fallback to Persistent Disk is unavailable.
+- **Availability and disaster recovery — Backup for GKE:** Backup for GKE is unavailable.
+- **Availability and disaster recovery — Autoscaling:** Some customization options are unavailable: - The Performance HPA profile is unavailable. - The VPA `InPlaceOrRecreate` mode is unavailable.
+- **Availability and disaster recovery — Cluster upgrade visibility and scheduled upgrades:** Cluster upgrade visibility and scheduled upgrades are unavailable.
+- **Cost management — Cost optimization metrics:** Some cost optimization recommendations might be unavailable.
+- **Cost management — Committed use discounts (CUDs):** Cloud de Confiance by S3NS offers compute flexible committed use discounts (CUDs) for eligible spend on GKE. To purchase compute flexible commitments, contact [ Cloud de Confiance by S3NS billing support](https://support.s3ns.fr/). For more information, see the [billing differences page](https://documentation.s3ns.fr/billing/docs/tpc-differences).
+- **Integrations — Cloud Storage:** Transferring data from Cloud Storage by using GKE Volume Populator is unavailable.
+- **Integrations — Cloud Storage FUSE:** The [Cloud Storage FUSE](https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/cloud-storage-fuse-csi-driver) CSI driver is supported on clusters and node pools running GKE version 1.36.0-gke.1266000 or later. Configuration requirements depend on your GKE version: - **GKE version 1.36.0-gke.2684000 or later**: specify the `skipCSIBucketAccessCheck: "true"` volume attribute. The `custom-endpoint` mount option is not required because the CSI driver automatically discovers the storage endpoint. - **GKE versions between 1.36.0-gke.1266000 and 1.36.0-gke.2684000**: specify both the `skipCSIBucketAccessCheck: "true"` volume attribute and the `custom-endpoint` mount option. To configure these settings: - Specify the `skipCSIBucketAccessCheck: "true"` volume attribute in the PersistentVolume specification or Pod's ephemeral storage volume attributes. For example: `` volumeAttributes : skipCSIBucketAccessCheck : "true" `` - *(Versions between 1.36.0-gke.1266000 and 1.36.0-gke.2684000 only)* Specify the `custom-endpoint` mount option in the volume's `mountOptions`, either in a Pod's ephemeral storage volume or in a PersistentVolume, to point to the Cloud Storage API endpoint for your environment: `storage.s3nsapis.fr:443`. You can use either the [CLI flag format](https://documentation.s3ns.fr/storage/docs/cloud-storage-fuse/cli-options#custom-endpoint) or the [configuration file format](https://documentation.s3ns.fr/storage/docs/cloud-storage-fuse/config-file#format-and-fields). Both formats are parsed directly by the driver as mount options, so you don't need to supply a separate configuration file. - **CLI format**: `custom-endpoint=storage.s3nsapis.fr:443` - **Configuration file format**: `gcs-connection:custom-endpoint:storage.s3nsapis.fr:443` For more information about specifying mount options, see [Configure mount options](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#mount-options).
+- **Integrations — Filestore:** The [Filestore CSI driver](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver) is available only with the Filestore regional service tier by [creating a custom StorageClass](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver#storage-class). Automatically installed Filestore StorageClasses and Filestore multishares for GKE are unavailable. For more information, see the [Filestore differences page](https://documentation.s3ns.fr/filestore/docs/tpc-differences).
+- **Security — Security features:** The following security features are unavailable: - GKE security posture - Binary Authorization for GKE - Confidential Google Kubernetes Engine Nodes - GKE control plane authority - Policy Controller - Agent Identity for GKE (Preview)
+- **Security — Authentication:** Connect gateway is unavailable.
+- **Security — Workload identity:** Workload identity pool domains (and the Kubernetes principal identifiers that use them) are specified slightly differently in Google Cloud and Cloud de Confiance by S3NS, using `s3ns.svc.id.goog` rather than `svc.id.goog`. So, for example, when specifying a Kubernetes ServiceAccount using Workload Identity Federation for GKE in an [IAM policy](https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/workload-identity#kubernetes-resources-iam-policies), you use `.../ PROJECT_ID .s3ns.svc.id.goog/subject/ns/ NAMESPACE /sa/ KUBERNETES_SERVICE_ACCOUNT`.
+- **Security — Node security:** Secure kernel module loading is unavailable.
+- **Security — Service agent provisioning:** In Cloud de Confiance, service agents (universe-managed service accounts) are provisioned **Just-In-Time (JIT)** when you create your first resource for a service, rather than when the API is enabled. If you need to grant permissions to a service agent before creating resources (for example, when configuring a [Shared VPC](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/cluster-shared-vpc)), you must manually create the service agent and grant it the required default roles. For instructions on how to manually trigger service agent creation grant roles, see [Create and grant roles to service agents](https://documentation.s3ns.fr/iam/docs/create-service-agent). Then, grant the default `Kubernetes Engine Service Agent` (`service- PROJECT_NUMBER @container-engine-robot.s3ns-system.iam.gserviceaccount.com`) to the agent that you create.
+- **Security — GKE Sandbox:** In Cloud de Confiance, only the gVisor sandbox type has been tested for use with GKE Pods.
+- **Network — IP addressing:** Only VPC-native clusters are supported. Route-based clusters are unavailable.
+- **Network — Maximum Pods per node:** There is a maximum limit of 32 Pods per node.
+- **Network — Network isolation:** The following customization options for network isolation are unavailable: - Disabling internal and external endpoints of the control plane. - Assigning additional Pod IPv4 ranges to a cluster. - Restricting egress traffic from the API server.
+- **Network — Application exposure:** When using the GKE Ingress controller, the global Google Cloud external application load balancer (`gxlb`) is not used. In Cloud de Confiance by S3NS, a regional external load balancer (`rxlb`) is used.
+- **Network — Multi-cluster networking:** Multi Cluster Ingress and multi-cluster Services (MCS) are unavailable.
+- **Network — Observability:** GKE Dataplane V2 observability tools are unavailable.
+- **Network — Cloud Service Mesh:** Cloud Service Mesh is unavailable.
+- **Network — Load balancing:** The following load balancing features are unavailable: - Weighted load balancing. - Zonal affinity for Internal passthrough Network Load Balancer. - Utilization-based load balancing.
+- **Network — IP ranges:** The available IP address ranges, such as for [ingress firewall rules](https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/firewall-rules#ingress-fws), depend on your environment, as follows: - 177.222.80.0/23 - 177.222.87.0/26 - 177.222.87.64/26
+- **Workloads — Predefined compute classes:** Only the general-purpose compute class is available. All other predefined compute classes are unavailable.
+- **Workloads — Image streaming:** Image streaming is unavailable.
+- **Insights and observability — Logging and monitoring:** Workload metrics are unavailable.
+- **Insights and observability — Google Cloud Observability:** All Google Cloud Observability integrations and dashboards are unavailable.
+- **Insights and observability — Cluster notifications:** Cluster notifications are unavailable.
+- **Insights and observability — Google Cloud Managed Service for Prometheus:** Google Cloud Managed Service for Prometheus is unavailable.
+- **AI/ML features — Ray Operator:** The Ray Operator for GKE is unavailable.
+- **Resource management — Config Sync:** Config Sync is available with only the [manual installation method](https://documentation.s3ns.fr/kubernetes-engine/config-sync/docs/how-to/installing-kubectl). Because the GKE Hub (Fleet) API is unavailable, the following management and observability features are not supported: - Fleet-level defaults and fleet packages (`ConfigDelivery`). - Centralized management through the Config Sync dashboard in the Cloud de Confiance console. - Integrated dashboards and Cloud Monitoring metrics in the Cloud de Confiance console. You can use local Prometheus scraping (port 8675) for metrics and alerting instead.
+- **Resource management — Config Connector, Config Controller:** Config Connector and Config Controller are unavailable.
+- **Multi-cluster management — Fleets:** Fleets, fleet dashboards, and fleet team management are unavailable.
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:kubernetes-engine:END -->
 
 ---
 
