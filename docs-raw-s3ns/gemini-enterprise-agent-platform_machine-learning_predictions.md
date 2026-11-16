@@ -1,7 +1,7 @@
 # Overview of getting inferences on Agent Platform
 
 Source: https://documentation.s3ns.fr/gemini-enterprise-agent-platform/machine-learning/predictions
-Last updated: 2026-11-10
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/gemini-enterprise-agent-platform/tpc-differences) for more details.
 

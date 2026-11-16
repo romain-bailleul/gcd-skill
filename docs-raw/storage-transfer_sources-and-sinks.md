@@ -1,7 +1,7 @@
 # Sources and sinks
 
 Source: https://berlin.devsitetest.how/storage-transfer/docs/sources-and-sinks
-Last updated: 2026-11-05
+Last updated: 2026-11-10
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 

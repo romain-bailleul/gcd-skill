@@ -1,7 +1,7 @@
 # Workload Identity Federation
 
 Source: https://documentation.s3ns.fr/iam/docs/workload-identity-federation
-Last updated: 2026-11-07
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/iam/docs/tpc-differences) for more details.
 
@@ -157,22 +157,28 @@ Guides
 
 
 
-This document provides an overview of Workload Identity Federation.
-Using Workload Identity Federation, you can provide on-premises or multicloud
-workloads with access to Cloud de Confiance by S3NS resources by using federated identities
-instead of a service account key.
+Workload Identity Federation lets you grant on-premises or multicloud workloads
+access to Cloud de Confiance by S3NS resources by using federated identities instead of
+service account keys.
 
-You can use Workload Identity Federation with workloads that authenticate
-using
-[X.509 client certificates](/iam/docs/workload-identity-federation-with-x509-certificates);
-that run on
-[Amazon Web Services (AWS) or Azure](/iam/docs/workload-identity-federation-with-other-clouds);
-on-premises
-[Active Directory](/iam/docs/workload-identity-federation-with-active-directory);
-deployment services, such as
-[GitHub and GitLab](/iam/docs/workload-identity-federation-with-deployment-pipelines);
-and with any identity provider (IdP) that supports
-[OpenID Connect (OIDC) or Security Assertion Markup Language (SAML) V2.0](/iam/docs/workload-identity-federation-with-other-providers).
+You can configure federation for services and pipelines that do any of the
+following:
+
+- Authenticate with [X.509 client
+certificates](/iam/docs/workload-identity-federation-with-x509-certificates).
+
+- Run on [Amazon Web Services (AWS) or
+Azure](/iam/docs/workload-identity-federation-with-other-clouds).
+
+- Connect to on-premises [Active
+Directory](/iam/docs/workload-identity-federation-with-active-directory).
+
+- Build and deploy in pipelines such as [GitHub and
+GitLab](/iam/docs/workload-identity-federation-with-deployment-pipelines).
+
+- Obtain tokens from any external identity provider (IdP) that supports
+[OpenID Connect (OIDC) or Security Assertion Markup Language (SAML)
+2.0](/iam/docs/workload-identity-federation-with-other-providers).
 
 ## Why Workload Identity Federation?
 

@@ -1,7 +1,7 @@
 # Secret Manager overview
 
 Source: https://berlin.devsitetest.how/secret-manager/docs/overview
-Last updated: 2026-10-26
+Last updated: 2026-11-10
 
 - 
 

@@ -1,7 +1,7 @@
 # Secret Manager API
 
 Source: https://berlin.devsitetest.how/secret-manager/docs/reference/rest
-Last updated: 2026-11-04
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/secret-manager/docs/tpc-differences) for more details.
 
@@ -176,7 +176,7 @@ A [Discovery Document](https://apis-berlin-build0.goog/discovery/v1/reference/ap
 
 
 
-- [https://secretmanager.googleapis.com/$discovery/rest?version=v1](https://secretmanager.googleapis.com/$discovery/rest?version=v1)
+- [https://secretmanager.apis-berlin-build0.goog/$discovery/rest?version=v1](https://secretmanager.apis-berlin-build0.goog/$discovery/rest?version=v1)
 
 
 
@@ -191,8 +191,19 @@ A [service endpoint](https://berlin.devsitetest.how/apis/design/glossary#api_ser
 
 
 
-- `https://secretmanager.googleapis.com`
+- `https://secretmanager.apis-berlin-build0.goog`
 
+
+
+
+
+### Regional service endpoint
+
+
+
+A regional service endpoint is a base URL that specifies the network address of an API service in a single region. A service that is available in multiple regions might have multiple regional endpoints. Select a location to see its regional service endpoint for this service. global 
+
+- `https://secretmanager.apis-berlin-build0.goog` 
 
 
 

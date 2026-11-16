@@ -1,7 +1,7 @@
 # Quickstart: Create a cluster by using the Google Cloud Dedicated console
 
 Source: https://berlin.devsitetest.how/managed-spark/docs/quickstarts/update-cluster-console
-Last updated: 2026-11-09
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 

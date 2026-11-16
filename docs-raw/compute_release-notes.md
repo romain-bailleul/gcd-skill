@@ -194,6 +194,21 @@ reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the
 
 
 
+## November 12, 2026
+
+
+Feature 
+
+
+**Generally available**: In a managed instance group (MIG) with instance
+flexibility, you can override the instance template's disk and minimum CPU
+platform properties per instance selection. Overriding these properties lets you
+combine machine types that require different disk types, boot images, or CPU
+platforms in a single MIG. For more information, see
+[About instance flexibility in MIGs](/compute/docs/instance-groups/about-instance-flexibility).
+
+
+
 ## November 10, 2026
 
 

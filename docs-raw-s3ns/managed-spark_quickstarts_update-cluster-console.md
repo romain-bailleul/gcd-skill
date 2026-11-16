@@ -1,7 +1,7 @@
 # Quickstart: Create a cluster by using the Cloud de Confiance console
 
 Source: https://documentation.s3ns.fr/managed-spark/docs/quickstarts/update-cluster-console
-Last updated: 2026-11-09
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 

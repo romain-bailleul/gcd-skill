@@ -1,7 +1,7 @@
 # Bigtable documentation
 
 Source: https://berlin.devsitetest.how/bigtable/docs
-Last updated: 2026-11-10
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/bigtable/docs/tpc-differences) for more details.
 

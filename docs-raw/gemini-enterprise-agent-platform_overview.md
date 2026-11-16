@@ -1,7 +1,7 @@
 # Agent Platform overview
 
 Source: https://berlin.devsitetest.how/gemini-enterprise-agent-platform/overview
-Last updated: 2026-11-11
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/gemini-enterprise-agent-platform/tpc-differences) for more details.
 

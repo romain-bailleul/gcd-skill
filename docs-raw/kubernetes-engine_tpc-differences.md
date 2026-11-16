@@ -1,7 +1,7 @@
 # GKE in Google Cloud Dedicated versus Google Cloud
 
 Source: https://berlin.devsitetest.how/kubernetes-engine/docs/tpc-differences
-Last updated: 2026-11-02
+Last updated: 2026-11-13
 
 - 
 
@@ -256,6 +256,11 @@ Some customization options are unavailable:
 | 
 |
 
+| 
+**Cluster upgrade visibility and scheduled upgrades** | 
+Cluster upgrade visibility and scheduled upgrades are unavailable. | 
+|
+
 
 ### Cost management
 
@@ -357,6 +362,26 @@ You can use either the [CLI flag format](/storage/docs/cloud-storage-fuse/cli-op
 
 
 For more information about specifying mount options, see [Configure mount options](/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#mount-options).
+
+| 
+|
+
+| 
+**Filestore** | 
+
+
+
+The [Filestore
+CSI driver](/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver) is available only with the Filestore regional
+service tier by [creating
+a custom StorageClass](/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver#storage-class).
+
+
+
+Automatically installed Filestore StorageClasses and
+Filestore multishares for GKE are unavailable. For
+more information, see the [Filestore differences
+page](/filestore/docs/tpc-differences).
 
 | 
 |
@@ -544,6 +569,11 @@ All other predefined compute classes are unavailable.
 | 
 |
 
+| 
+**Image streaming** | 
+Image streaming is unavailable. | 
+|
+
 
 
 ### Insights and observability
@@ -566,6 +596,11 @@ All Google Cloud Observability integrations and dashboards are unavailable. |
 | 
 **Cluster notifications** | 
 Cluster notifications are unavailable. | 
+|
+
+| 
+**Google Cloud Managed Service for Prometheus** | 
+Google Cloud Managed Service for Prometheus is unavailable. | 
 |
 
 

@@ -1,7 +1,7 @@
 # Managed Service for Apache Spark in Google Cloud Dedicated versus Google Cloud
 
 Source: https://berlin.devsitetest.how/managed-spark/docs/tpc-differences
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 - 
 

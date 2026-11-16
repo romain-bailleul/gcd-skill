@@ -1,7 +1,7 @@
 # Secret Manager client libraries
 
 Source: https://berlin.devsitetest.how/secret-manager/docs/reference/libraries
-Last updated: 2026-11-07
+Last updated: 2026-11-10
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/secret-manager/docs/tpc-differences) for more details.
 
@@ -1703,7 +1703,7 @@ require "google/cloud/secret_manager"
 # 
 def quickstart project_id :, secret_id : 
 # Create the Secret Manager client. 
-client = Google :: Cloud :: [ SecretManager ](https://berlin.devsitetest.how/ruby/docs/reference/google-cloud-secret_manager-v1/latest/Google-Cloud-SecretManager.html) . [ secret_manager_service ](https://berlin.devsitetest.how/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html)
+client = Google :: Cloud :: [ SecretManager ](https://berlin.devsitetest.how/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html) . [ secret_manager_service ](https://berlin.devsitetest.how/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html)
 
 # Build the parent name from the project. 
 parent = "projects/ #{ project_id } " 

@@ -1,7 +1,7 @@
 # Secret Manager API
 
 Source: https://documentation.s3ns.fr/secret-manager/docs/reference/rest
-Last updated: 2026-11-04
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/secret-manager/docs/tpc-differences) for more details.
 
@@ -176,7 +176,7 @@ A [Discovery Document](https://s3nsapis.fr/discovery/v1/reference/apis) is a mac
 
 
 
-- [https://secretmanager.googleapis.com/$discovery/rest?version=v1](https://secretmanager.googleapis.com/$discovery/rest?version=v1)
+- [https://secretmanager.s3nsapis.fr/$discovery/rest?version=v1](https://secretmanager.s3nsapis.fr/$discovery/rest?version=v1)
 
 
 
@@ -191,8 +191,19 @@ A [service endpoint](https://documentation.s3ns.fr/apis/design/glossary#api_serv
 
 
 
-- `https://secretmanager.googleapis.com`
+- `https://secretmanager.s3nsapis.fr`
 
+
+
+
+
+### Regional service endpoint
+
+
+
+A regional service endpoint is a base URL that specifies the network address of an API service in a single region. A service that is available in multiple regions might have multiple regional endpoints. Select a location to see its regional service endpoint for this service. global 
+
+- `https://secretmanager.s3nsapis.fr` 
 
 
 

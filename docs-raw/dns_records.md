@@ -1,7 +1,7 @@
 # Add, update, and delete records
 
 Source: https://berlin.devsitetest.how/dns/docs/records
-Last updated: 2026-11-10
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/dns/docs/tpc-differences) for more details.
 
@@ -137,7 +137,7 @@ Guides
 
 
 
-This page describes how to add, update, and delete resource record sets.
+This page describes how to add, update, change, and delete resource record sets.
 
 To view the list of supported resource record types, see [DNS records overview](/dns/docs/records-overview#supported_dns_record_types).
 
@@ -366,6 +366,53 @@ ttl = 86400
 ```
 
 
+
+
+
+
+### Add a new record type to a domain with an existing record
+
+If you want to add a new record type to a domain name that already has an
+existing record—for example, adding a domain verification `TXT` record to
+a domain that already has an `A` record—don't edit the existing `A` record
+and change its **Resource record type** to `TXT`. Changing the record type
+replaces your existing `A` record.
+
+When you change DNS records for a domain or subdomain, two different record
+types (such as an `A` record and a `TXT` record) can coexist under the same DNS
+name as separate resource record sets. The only exception is a `CNAME` record,
+which must always exist on its own and can't share the same DNS name with any
+other record type.
+
+To add a new record type to a domain with an existing record, follow these
+steps:
+
+
+
+### Console
+
+- 
+
+In the Google Cloud Dedicated console, go to the **Cloud DNS zones** page.
+
+[Go to Cloud DNS zones](https://console.cloud.berlin-build0.goog/net-services/dns/zones) 
+
+- 
+
+Click the zone where you want to add the record.
+
+- 
+
+On the **Zone details** page, click **Add standard** to create a
+separate `TXT` record set with the same **DNS name** so both records
+coexist.
+
+- 
+
+If a `TXT` record set already exists for that name, click
+*edit***Edit** next to
+the existing `TXT` record set, and click **Add item** to add the new
+value.
 
 
 

@@ -1,7 +1,7 @@
 # Cloud Armor release notes
 
 Source: https://berlin.devsitetest.how/armor/docs/release-notes
-Last updated: 2026-11-10
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/armor/docs/tpc-differences) for more details.
 

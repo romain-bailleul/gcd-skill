@@ -1,7 +1,7 @@
 # Managed Service for Apache Spark documentation
 
 Source: https://documentation.s3ns.fr/managed-spark/docs
-Last updated: 2026-11-09
+Last updated: 2026-11-13
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 

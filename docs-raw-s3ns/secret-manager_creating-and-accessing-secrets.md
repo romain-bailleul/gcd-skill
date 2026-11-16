@@ -1,7 +1,7 @@
 # Create a secret
 
 Source: https://documentation.s3ns.fr/secret-manager/docs/creating-and-accessing-secrets
-Last updated: 2026-11-07
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/secret-manager/docs/tpc-differences) for more details.
 
@@ -1699,7 +1699,7 @@ On Compute Engine or GKE, you must
 require "google/cloud/secret_manager" 
 
 # Create a Secret Manager client. 
-client = Google :: Cloud :: [ SecretManager ](https://documentation.s3ns.fr/ruby/docs/reference/google-cloud-secret_manager-v1/latest/Google-Cloud-SecretManager.html) . [ secret_manager_service ](https://documentation.s3ns.fr/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html)
+client = Google :: Cloud :: [ SecretManager ](https://documentation.s3ns.fr/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html) . [ secret_manager_service ](https://documentation.s3ns.fr/ruby/docs/reference/google-cloud-secret_manager/latest/Google-Cloud-SecretManager.html)
 
 # Build the resource name of the parent project. 
 parent = client . project_path project : project_id 

@@ -1,7 +1,7 @@
 # Cloud Run in Cloud de Confiance versus Google Cloud
 
 Source: https://documentation.s3ns.fr/run/docs/tpc-differences
-Last updated: 2026-11-09
+Last updated: 2026-11-10
 
 - 
 

@@ -1,7 +1,7 @@
 # Deploy container images to Cloud Run services
 
 Source: https://berlin.devsitetest.how/run/docs/deploying
-Last updated: 2026-11-09
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/run/docs/tpc-differences) for more details.
 

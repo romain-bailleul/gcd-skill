@@ -1,7 +1,7 @@
 # Data transfer options
 
 Source: https://documentation.s3ns.fr/storage-transfer/docs/transfer-options
-Last updated: 2026-10-26
+Last updated: 2026-11-10
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 

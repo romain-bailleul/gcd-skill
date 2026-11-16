@@ -1,7 +1,7 @@
 # Static outbound IP address
 
 Source: https://berlin.devsitetest.how/run/docs/configuring/static-outbound-ip
-Last updated: 2026-11-09
+Last updated: 2026-11-12
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/run/docs/tpc-differences) for more details.
 
@@ -159,11 +159,12 @@ block or throttle your requests.
 vulnerability probing, web scraping, or load testing workloads.
 
 To send outbound requests from a dedicated static IP address, configure your
-Cloud Run service to use [Direct VPC egress](/run/docs/configuring/vpc-direct-vpc).
+Cloud Run workloads to use
+[Direct VPC egress](/run/docs/configuring/vpc-direct-vpc).
 
 ## Task overview
 
-To route requests using a static IP address, configure the service's
+To route requests using a static IP address, configure
 [VPC egress](/run/docs/configuring/connecting-vpc) to send all outbound traffic
 (`--vpc-egress=all-traffic`) through a [VPC network](/vpc/docs).
 Attach a [Cloud NAT](/nat/docs) gateway to that network with your reserved static
@@ -184,8 +185,9 @@ the NAT gateway or the Cloud Router.
 
 ## Configure network address translation (NAT)
 
-If you use Direct VPC egress, requests
-from your Cloud Run service arrive at your VPC network.
+If you use Direct VPC egress,
+requests from your Cloud Run workloads arrive at your
+VPC network.
 If you want to route outbound requests to external endpoints using a static IP,
 configure a [Cloud NAT](/nat/docs) gateway.
 
@@ -235,7 +237,8 @@ assign to the IP address resource.
 
 - ` REGION `: the [region](/run/docs/locations)
 that will run the Cloud NAT router. Use the same region as your
-Cloud Run service to minimize latency and network costs.
+Cloud Run workloads to minimize latency and network
+costs.
 
 - 
 
@@ -405,8 +408,12 @@ Replace `cr-static-nat` with your Cloud NAT gateway name.
 ## Route Cloud Run traffic through the VPC network
 
 After Cloud NAT is configured, deploy or update your Cloud Run
-service with [Direct VPC egress](/run/docs/configuring/vpc-direct-vpc), and set the VPC egress to
-[route all traffic through the VPC network](/run/docs/configuring/connecting-vpc):
+workload with [Direct VPC egress](/run/docs/configuring/vpc-direct-vpc)
+, and set VPC egress to
+[route all traffic through the VPC network](/run/docs/configuring/connecting-vpc). The
+following examples deploy a Cloud Run service. For jobs, worker
+pools, or instances, pass the same VPC network and
+`all-traffic` egress settings when you create or update the resource:
 
 
 
@@ -572,15 +579,16 @@ your container image.
 
 After completing the previous steps, you have set up Cloud NAT on your
 VPC network with a predefined static IP address, and you have
-routed all of your Cloud Run service's outbound traffic into your
-VPC network. Requests from your Cloud Run service travel
-through your VPC network and reach external endpoints using
-the static IP address.
+routed all of your Cloud Run workload's outbound traffic into
+your VPC network. Requests from your Cloud Run
+workload travel through your VPC network and reach external
+endpoints using the static IP address.
 
-To verify this behavior and confirm the origin IP address that your service
-uses, you can make a request to an API or a website such as [curlmyip.org](https://curlmyip.org)
-that shows the originating IP address.
+To verify this behavior and confirm the origin IP address that your workload
+uses, you can make a request to an API or a website such as
+[curlmyip.org](https://curlmyip.org) that shows the originating IP address.
 
 ## Deleting the static external IP address
 
-If you no longer need a static external IP address, see [Release a static external IP address](/vpc/docs/reserve-static-external-ip-address#release_ip).
+If you no longer need a static external IP address, see
+[Release a static external IP address](/vpc/docs/reserve-static-external-ip-address#release_ip).
