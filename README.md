@@ -112,6 +112,8 @@ gcd-skill/
     scrape-gcd-docs.py                  # Documentation scraper (HTTP SSR + optional Playwright)
     sync-skill.py                       # Synchronizes SKILL.md, references/, and README.md from scraped docs
     check-skill.py                      # Integrity checks on what agents load (run in CI)
+    docs-release-note.py                # Writes the daily note of what changed in the scraped docs
+  docs-changes/                         # One release note per day the docs changed (YYYY-MM-DD.md)
   docs-raw/                             # Scraped Berlin (GCD) docs
     _manifest.json                      # Page inventory with metadata
     _last_updated.json                  # Per-page last-updated dates
@@ -240,7 +242,7 @@ Two workflows run in `.github/workflows/`:
 | Workflow | Runs on | What it does |
 |---|---|---|
 | `ci.yml` | every pull request, pushes to `main` | Python lint and unit tests, skill integrity, workflow lint and security |
-| `update-docs.yml` | Mondays at 06:00 Paris time, manual dispatch | Scrapes both regions, re-syncs the skill, checks it, and opens or updates a pull request with the result |
+| `update-docs.yml` | every day at 05:17 Paris time, manual dispatch | Scrapes both regions, re-syncs the skill, checks it, writes the day's release note, and merges the result through a pull request |
 
 The `ci.yml` jobs, and the failure each one prevents:
 
@@ -257,15 +259,36 @@ The `ci.yml` jobs, and the failure each one prevents:
 
 ### Scheduled docs update
 
-`update-docs.yml` never pushes to `main`. It commits the scrape to the `automation/docs-update` branch and opens a pull request, so a person reviews scraped web text before it reaches the skill agents load. The branch is rebuilt from `main` on every run, so a single open pull request holds the latest scrape. A week not merged is simply superseded. Do not push to that branch: the next run overwrites it.
+The skill must hold all of the published documentation, current by the next day: a page published on day J is in the skill on day J+1. No person reviews the scraped text before it lands, because the skill answers from the public documentation as it is. A page that is wrong is reported to the documentation owner through a support ticket, not left out of the skill.
 
-The pull request body lists the files agents load that changed. It also flags a run in which one region's scrape failed, so a partial update cannot slip in unnoticed.
+Each day, `update-docs.yml`:
+1. Scrapes both regions and re-syncs the skill.
+2. Runs `check-skill.py`, `sync-skill.py --check` and the unit tests on the result. These check that the files are intact and stay inert for agents, not what the docs say.
+3. Writes the day's release note, `docs-changes/YYYY-MM-DD.md` (see below).
+4. Commits everything to the `automation/docs-update` branch, opens or updates a pull request, and **merges it itself** (squash). The pull request is the dated record of the day, and reverting its commit undoes the day.
 
-To refresh before Monday, run the workflow by hand: **Actions → Update sovereign cloud docs → Run workflow**, on `main`.
+A day with no change commits nothing and writes no note. A second run on the same day writes `YYYY-MM-DD-2.md`, so the first note is kept.
+
+**Release note.** For each region, from the previous and the new `_manifest.json`:
+- pages added and removed;
+- pages whose text changed, with line counts and the sections the changes fall under;
+- the number of pages only re-dated: the "Last updated" line moved but the text did not;
+- SecNumCloud 3.2 qualification moves, for S3NS.
+
+The pull request body carries the same note. Scraped titles, headings and names are shown in code spans, so the note cannot mention people, link issues or carry markup.
+
+**When something goes wrong, the run turns red**, which is what GitHub emails you about, since nobody reads the pull request:
+- One region's scrape failed. The other region is still merged, and the note opens with a warning. The failed region keeps its previous pages.
+- `main` moved during the scrape. The pull request stays open and the next run rebuilds it, so generated files always match the code they were made with.
+- The merge was refused, for example by a branch rule.
+
+The branch is rebuilt from `main` on every run. Do not push to it: the next run overwrites it.
+
+To refresh at once, run the workflow by hand: **Actions → Update sovereign cloud docs → Run workflow**, on `main`.
 
 Two repository settings matter:
 - **Settings → Actions → General → Workflow permissions:** enable *Allow GitHub Actions to create and approve pull requests*. It is off by default on personal repositories, and without it the job fails when it opens the pull request.
-- A pull request opened with `GITHUB_TOKEN` does not start `ci.yml` by itself: GitHub holds the run until someone approves it on the pull request. The job therefore runs `check-skill.py` and `sync-skill.py --check` before it commits.
+- **`main` must not require a review or status checks** for this merge. Workflows do not start on a pull request opened with `GITHUB_TOKEN`, so `ci.yml` never runs on it and required checks would never arrive. The job runs those checks itself before it commits.
 
 Run the same checks locally:
 

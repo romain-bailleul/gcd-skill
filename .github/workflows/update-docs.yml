@@ -2,10 +2,11 @@ name: Update sovereign cloud docs
 
 on:
   schedule:
-    # Mondays at 06:00 Paris time (CET in winter, CEST in summer).
-    - cron: "0 6 * * 1"
+    # Every day at 05:17 Paris time (CET in winter, CEST in summer), so a page published
+    # on day J is in the skill on day J+1. Off the hour: GitHub delays runs queued at :00.
+    - cron: "17 5 * * *"
       timezone: "Europe/Paris"
-  # Run it by hand from the Actions tab to refresh the docs before Monday.
+  # Run it by hand from the Actions tab to refresh the docs at once.
   workflow_dispatch: {}
 
 permissions:
@@ -56,13 +57,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Save previous manifests and update trackers
+      # The release note compares this copy with the new scrape.
+      - name: Save the previous docs
         run: |
-          cp docs-raw/_last_updated.json /tmp/previous_tracker_berlin.json 2>/dev/null || echo "{}" > /tmp/previous_tracker_berlin.json
-          cp docs-raw-s3ns/_last_updated.json /tmp/previous_tracker_s3ns.json 2>/dev/null || echo "{}" > /tmp/previous_tracker_s3ns.json
-          cp docs-raw/_manifest.json /tmp/previous_manifest_berlin.json 2>/dev/null || echo "{}" > /tmp/previous_manifest_berlin.json
-          cp docs-raw-s3ns/_manifest.json /tmp/previous_manifest_s3ns.json 2>/dev/null || echo "{}" > /tmp/previous_manifest_s3ns.json
-          cp docs-raw-s3ns/_secnumcloud_status.json /tmp/previous_secnumcloud_s3ns.json 2>/dev/null || echo "{}" > /tmp/previous_secnumcloud_s3ns.json
+          mkdir -p "$RUNNER_TEMP/previous"
+          cp -R docs-raw docs-raw-s3ns "$RUNNER_TEMP/previous/"
 
       - name: Scrape S3NS (Cloud de Confiance) docs and PREMI3NS SecNumCloud status
         id: scrape_s3ns
@@ -86,88 +85,126 @@ jobs:
           python3 -u scripts/sync-skill.py
           python3 -u scripts/sync-skill.py --check
 
-      # CI runs on a pull request opened with GITHUB_TOKEN wait for approval, so the
-      # scraped content is checked here, before it is committed.
-      - name: Check skill integrity before committing
-        run: python3 scripts/check-skill.py
+      # No person reviews the update and CI does not run on a pull request opened with
+      # GITHUB_TOKEN, so the checks CI would run on the scraped data run here, before the
+      # commit. They check that the files are intact, not what the docs say.
+      - name: Check the skill and the scraped data before committing
+        run: |
+          python3 scripts/check-skill.py
+          python3 -m unittest discover -s tests -t .
 
       - name: Detect documentation and skill changes
         id: diff
         run: |
-          CHANGED=false
-          if ! diff -q /tmp/previous_tracker_berlin.json docs-raw/_last_updated.json > /dev/null 2>&1; then
-            CHANGED=true
-            echo "Berlin last-updated tracker changes detected:"
-            diff -u /tmp/previous_tracker_berlin.json docs-raw/_last_updated.json || true
-          fi
-          if ! diff -q /tmp/previous_tracker_s3ns.json docs-raw-s3ns/_last_updated.json > /dev/null 2>&1; then
-            CHANGED=true
-            echo "S3NS last-updated tracker changes detected:"
-            diff -u /tmp/previous_tracker_s3ns.json docs-raw-s3ns/_last_updated.json || true
-          fi
-          if ! diff -q /tmp/previous_secnumcloud_s3ns.json docs-raw-s3ns/_secnumcloud_status.json > /dev/null 2>&1; then
-            CHANGED=true
-            echo "S3NS SecNumCloud 3.2 qualification status changes detected:"
-            diff -u /tmp/previous_secnumcloud_s3ns.json docs-raw-s3ns/_secnumcloud_status.json || true
-          fi
-          if [ -n "$(git status --porcelain docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md)" ]; then
-            CHANGED=true
-            echo "Repository file changes detected:"
-            git status --short docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md
-          fi
-          if [ "$CHANGED" = "false" ]; then
+          paths="docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md"
+          # shellcheck disable=SC2086  # the path list is meant to split
+          if [ -n "$(git status --porcelain $paths)" ]; then
+            git status --short $paths
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
             echo "No documentation or skill changes detected in either region."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
-          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
 
-      # The update goes through a pull request so that a person reviews scraped web
-      # text before it reaches the skill agents load. The branch is rebuilt from main
-      # on every run, so one open pull request always holds the latest scrape.
-      - name: Open or update the docs update pull request
+      # Written after change detection, so the note alone never counts as a change.
+      - name: Write the release note
+        id: note
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          S3NS_OUTCOME: ${{ steps.scrape_s3ns.outcome }}
+          BERLIN_OUTCOME: ${{ steps.scrape_berlin.outcome }}
+        run: |
+          today="$(TZ=Europe/Paris date +%Y-%m-%d)"
+          failed=()
+          [ "$S3NS_OUTCOME" = "success" ] || failed+=(--failed S3NS)
+          [ "$BERLIN_OUTCOME" = "success" ] || failed+=(--failed Berlin)
+          echo "date=$today" >> "$GITHUB_OUTPUT"
+          python3 -u scripts/docs-release-note.py --date "$today" \
+            --region S3NS "$RUNNER_TEMP/previous/docs-raw-s3ns" docs-raw-s3ns \
+            --region Berlin "$RUNNER_TEMP/previous/docs-raw" docs-raw \
+            "${failed[@]}" --pr-body "$RUNNER_TEMP/note-body.md" >> "$GITHUB_OUTPUT"
+
+      # The update goes through a pull request, which the job merges itself: the pull
+      # request is the dated record of the day, and one revert undoes it. The branch is
+      # rebuilt from main on every run, so a day whose merge failed is superseded.
+      - name: Open, update and merge the docs update pull request
         if: steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           UPDATE_BRANCH: automation/docs-update
           BASE_BRANCH: ${{ github.ref_name }}
+          BASE_SHA: ${{ github.sha }}
           TRIGGER: ${{ github.event_name }}
           S3NS_OUTCOME: ${{ steps.scrape_s3ns.outcome }}
           BERLIN_OUTCOME: ${{ steps.scrape_berlin.outcome }}
+          NOTE_DATE: ${{ steps.note.outputs.date }}
+          NOTE_PATH: ${{ steps.note.outputs.note }}
         run: |
-          today="$(date -u +%Y-%m-%d)"
-          title="chore: update scraped GCD/S3NS docs and sync skill ($today)"
+          title="chore: update scraped GCD/S3NS docs and sync skill ($NOTE_DATE)"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git switch -C "$UPDATE_BRANCH"
-          git add docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md
+          git add docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md docs-changes/
           git commit -m "$title"
           git push --force origin "$UPDATE_BRANCH"
+          head_sha="$(git rev-parse HEAD)"
 
           {
-            echo "Scraped on $today (trigger: \`$TRIGGER\`)."
+            echo "Scraped on $NOTE_DATE (trigger: \`$TRIGGER\`). This pull request merges itself once opened."
             echo
             echo "| Region | Scrape |"
             echo "|---|---|"
             echo "| S3NS | \`$S3NS_OUTCOME\` |"
             echo "| Berlin | \`$BERLIN_OUTCOME\` |"
-            if [ "$S3NS_OUTCOME" != "success" ] || [ "$BERLIN_OUTCOME" != "success" ]; then
-              echo
-              echo "**Warning:** one region's scrape failed, so this update contains only the other region's changes."
-            fi
             echo
             echo "Files agents load:"
             echo '```'
             git diff --stat HEAD~1 -- SKILL.md references/
             echo '```'
             echo
-            pages="$(git diff --shortstat HEAD~1 -- docs-raw/ docs-raw-s3ns/ | sed 's/^ *//')"
-            echo "Scraped pages: ${pages:-no changes}."
+            cat "$RUNNER_TEMP/note-body.md"
             echo
             echo "This branch is rebuilt from \`$BASE_BRANCH\` on every run. Commits pushed to it are overwritten."
           } > "$RUNNER_TEMP/pr-body.md"
 
-          existing="$(gh pr list --head "$UPDATE_BRANCH" --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')"
-          if [ -n "$existing" ]; then
-            gh pr edit "$existing" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
+          number="$(gh pr list --head "$UPDATE_BRANCH" --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$number" ]; then
+            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
           else
             gh pr create --head "$UPDATE_BRANCH" --base "$BASE_BRANCH" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
+            number="$(gh pr view "$UPDATE_BRANCH" --json number --jq .number)"
           fi
+
+          # Generated files must match the code on main: if main moved during the scrape,
+          # leave the pull request open and let the next run rebuild it.
+          main_sha="$(git ls-remote origin "refs/heads/$BASE_BRANCH" | cut -f1)"
+          if [ "$main_sha" != "$BASE_SHA" ]; then
+            echo "ERROR: $BASE_BRANCH moved during the scrape; pull request #$number is left open." >&2
+            exit 1
+          fi
+
+          # The squash commit carries no scraped text: commit messages are not markdown,
+          # so a heading such as "Fixes #3" would act on the issue.
+          body="Release note: $NOTE_PATH. Scrape: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME."
+          # GitHub computes mergeability after the push, so the first attempt can be early.
+          for attempt in 1 2 3; do
+            if gh pr merge "$number" --squash --delete-branch --match-head-commit "$head_sha" \
+                 --subject "$title (#$number)" --body "$body"; then
+              exit 0
+            fi
+            echo "Merge attempt $attempt failed; retrying." >&2
+            sleep 15
+          done
+          echo "ERROR: could not merge pull request #$number." >&2
+          exit 1
+
+      # A failed region keeps its previous pages, so the run reports it: nobody reads
+      # the pull request, and a red run is what GitHub notifies the owner about.
+      - name: Fail the run when a region's scrape failed
+        if: steps.scrape_s3ns.outcome != 'success' || steps.scrape_berlin.outcome != 'success'
+        env:
+          S3NS_OUTCOME: ${{ steps.scrape_s3ns.outcome }}
+          BERLIN_OUTCOME: ${{ steps.scrape_berlin.outcome }}
+        run: |
+          echo "ERROR: scrape outcome: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME. Any change from the other region was merged." >&2
+          exit 1
