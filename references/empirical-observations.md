@@ -9,6 +9,8 @@ How to read an entry:
 - Each entry is dated and states its evidence. The surface changes over time, so re-check
   anything older than a few months before relying on it.
 - **Hypothesis** marks a conclusion the evidence suggests but does not prove.
+- An entry states what is true now. When new evidence refutes one, the entry is rewritten,
+  not annotated: agents load this page, and a refuted claim kept as history is noise.
 - Project, organization and account identifiers are deliberately omitted.
 
 Evidence strength, weakest first:
@@ -43,7 +45,7 @@ served. Use the `tpc-differences` pages, or a probe.
 - `spanner`, `cloudbuild` and `cloudasset`, listed as **À venir** (upcoming) on PREMI3NS.
 - `bigquerydatatransfer` and `bigquerydatapolicy`, which the BigQuery differences page lists
   as unavailable.
-- `iamcredentials`. It did not resolve in July 2026.
+- `iamcredentials`.
 
 A random control name (`<random>.s3nsapis.fr`) returns NXDOMAIN, so this is not a wildcard
 record.
@@ -78,11 +80,6 @@ lists its methods.
 
 ## The offered-services list grows over time
 
-**2026-11-11, correction.** An earlier version of this entry (2026-11-08, hypothesis) said
-the offered-services list was scoped per organization to the SecNumCloud-qualified services.
-That is refuted. The 31-API list it relied on was an old capture, and every capture came
-from the same project.
-
 **2026-08-17 to 2026-11-11.** Repeated captures of `gcloud services list --available` on one
 project show S3NS adding services progressively. None was removed:
 
@@ -112,7 +109,7 @@ status.
 machine. `storage.projects.hmacKeys.create` is served.
 
 **2026-11-08.** The V4 path needs `iamcredentials.projects.serviceAccounts.signBlob`.
-`iamcredentials` now resolves and PREMI3NS lists *Service Account Credentials* as qualified.
+`iamcredentials` resolves and PREMI3NS lists *Service Account Credentials* as qualified.
 
 **2026-11-11, functional.** `gcloud storage sign-url --impersonate-service-account=SA`
 produced a V4 signed URL through `signBlob`, and a request to that URL returned HTTP 200.
