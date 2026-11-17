@@ -149,6 +149,10 @@ Load these files based on what the user needs help with:
   probe status codes, the offered-services list) -
   Read [references/empirical-observations.md](references/empirical-observations.md)
 
+- **Whether a service or feature is available, and how to word the answer** (which source
+  wins, verdicts, global versus edge) -
+  Read [references/assessing-availability.md](references/assessing-availability.md)
+
 ## Available services (quick list)
 
 <!-- AUTO-SYNC:AVAILABLE-SERVICES:START -->

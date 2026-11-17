@@ -129,3 +129,10 @@ public GCP to Google Cloud Dedicated (Berlin) or Cloud de Confiance by S3NS (Fra
 - **Sovereign cloud docs may redirect to `/docs/tpc-differences`** when you follow a link to
   a product or feature that is unavailable. If you land on the "Differences from Google Cloud"
   page unexpectedly, the feature you were looking for is not available in GCD or S3NS.
+- **"Not in my organization's list" is not "not available on S3NS".** `gcloud services list
+  --available` is one organization's list on one date, and S3NS adds services to it over
+  time. Check the documentation and the PREMI3NS status before calling a service missing. See
+  [assessing-availability.md](assessing-availability.md).
+- **"Global" is not "unavailable".** IAM, Resource Manager and Compute Engine's global
+  resources are served. Only the edge tier (Cloud CDN, global external load balancers, global
+  Cloud Armor) cannot exist in a sovereign region.
