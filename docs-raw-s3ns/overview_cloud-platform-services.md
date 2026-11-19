@@ -1,7 +1,7 @@
 # Products and Services
 
 Source: https://documentation.s3ns.fr/docs/overview/cloud-platform-services
-Last updated: 2026-10-23
+Last updated: 2026-11-16
 
 - 
 
@@ -82,6 +82,10 @@ see
 - [BigQuery Reservation](/bigquery/docs/reservations-intro)
 
 - [Bigtable](/bigtable/docs)
+
+- [Cloud Build](/build/docs)
+
+- [Cloud Asset Inventory](/asset-inventory/docs)
 
 - [Cloud DNS](/dns/docs)
 

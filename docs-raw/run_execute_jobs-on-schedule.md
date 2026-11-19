@@ -1,7 +1,7 @@
 # Execute jobs on a schedule
 
 Source: https://berlin.devsitetest.how/run/docs/execute/jobs-on-schedule
-Last updated: 2026-11-10
+Last updated: 2026-11-18
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/run/docs/tpc-differences) for more details.
 

@@ -1,7 +1,7 @@
 # Storage Transfer Service
 
 Source: https://berlin.devsitetest.how/storage-transfer/docs
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 
@@ -127,11 +127,11 @@ storage systems, including:
 
 - Cloud Storage to Cloud Storage
 
+- S3-compatible object storage to Cloud Storage
+
 - On-premises storage to Cloud Storage, or Cloud Storage to on-premises
 
 - Between on-premises storage systems
-
-- From HDFS to Cloud Storage
 
 Storage Transfer Service is optimized for transfers involving more than 1TiB of data.
 For smaller transfers, see our
@@ -139,11 +139,14 @@ For smaller transfers, see our
 
 With Storage Transfer Service, you can:
 
+
 - **Automate data transfers**: Eliminate the need for manual processes and custom scripts.
 
 - **Transfer data at scale**: Move petabytes of data quickly and reliably.
 
-- **Optimize network performance**: Choose between Google-managed transfers for simplicity or self-hosted agents for granular control over network routing and bandwidth consumption.
+
+- **Control network performance**: Use self-hosted agents for granular control over network routing and bandwidth consumption.
+
 
 - **Support diverse storage systems**: Transfer data seamlessly between cloud providers and on-premises environments.
 
@@ -153,11 +156,11 @@ With Storage Transfer Service, you can:
 data from other cloud storage providers or on-premises data centers to
 Cloud Storage.
 
-**Backup**: Replicate your data to Google Cloud, or create a copy of a
-Cloud Storage bucket in another region
+**Backup**: Replicate your data to Google Cloud Dedicated in Germany, or create a copy of a
+Cloud Storage bucket in another bucket or project.
 
 **Data processing pipelines**: Move data generated on other clouds, your data
-center, and the edge to Google Cloud for analytics using
+center, and the edge to Google Cloud Dedicated in Germany for analytics using
 [BigQuery](/bigquery).
 
 **Archival**: Move cold data from costly on-premises storage systems to
@@ -198,10 +201,10 @@ There are a number of ways that you can work with Storage Transfer Service:
 
 - The `gcloud` command-line tool
 
-- Java and Python client libraries
+- [Client libraries](/storage-transfer/docs/libraries) for C++, C#, Go, Java, Node.js, PHP, Python, and Ruby
 
 See [Create transfers](/storage-transfer/docs/create-transfers) to get started.
 
 ## What's next
 
-- Learn about [Storage Transfer Service differences in Google Cloud versus Google Cloud](/storage-transfer/docs/tpc-differences).
+- Learn about [Storage Transfer Service differences in Google Cloud Dedicated versus Google Cloud](/storage-transfer/docs/tpc-differences).

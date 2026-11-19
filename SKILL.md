@@ -156,7 +156,7 @@ Load these files based on what the user needs help with:
 ## Available services (quick list)
 
 <!-- AUTO-SYNC:AVAILABLE-SERVICES:START -->
-**Both regions (Compute, Data, Storage, Security & Ops):** Access Context Manager, Access Transparency, Agent Platform (Gemini Enterprise Agent Platform), API Discovery Service, API Keys, Artifact Registry, BigQuery, BigQuery Reservation, Bigtable, Cloud Billing, Cloud DNS, Cloud KMS, Cloud Logging, Cloud Monitoring, Cloud Quotas, Cloud Run, Cloud SQL, Cloud Storage, Compute Engine, Container-Optimized OS, Filestore, Google Cloud CLI (gcloud SDK), Google Kubernetes Engine (Autopilot only), IAM, Managed Airflow (Cloud Composer 3), Managed Service for Apache Spark (Dataproc), Organization Policy, Pub/Sub, Resource Manager, Secret Manager, Service Account Credentials, Service Directory, Service Usage, Shielded VM, Storage Transfer Service, Terraform, Workforce/Workload Identity Federation.
+**Both regions (Compute, Data, Storage, Security & Ops):** Access Context Manager, Access Transparency, Agent Platform (Gemini Enterprise Agent Platform), API Discovery Service, API Keys, Artifact Registry, BigQuery, BigQuery Reservation, Bigtable, Cloud Asset Inventory, Cloud Billing, Cloud Build, Cloud DNS, Cloud KMS, Cloud Logging, Cloud Monitoring, Cloud Quotas, Cloud Run, Cloud SQL, Cloud Storage, Compute Engine, Container-Optimized OS, Filestore, Google Cloud CLI (gcloud SDK), Google Kubernetes Engine (Autopilot only), IAM, Managed Airflow (Cloud Composer 3), Managed Service for Apache Spark (Dataproc), Organization Policy, Pub/Sub, Resource Manager, Secret Manager, Service Account Credentials, Service Directory, Service Usage, Shielded VM, Storage Transfer Service, Terraform, Workforce/Workload Identity Federation.
 
 **Both regions (Networking):** Cloud Armor, Cloud DNS, Cloud Interconnect, Cloud Load Balancing, Cloud NAT, Cloud NGFW, Cloud Router, Cloud VPN, Network Service Tiers, VPC, VPC Service Controls.
 
@@ -233,7 +233,7 @@ When uncertain whether a feature is available, query the docs directly
 ### Service availability
 
 <!-- AUTO-SYNC:UNAVAILABLE-SERVICES-CHECKLIST:START -->
-- [ ] No references to unavailable services: Cloud Functions / Cloud Run functions, App Engine, Dataflow, Spanner, Firestore, Memorystore, AlloyDB, Cloud Tasks, Cloud Scheduler, Cloud Build, Cloud CDN, Certificate Manager, or proprietary Vertex AI / Gemini APIs.
+- [ ] No references to unavailable services: Cloud Functions / Cloud Run functions, App Engine, Dataflow, Spanner, Firestore, Memorystore, AlloyDB, Cloud Tasks, Cloud Scheduler, Cloud CDN, Certificate Manager, or proprietary Vertex AI / Gemini APIs.
 <!-- AUTO-SYNC:UNAVAILABLE-SERVICES-CHECKLIST:END -->
 <!-- AUTO-SYNC:SECNUMCLOUD-CHECKLIST:START -->
 - [ ] For S3NS workloads requiring strict **SecNumCloud 3.2** qualification, verify

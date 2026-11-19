@@ -1,7 +1,7 @@
 # Managed Service for Apache Airflow version list
 
 Source: https://documentation.s3ns.fr/composer/docs/composer-versions
-Last updated: 2026-11-10
+Last updated: 2026-11-16
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -322,12 +322,39 @@ Notes |
 
 
 | 
+composer-3-airflow-3.3.1-build.8 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-8) | 
+November 10, 2026 | 
+November 10, 2027 | 
+Latest build | 
+|
+
+| 
+composer-3-airflow-3.2.2-build.12 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-12) | 
+November 10, 2026 | 
+November 10, 2027 | 
+Latest build | 
+|
+
+| 
+composer-3-airflow-2.11.1-build.25 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-25) | 
+November 10, 2026 | 
+November 10, 2027 | 
+Latest build, Default build | 
+|
+
+| 
 composer-3-airflow-3.3.1-build.6 | 
 3.11.8 | 
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-6) | 
 November 06, 2026 | 
 November 06, 2027 | 
-Latest build | 
+| 
 |
 
 | 
@@ -336,7 +363,7 @@ composer-3-airflow-3.2.2-build.10 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-10) | 
 November 06, 2026 | 
 November 06, 2027 | 
-Latest build | 
+| 
 |
 
 | 
@@ -345,7 +372,7 @@ composer-3-airflow-2.11.1-build.23 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-23) | 
 November 06, 2026 | 
 November 06, 2027 | 
-Latest build, Default build | 
+| 
 |
 
 | 
@@ -114505,12 +114532,21 @@ Notes |
 
 
 | 
+composer-2.18.0-airflow-2.11.1 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-2-18-0-airflow-2-11-1) | 
+November 10, 2026 | 
+November 10, 2027 | 
+Latest version, Default version | 
+|
+
+| 
 composer-2.17.17-airflow-2.11.1 | 
 3.11.8 | 
 [See packages](/composer/docs/versions-packages#composer-2-17-17-airflow-2-11-1) | 
 November 06, 2026 | 
 November 06, 2027 | 
-Latest version, Default version | 
+| 
 |
 
 | 

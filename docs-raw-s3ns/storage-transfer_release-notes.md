@@ -1,7 +1,7 @@
 # Storage Transfer Service release notes
 
 Source: https://documentation.s3ns.fr/storage-transfer/docs/release-notes
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 
@@ -151,10 +151,10 @@ new announcements.
 
 
 
-You can see the latest product updates for all of Google Cloud on the
+You can see the latest product updates for all of Cloud de Confiance by S3NS on the
 [
-Google Cloud](/release-notes) page, browse and filter all release notes in the
-[Google Cloud console](https://console.cloud.s3nscloud.fr/release-notes),
+Cloud de Confiance](/release-notes) page, browse and filter all release notes in the
+[Cloud de Confiance console](https://console.cloud.s3nscloud.fr/release-notes),
 or programmatically access release notes in
 [BigQuery](https://console.cloud.s3nscloud.fr/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table).
 

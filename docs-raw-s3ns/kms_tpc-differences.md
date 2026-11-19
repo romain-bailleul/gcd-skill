@@ -1,7 +1,7 @@
 # Cloud KMS in Cloud de Confiance versus Google Cloud
 
 Source: https://documentation.s3ns.fr/kms/docs/tpc-differences
-Last updated: 2026-11-10
+Last updated: 2026-11-18
 
 - 
 
@@ -184,6 +184,8 @@ Only the `u-france-east1` regional
 location is supported for Cloud de Confiance.
 | 
 |
+
+| 
 **Multi-regions**
 | 
 Multi-regions other than `global` are not supported for
@@ -205,7 +207,7 @@ residency requirements as those stored in
 you want to use CMEK to protect resources in the `global`
 location. Otherwise, you should create your Cloud KMS resources
 in the `u-france-east1` region.
-
+| 
 |
 
 
