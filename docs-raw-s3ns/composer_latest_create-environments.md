@@ -1,7 +1,7 @@
 # Create Managed Service for Apache Airflow environments
 
 Source: https://documentation.s3ns.fr/composer/docs/latest/create-environments
-Last updated: 2026-11-10
+Last updated: 2026-11-16
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -325,7 +325,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " 
@@ -394,7 +394,7 @@ Example:
 "name" : "projects/example-project/locations/us-central1/environments/example-environment" , 
 "config" : { 
 "softwareConfig" : { 
-"imageVersion" : "composer-3-airflow-2.11.1-build.22" 
+"imageVersion" : "composer-3-airflow-2.11.1-build.25" 
 }, 
 "nodeConfig" : { 
 "serviceAccount" : " 
@@ -469,7 +469,7 @@ region = "us-central1"
 
 config { 
 software_config { 
-image_version = "composer-3-airflow-2.11.1-build.22" 
+image_version = "composer-3-airflow-2.11.1-build.25" 
 } 
 node_config { 
 service_account = " 
@@ -490,7 +490,8 @@ mode environment when you're not using it.
 
 Development mode environments have the following constraints:
 
-- Only Managed Airflow (Gen 3) with Airflow 3.
+- Only Managed Airflow (Gen 3) environments with Airflow 3, Airflow 2.11.1 and
+Airflow 2.10.5.
 
 - Only [standard resilience mode](#enable-high-resilience).
 
@@ -828,7 +829,7 @@ environment's cluster runs at most this number of workers.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --environment-size ENVIRONMENT_SIZE \ 
 --scheduler-count SCHEDULER_COUNT \ 
@@ -936,7 +937,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -1592,7 +1593,7 @@ For more information about `--triggerer-count`, `--triggerer-cpu`, and
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --enable-high-resilience \ 
 --enable-private-environment \ 
@@ -1727,7 +1728,7 @@ specifies a preferred Cloud SQL zone.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --cloud-sql-preferred-zone SQL_ZONE 
 ```
@@ -1744,7 +1745,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -1931,7 +1932,7 @@ with a connected VPC network)
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --enable-private-environment \ 
 --network NETWORK_ID \ 
@@ -1983,7 +1984,7 @@ node VMs.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --tags TAGS 
 ```
@@ -1999,7 +2000,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --tags group1,production
 ```
 
@@ -2174,7 +2175,7 @@ ranges. To specify several IP ranges, use this argument multiple times.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --web-server-allow-ip ip_range = WS_IP_RANGE ,description = WS_RANGE_DESCRIPTION 
 ```
 
@@ -2192,7 +2193,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -2437,7 +2438,7 @@ for Airflow configuration overrides.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --env-variables ENV_VARS \ 
 --airflow-configs CONFIG_OVERRIDES 
@@ -2460,7 +2461,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -2698,7 +2699,7 @@ the [maintenance window recurrence](/kubernetes-engine/docs/how-to/maintenance-w
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --maintenance-window-start ' DATETIME_START ' \ 
 --maintenance-window-end ' DATETIME_END ' \ 
@@ -2742,7 +2743,7 @@ date is ignored.
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -2953,7 +2954,7 @@ argument disables the data lineage integration.
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --disable-cloud-data-lineage-integration
 ```
@@ -2971,7 +2972,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 
@@ -3044,7 +3045,7 @@ When you create an environment, the `--labels` argument specifies a comma-separa
 ```
 gcloud composer environments create ENVIRONMENT_NAME \ 
 --location LOCATION \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " SERVICE_ACCOUNT " \ 
 --labels LABELS 
 ```
@@ -3061,7 +3062,7 @@ Example:
 ```
 gcloud composer environments create example-environment \ 
 --location us-central1 \ 
---image-version composer-3-airflow-2.11.1-build.22 \ 
+--image-version composer-3-airflow-2.11.1-build.25 \ 
 --service-account " 
 example-account@example-project. s3ns.iam.gserviceaccount.com
 " \ 

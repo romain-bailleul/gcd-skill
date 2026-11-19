@@ -1,7 +1,7 @@
 # Data transfer options
 
 Source: https://berlin.devsitetest.how/storage-transfer/docs/transfer-options
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 
@@ -118,7 +118,7 @@ Storage Transfer Service
 
 
 
-Google offers multiple solutions for transferring your data to or from
+Google Cloud Dedicated in Germany offers multiple solutions for transferring your data to or from
 Cloud Storage, or between file systems.
 
 
@@ -155,25 +155,25 @@ Use [`gcloud storage`](/sdk/gcloud/reference/storage).
 Transferring more than 1 TB from on-premises
 | 
 
+
 Use
-[Storage Transfer Service](/storage-transfer/docs/create-transfers)
-or
-[Transfer Appliance](/transfer-appliance/docs/4.0/overview).
+[Storage Transfer Service](/storage-transfer/docs/create-transfers).
+
 | 
 |
 
 | 
 
-Transferring less than 1 TB from another Cloud Storage region
+Transferring less than 1 TB between Cloud Storage buckets
 | 
 
-Use [gcloud storage](/sdk/gcloud/reference/storage).
+Use [`gcloud storage`](/sdk/gcloud/reference/storage).
 | 
 |
 
 | 
 
-Transferring more than 1 TB from another Cloud Storage region
+Transferring more than 1 TB between Cloud Storage buckets
 | 
 
 Use Storage Transfer Service.
@@ -187,17 +187,12 @@ scenario will also help you determine which tool is more appropriate.
 ## Move or back up data from another cloud provider to Cloud Storage
 
 We recommend using
-[Storage Transfer Service](/storage-transfer/docs/overview) to move or back up
-your data from other cloud storage providers to Cloud Storage.
-
-We support transfers from the following cloud storage providers:
-
-- Amazon S3
-
-- Microsoft Azure Blob Storage
+[Storage Transfer Service](/storage-transfer/docs/overview) with self-hosted transfer
+agents to move or back up your data from S3-compatible object storage providers
+to Cloud Storage.
 
 To get started, see
-[Create transfers](/storage-transfer/docs/create-transfers).
+[Transfer from S3-compatible storage to Cloud Storage](/storage-transfer/docs/create-transfers/agent-based/s3-compatible).
 
 ## Move data between Cloud Storage buckets
 
@@ -205,8 +200,7 @@ We recommend using Storage Transfer Service to move large amounts of data betwee
 Cloud Storage buckets.
 
 You can alternatively use the Google Cloud CLI to transfer between
-Cloud Storage buckets. This can be helpful for moving data between
-bucket locations.
+Cloud Storage buckets.
 
 To get started, see:
 
@@ -216,48 +210,19 @@ To get started, see:
 
 - 
 
-[Move data from one bucket to another](/storage/docs/moving-buckets#move-buckets)
+[Move data from one bucket to another](/storage/docs/moving-buckets#move-buckets-cli)
 using the command line (`gcloud storage`).
 
 ## Move or back up data from on-premises storage
 
-We offer several solutions for moving or backing up on-premises data, depending
-on your specific situation:
-
-### Locations with good internet connectivity
-
-We offer the following solutions for on-premises data:
-
-- 
-
-You can use Storage Transfer Service. For file system transfers, you install a
-small piece of software, called an agent, on a machine with access to your
-file system. The agent runs within a Docker container and has access to your
-locally-mounted NFS data. We upload the data you specify to Cloud Storage.
+You can use Storage Transfer Service to move or back up on-premises data. For file
+system transfers, you install a small piece of software, called an agent, on a
+machine with access to your file system. The agent runs within a Docker or
+Podman container and has access to your locally-mounted NFS data, and uploads
+the data you specify to Cloud Storage.
 
 To get started, see
 [Manage agent pools](/storage-transfer/docs/on-prem-agent-pools).
-
-- 
-
-You can use a Transfer Appliance with online mode enabled. You
-connect the Transfer Appliance to your
-network, and copy data directly to it. The appliance transfers the data you
-copy to it to Cloud Storage.
-
-To get started, see the
-[Transfer Appliance documentation](/transfer-appliance/docs/4.0/procedure-guide).
-
-### Locations with poor or no internet connectivity
-
-We recommend using Transfer Appliance to move or back up your
-on-premises data if you have poor or no internet connectivity. You connect
-Transfer Appliance to your network, and copy data directly to it. When
-the appliance is full, you send it back to us to copy to Cloud Storage.
-When we finish copying your data, we wipe the device for its next use.
-
-To get started, see the
-[Transfer Appliance documentation](/transfer-appliance/docs/4.0/procedure-guide).
 
 ## Transfer from Cloud to a file system
 

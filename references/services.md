@@ -21,8 +21,10 @@ The following services have confirmed documentation and API availability in the 
 - BigQuery Storage
 - Bigtable
 - Cloud Armor
+- Cloud Asset Inventory
 - Cloud Audit Logs
 - Cloud Billing
+- Cloud Build
 - Cloud DNS
 - Cloud External Key Manager (EKM)
 - Cloud GPUs
@@ -230,7 +232,12 @@ On **Cloud de Confiance by S3NS** (`u-france-east1`, PREMI3NS offering), service
 | Terraform | Available | — | Infrastructure provisioning via the Google Terraform provider |
 
 <!-- AUTO-SYNC:ADDITIONAL-CATEGORY-SERVICES:START -->
+### Newly Discovered Sovereign Cloud Services
 
+| Service | Status | S3NS SecNumCloud 3.2 | Description |
+|---------|--------|----------------------|-------------|
+| Cloud Asset Inventory | Available | — | Landing, differences, guides, release notes |
+| Cloud Build | Available | — | Landing, differences, guides, release notes |
 <!-- AUTO-SYNC:ADDITIONAL-CATEGORY-SERVICES:END -->
 
 ---
@@ -238,40 +245,42 @@ On **Cloud de Confiance by S3NS** (`u-france-east1`, PREMI3NS offering), service
 ## Discovered Documentation Inventory (Auto-Synced)
 
 <!-- AUTO-SYNC:DISCOVERED-PRODUCTS-TABLE:START -->
-Total scraped pages: **436** (Berlin GCD) / **435** (France S3NS).
+Total scraped pages: **468** (Berlin GCD) / **467** (France S3NS).
 
 | Service / Documentation Hub | Berlin Pages | S3NS Pages | S3NS SecNumCloud 3.2 | Differences Guide | Last Updated |
 |---|---:|---:|---|---|---|
 | Access Context Manager | 8 | 8 | Qualifié SecNumCloud 3.2 | `access-context-manager_tpc-differences.md` | 2026-11-13 |
 | Access Transparency | 7 | 7 | Qualification en cours | — | 2026-11-16 |
-| Agent Platform (Gemini Enterprise Agent Platform) | 7 | 7 | Qualification en cours | `gemini-enterprise-agent-platform_tpc-differences.md` | 2026-11-12 |
+| Agent Platform (Gemini Enterprise Agent Platform) | 7 | 7 | Qualification en cours | `gemini-enterprise-agent-platform_tpc-differences.md` | 2026-11-19 |
 | API Keys | 4 | 4 | — | — | 2026-11-13 |
 | Artifact Registry | 6 | 6 | Qualifié SecNumCloud 3.2 | `artifact-registry_tpc-differences.md` | 2026-11-13 |
-| BigQuery | 16 | 16 | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-13 |
+| BigQuery | 16 | 16 | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-18 |
 | Bigtable | 14 | 14 | Qualification en cours | `bigtable_tpc-differences.md` | 2026-11-13 |
 | Cloud Armor | 3 | 3 | Qualifié SecNumCloud 3.2 | `armor_tpc-differences.md` | 2026-11-13 |
+| Cloud Asset Inventory | 17 | 17 | — | `asset-inventory_tpc-differences.md` | 2026-11-17 |
 | Cloud Billing | 7 | 7 | — | `billing_tpc-differences.md` | 2026-11-13 |
+| Cloud Build | 14 | 14 | — | `build_tpc-differences.md` | 2026-11-13 |
 | Cloud DNS | 8 | 8 | Qualifié SecNumCloud 3.2 | `dns_tpc-differences.md` | 2026-11-13 |
 | Cloud Interconnect | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-13 |
-| Cloud KMS | 8 | 8 | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-13 |
-| Cloud Load Balancing | 3 | 3 | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-13 |
-| Cloud Logging | 10 | 10 | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-13 |
-| Cloud Monitoring | 4 | 4 | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-13 |
+| Cloud KMS | 8 | 8 | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-18 |
+| Cloud Load Balancing | 3 | 3 | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-16 |
+| Cloud Logging | 10 | 10 | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-18 |
+| Cloud Monitoring | 4 | 4 | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-18 |
 | Cloud NAT | 3 | 3 | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-13 |
 | Cloud NGFW | 3 | 3 | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-13 |
-| Cloud Quotas | 29 | 29 | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-13 |
+| Cloud Quotas | 29 | 29 | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-17 |
 | Cloud Router | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-11-13 |
-| Cloud Run | 14 | 14 | Qualification en cours | `run_tpc-differences.md` | 2026-11-13 |
-| Cloud SQL | 3 | 3 | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-16 |
-| Cloud Storage | 10 | 10 | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-13 |
+| Cloud Run | 14 | 14 | Qualification en cours | `run_tpc-differences.md` | 2026-11-18 |
+| Cloud SQL | 3 | 3 | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-19 |
+| Cloud Storage | 10 | 10 | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-17 |
 | Cloud VPN | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-13 |
-| Compute Engine | 12 | 12 | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-13 |
+| Compute Engine | 12 | 12 | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-17 |
 | Container-Optimized OS | 3 | 3 | Qualifié SecNumCloud 3.2 | `container-optimized-os_tpc-differences.md` | 2026-11-13 |
 | Filestore | 16 | 16 | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-13 |
-| Google Cloud CLI (gcloud SDK) | 2 | 2 | — | — | 2026-11-13 |
-| Google Kubernetes Engine (GKE) | 9 | 9 | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-13 |
-| IAM | 18 | 18 | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-13 |
-| Managed Airflow (Cloud Composer 3) | 18 | 18 | Qualification en cours | `composer_tpc-differences.md` | 2026-11-13 |
+| Google Cloud CLI (gcloud SDK) | 2 | 2 | — | — | 2026-11-17 |
+| Google Kubernetes Engine (GKE) | 9 | 9 | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-18 |
+| IAM | 18 | 18 | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-18 |
+| Managed Airflow (Cloud Composer 3) | 18 | 18 | Qualification en cours | `composer_tpc-differences.md` | 2026-11-16 |
 | Managed Service for Apache Spark (Dataproc) | 10 | 10 | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-13 |
 | Network Service Tiers | 3 | 3 | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-13 |
 | Organization Policy | 3 | 3 | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-11-13 |
@@ -280,7 +289,7 @@ Total scraped pages: **436** (Berlin GCD) / **435** (France S3NS).
 | Secret Manager | 10 | 10 | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-11-13 |
 | Service Directory | 2 | 2 | Qualifié SecNumCloud 3.2 | — | 2026-11-13 |
 | Service Usage | 9 | 9 | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-11-13 |
-| Storage Transfer Service | 7 | 7 | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-10 |
+| Storage Transfer Service | 8 | 8 | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-19 |
 | Terraform | 32 | 32 | — | `terraform_tpc-differences.md` | 2026-11-13 |
 | VPC | 7 | 7 | Qualifié SecNumCloud 3.2 | `vpc_tpc-differences.md` | 2026-11-13 |
 | VPC Service Controls | 3 | 3 | Qualifié SecNumCloud 3.2 | `vpc-service-controls_tpc-differences.md` | 2026-11-13 |
@@ -295,6 +304,9 @@ The following table summarizes the most recent sovereign cloud release notes ext
 <!-- AUTO-SYNC:RECENT-RELEASE-NOTES:START -->
 | Date | Product | Type | Summary |
 |---|---|---|---|
+| November 18, 2026 | **Google Kubernetes Engine** | `Issue` | In GKE versions 1.35, 1.36, and 1.37, enabling application-layer secrets encryption (`/kubernetes-engine/docs/how-to/encrypting-secrets`) on a new or existing cluster whose control plane stores cluster state in Spanner encrypts only Kubernetes Secrets (`ENCRYPTED`) instead of all Kubernetes API objects (`ALL_OBJECTS_ENCRYPTION_ENABLED`). |
+| November 17, 2026 | **Cloud SQL for MySQL** | `Feature` | Blue-green deployments for Cloud SQL for MySQL are [generally available](https://documentation.s3ns.fr/products#product-launch-stages). |
+| November 16, 2026 | **Cloud Build** | `Announcement` | Cloud Build is now available in Google Cloud. For more information, see Cloud Build differences in Google Cloud versus Google Cloud (`/build/docs/tpc-differences`). |
 | November 13, 2026 | **Google Kubernetes Engine** | `Change` | **(2026-R48) Version updates:** GKE cluster versions have been updated. |
 | November 12, 2026 | **Compute Engine** | `Feature` | **Generally available**: In a managed instance group (MIG) with instance flexibility, you can override the instance template's disk and minimum CPU platform properties per instance selection. Overriding these properties lets you combine machine types that require different disk types, boot images, or CPU platforms in a single MIG. For more information, see About instance flexibility in MIGs (`/compute/docs/instance-groups/about-instance-flexibility`). |
 | November 12, 2026 | **Google Kubernetes Engine** | `Change` | In GKE version 1.35.1-gke.1516000 or later, GKE Dataplane V2 clusters use a unified `cilium-cni` configuration instead of a chained CNI setup. With this change, Cilium configures the Pod default gateway by using its node-local virtual router interface (`cilium_host`), which has the statically assigned link-local IP address `169.254.4.6`. |
@@ -304,9 +316,6 @@ The following table summarizes the most recent sovereign cloud release notes ext
 | November 09, 2026 | **Virtual Private Cloud** | `Feature` | **General Availability**: You can create an internal range with the `INTERNAL_ADDRESS` purpose to allocate global internal IPv4 addresses for Private Service Connect endpoints that access global Google APIs (`/vpc/docs/about-accessing-google-apis-endpoints`). |
 | November 04, 2026 | **Cloud Storage** | `Feature` | You can pause hard deletions for a bucket when you need more time to restore soft-deleted objects before they're permanently deleted. For more information, see Pause permanent (hard) deletions of soft-deleted objects (`/storage/docs/pause-hard-deletions`). |
 | November 03, 2026 | **Virtual Private Cloud** | `Feature` | **General Availability**: VPC Flow Logs supports logging for IPv6 encapsulation flows. For more information, see IpConnection field format (`/vpc/docs/about-flow-logs-records#IpConnection`). |
-| October 29, 2026 | **Identity and Access Management** | `Feature` | The Admin (`roles/admin`), Writer (`roles/writer`), and Reader (`roles/reader`) basic roles are generally available ([GA](https://documentation.s3ns.fr/products#product-launch-stages)). For more information, see Basic roles (`/iam/docs/roles-overview#basic`). |
-| October 27, 2026 | **Google Cloud Armor** | `Feature` | Cloud Armor supports advanced match conditions to include attributes for inspecting request body content and parameters. This lets you write custom CEL rules to filter traffic based on raw body content, structured data (JSON, Form Data, GraphQL), and query parameters. For more information, see Attributes (`/armor/docs/create-security-policy-rules#attributes`) in "Create and view Cloud Armor security policy rules." This feature is [generally available (GA)](https://documentation.s3ns.fr/products#product-launch-stages). |
-| October 27, 2026 | **Google Kubernetes Engine** | `Change` | **(2026-R46) Version updates:** GKE cluster versions have been updated. |
 <!-- AUTO-SYNC:RECENT-RELEASE-NOTES:END -->
 
 ---
@@ -320,9 +329,9 @@ The following commonly used Google Cloud services are **NOT** available in GCD o
 - **Databases:** Spanner (`À venir` on S3NS roadmap), Firestore, Memorystore (Redis/Memcached), AlloyDB, Database Migration Service
 - **Data:** Dataflow, Dataform, Data Fusion, Datastream, Analytics Hub, Serverless Spark
 - **Serverless:** App Engine, Cloud Run functions / Cloud Functions, Cloud Scheduler, Cloud Tasks, Eventarc
-- **CI/CD:** Cloud Build (`À venir` on S3NS roadmap), Cloud Deploy, Cloud Source Repositories
+- **CI/CD:** Cloud Deploy, Cloud Source Repositories
 - **Observability:** Cloud Trace, Cloud Profiler, Error Reporting, Ops Agent
-- **Security:** Cloud Asset Inventory (`À venir` on S3NS roadmap), Cloud HSM, Security Command Center, Binary Authorization, Certificate Authority Service, Identity-Aware Proxy (IAP), Managed Microsoft AD
+- **Security:** Cloud HSM, Security Command Center, Binary Authorization, Certificate Authority Service, Identity-Aware Proxy (IAP), Managed Microsoft AD
 - **Networking:** Cloud CDN, Certificate Manager, Classic VPN, Cross-Cloud Interconnect, Network Connectivity Center (`À venir` on S3NS roadmap)
 - **Other:** Cloud Shell, Apigee, API Gateway, Firebase
 <!-- AUTO-SYNC:NOTABLE-UNAVAILABLE-SERVICES:END -->

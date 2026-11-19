@@ -1,7 +1,7 @@
 # Select an execution environment for services
 
 Source: https://documentation.s3ns.fr/run/docs/about-execution-environments
-Last updated: 2026-11-12
+Last updated: 2026-11-18
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/run/docs/tpc-differences) for more details.
 
@@ -337,7 +337,7 @@ command line, or a YAML file when you [create a new service](/run/docs/deploying
 
 - 
 
-In the Cloud de Confiance by S3NS console, go to Cloud Run:
+In the Cloud de Confiance console, go to the Cloud Run page:
 
 [Go to Cloud Run](https://console.cloud.s3nscloud.fr/run) 
 

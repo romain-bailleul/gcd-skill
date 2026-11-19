@@ -1,7 +1,7 @@
 # Access and resource management
 
 Source: https://berlin.devsitetest.how/docs/access-resources
-Last updated: 2026-11-13
+Last updated: 2026-11-18
 
 - 
 
@@ -321,15 +321,6 @@ Manage internal enterprise solutions and Google Cloud Dedicated in Germany APIs.
 
 
 
-
-
-
-
-
-
-
-
-
 #### [
 Service Usage
 ](/service-usage/docs)
@@ -418,6 +409,24 @@ Manage Google Cloud Dedicated in Germany resources programmatically.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+#### [
+Cloud Asset Inventory
+](/asset-inventory/docs)
+
+
+Use inventory services based on a time series database.
 
 
 

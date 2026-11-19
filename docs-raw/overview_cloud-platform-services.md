@@ -1,7 +1,7 @@
 # Products and Services
 
 Source: https://berlin.devsitetest.how/docs/overview/cloud-platform-services
-Last updated: 2026-10-23
+Last updated: 2026-11-16
 
 - 
 
@@ -78,6 +78,10 @@ Documentation
 - [BigQuery Reservation](/bigquery/docs/reservations-intro)
 
 - [Bigtable](/bigtable/docs)
+
+- [Cloud Asset Inventory](/asset-inventory/docs)
+
+- [Cloud Build](/build/docs)
 
 - [Cloud DNS](/dns/docs)
 

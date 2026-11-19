@@ -1,7 +1,7 @@
 # Google Cloud CLI - Release Notes
 
 Source: https://documentation.s3ns.fr/sdk/docs/release-notes
-Last updated: 2026-11-10
+Last updated: 2026-11-17
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/sdk/docs/tpc-differences) for more details.
 
@@ -138,6 +138,229 @@ Resources
 
 
 Copyright 2014-2026 Google Inc. All rights reserved.
+
+Subscribe to these release notes at [https://groups.google.com/forum/#!forum/google-cloud-sdk-announce](https://groups.google.com/forum/#!forum/google-cloud-sdk-announce).
+
+## 594.0.0 (2026-11-17)
+
+### Breaking Changes
+
+- **(Google Cloud CLI)** Fixed an issue where `--account` overrode the `ACCOUNT_NAME` positional
+argument (formerly `ACCOUNT`) of `gcloud auth print-access-token`,
+`print-identity-token`, `login`, `application-default login`, and
+`activate-service-account` when specified after it. The positional argument
+now takes precedence. `--account` still applies when `ACCOUNT_NAME` is
+omitted.
+
+- **(Cloud Billing)** Fixed an issue where `--account` overrode the `ACCOUNT_ID` positional
+argument (formerly `ACCOUNT`) of `gcloud billing accounts get-iam-policy`,
+`set-iam-policy`, `add-iam-policy-binding`, and `remove-iam-policy-binding`
+when specified after it. The positional argument now takes precedence.
+`ACCOUNT_ID` is now always required. `--account` no longer replaces a missing
+`ACCOUNT_ID`.
+
+- **(Compute Engine)** Fixed an issue where `--project` overrode the `PROJECT_ID` positional
+argument of `gcloud compute shared-vpc` commands when specified after it.
+The positional argument now takes precedence. `PROJECT_ID` is now always
+required. `--project` no longer replaces a missing `PROJECT_ID`.
+
+### Google Cloud CLI
+
+- Fixed an issue where `gcloud config config-helper` crashed or overwrote stored credentials when `auth/credential_file_override` (`CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE`) was set.
+
+- Added error details (such as the error reason and troubleshooting links) to the output for failed long-running operations.
+
+### AI
+
+- Fixed `--system-labels` flag of `gcloud ai model-garden models deploy` being ignored for Model Garden and Hugging Face models.
+
+### Agent Registry
+
+- Promoted `gcloud agent-registry skill-encryption-spec` to GA.
+
+- Promoted `gcloud agent-registry skills revisions download` to GA.
+
+- Fixed `gcloud agent-registry skills create --payload` so that the local ZIP archive is uploaded as the initial revision of the skill.
+
+### AlloyDB
+
+- Added support for the `z4d-highmem-16-standardlssd` machine-type in
+`gcloud alloydb instances create` and `gcloud alloydb instances update`.
+
+### App Lifecycle Manager
+
+- Added `--with-default-evaluation` flag to
+`gcloud beta app-lifecycle-manager flags create` to populate boolean flags
+with default variants (`Enabled` and `Disabled`) and default evaluation spec
+(`defaultVariant: Disabled`).
+
+### Artifact Registry
+
+- Renamed the `URI` positional argument of
+`gcloud artifacts vulnerabilities list` to `ARTIFACT_URI` in help text.
+Command syntax is unchanged.
+
+### Assured Workloads
+
+- Renamed the `WORKLOAD_ID` positional argument of
+`gcloud assured workloads create` to `WORKLOAD` in help text. Command syntax
+is unchanged.
+
+### BigLake
+
+- Promoted `gcloud biglake iceberg views` to beta. The `create`, `delete`,
+`describe`, `get-iam-policy`, `list`, `set-iam-policy`, and `update`
+commands are now available in beta.
+
+- Promoted `gcloud biglake data-product-sharing unpublish` to GA.
+
+### Cloud Backup DR
+
+- Updated `gcloud backup-dr applied-auto-protection-policies list` to
+return an error when `--location=-` is specified, because listing across
+all locations is not supported.
+
+### Cloud Composer
+
+- Added `--rollback-image-version` flag to
+`gcloud composer environments update` to roll back a Cloud Composer 3
+environment to its previous image version.
+
+### Cloud Dataflow
+
+- Updated `gcloud dataflow config-store-settings` commands to accept project
+IDs in addition to project numbers for project-level settings.
+
+### Cloud IAM
+
+- Added `--attribute-sync-interval` flag to `gcloud iam workforce-pools
+providers create-oidc` and `gcloud iam workforce-pools providers
+update-oidc`, and `--clear-attribute-sync-interval` flag to `gcloud iam
+workforce-pools providers update-oidc`.
+
+### Cloud Run
+
+- Added support for `gcloud beta run deploy --domain` when property
+`regional/endpoint_mode` is set to `regional-preferred`.
+
+- Promoted regional endpoints support to GA for `gcloud run deploy` and
+`gcloud run` `services`, `revisions`, `jobs`, and `worker-pools` commands.
+
+- Promoted `--scaling`, `--scaling-cpu-target`, `--clear-scaling-cpu-target`,
+`--min`, and `--max` flags to `gcloud beta run worker-pools deploy` and
+`gcloud beta run worker-pools update` for configuring worker pool automatic
+and CPU utilization scaling.
+
+### Cloud SQL
+
+- Promoted `gcloud sql blue-green-deployments` to GA.
+
+- Promoted `--msdtc-enabled` and `--msdtc-rpc-auth-mode` flags of `gcloud sql instances create` and `gcloud sql instances patch` to GA.
+
+### Cloud Speech API
+
+- Promoted `gcloud ml speech recognizers` command group to beta.
+
+### Cloud Storage
+
+- Fixed an issue in `gcloud storage buckets update` where specifying
+`--update-labels` or `--remove-labels` multiple times only applied the last
+flag instead of merging all specified labels.
+
+### Cloud Tasks
+
+- Promoted `gcloud tasks batch-create` command to GA, which creates multiple
+tasks from a JSON or YAML file in a single batch operation.
+
+- Promoted `--tasks-from-file` and `--failed-tasks-file` on
+`gcloud tasks delete` to GA, which deletes multiple tasks in a single batch
+operation.
+
+- Deprecated `--from-file` on `gcloud alpha/beta tasks delete`; use
+`--tasks-from-file` instead.
+
+- Promoted the task-level retry flags (`--max-attempts`,
+`--max-retry-duration`, `--min-backoff`, `--max-backoff`, and
+`--max-doublings`) on `gcloud tasks create-http-task` and
+`gcloud tasks create-app-engine-task` to GA. These flags override the
+queue-level retry configuration for an individual task.
+
+### Cluster Director
+
+- Promoted `--existing-instances` flag of
+`gcloud cluster-director clusters create` and `--add-existing-instances` and
+`--remove-existing-instances` flags of
+`gcloud cluster-director clusters update` to beta to support importing
+existing Compute Engine instances into clusters.
+
+- Added `resourcePolicyConfig` to `--slurm-node-sets` flag of
+`gcloud beta cluster-director clusters create` and
+`--add-slurm-node-sets` and `--update-slurm-node-sets` flags of
+`gcloud beta cluster-director clusters update` to support configuring the
+accelerator topology of Slurm node sets.
+
+### Compute Engine
+
+- Promoted `PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0` and
+`PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1` values of the `--purpose`
+flag of `gcloud compute addresses create` to GA.
+
+- Promoted `--purpose` flag of `gcloud compute public-delegated-prefixes
+create` to GA.
+
+- Promoted `--network-attachment` and `--service-class-id` flags of `gcloud
+compute addresses create` to GA.
+
+- Promoted Global External Passthrough Network Load Balancing
+(`EXTERNAL_PASSTHROUGH` load-balancing scheme) support in `gcloud compute
+forwarding-rules` to GA.
+
+- Promoted Global External Passthrough Network Load Balancing
+(`EXTERNAL_PASSTHROUGH` load-balancing scheme) support in `gcloud compute
+backend-services` to GA.
+
+- Promoted `imageOptimizationPolicy` support in `HttpRouteAction` to GA for
+`gcloud compute url-maps import`, `gcloud compute url-maps export`, and
+`gcloud compute url-maps validate`.
+
+- Updated `gcloud compute ssh` to print status messages describing SSH key
+generation, public key upload, private key login, and temporary OS Login
+certificate cleanup.
+
+### Config Connector
+
+- Updated Google Cloud Config Connector to version 1.161.0.
+See Config Connector Overview for more details [https://cloud.google.com/config-connector/docs/overview](https://documentation.s3ns.fr/config-connector/docs/overview).
+
+### Container
+
+- Added `bmsai` option to `--confidential-node-type` flag in `gcloud container
+clusters create`, `clusters create-auto`, `node-pools create`, and
+`node-pools update` commands.
+
+### Design Center
+
+- Added `gcloud design-center spaces application-templates export` command to
+export IaC for an application template.
+
+- Added `gcloud design-center spaces application-templates revisions export`
+command to export IaC for an application template revision.
+
+### Kubernetes Engine
+
+- Added `--enable-cluster-scale-to-zero` and `--cluster-scale-to-zero-delay`
+flags to `gcloud container clusters create`,
+`gcloud container clusters create-auto`, and
+`gcloud container clusters update` to configure cluster scale-to-zero.
+
+### Workspace Add Ons
+
+- Added `gcloud beta workspace-add-ons chat-app-config` command group to view
+and update the Google Chat app configuration of a Google Cloud project.
+
+- Added `gcloud beta workspace-add-ons deployments` command group and
+`gcloud beta workspace-add-ons get-authorization` command, which match their
+GA versions.
 
 Subscribe to these release notes at [https://groups.google.com/forum/#!forum/google-cloud-sdk-announce](https://groups.google.com/forum/#!forum/google-cloud-sdk-announce).
 

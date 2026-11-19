@@ -1,7 +1,7 @@
 # Create transfers
 
 Source: https://documentation.s3ns.fr/storage-transfer/docs/create-transfers
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 
@@ -130,14 +130,10 @@ Depending on your source and destination, you may need to create and configure
 an agent pool and install agents on a machine with access to your source or
 destination.
 
-- 
+- Transfers between Cloud Storage buckets **do not require agents and agent
+pools**.
 
-Transfers from Amazon S3, Microsoft Azure, URL lists, or Cloud Storage
-to Cloud Storage **do not require agents and agent pools**.
-
-- 
-
-Transfers whose source and/or destination is a file system, or from
+- Transfers whose source or destination is a file system, or from
 S3-compatible storage, do require agents and agent pools. See
 [Manage agent pools](/storage-transfer/docs/on-prem-agent-pools) for
 instructions.
@@ -158,11 +154,6 @@ If you're using `gcloud` commands,
 [install the gcloud CLI](/sdk/docs/install).
 
 ## Create a transfer
-
-Don't include sensitive information such as personally identifiable information
-(PII) or security data in your transfer job name. Resource names may be
-propagated to the names of other Google Cloud resources and may be exposed
-to Google-internal systems outside of your project.
 
 
 
@@ -198,21 +189,7 @@ Under **Source type**, select **Cloud Storage**.
 
 - 
 
-Select your **Destination type**.
-
-- 
-
-If your destination is Cloud Storage, select your
-**Scheduling mode**. *Batch transfers* execute on a
-one-time or scheduled basis. *Event-driven transfers* continuously
-monitor the source and transfer data when it's added or modified.
-
-To configure an event-driven transfer, follow the instructions at
-[Event-driven transfers](/storage-transfer/docs/event-driven-transfers).
-
-- 
-
-Click **Next step**.
+Select your **Destination type** and click **Next step**.
 
 - 
 
@@ -246,22 +223,9 @@ If you specify a path within the folder, see
 [Specifying source and destination paths](#source-destination-paths)
 for important details.
 
-- 
-
-If this is an [event-driven transfer](/storage-transfer/docs/event-driven-transfers), enter the
-Pub/Sub subscription name, which takes the following
-format:
-
-
-```
-projects/ PROJECT_NAME /subscriptions/ SUBSCRIPTION_ID 
-```
-
-
 - Optionally, choose to
-[filter objects by prefix](/storage-transfer/docs/filtering-objects-from-transfers),
-by last modified date, or by
-[storage class](/storage-transfer/docs/filtering-by-storage-class). If you specified a folder as your source location, prefix filters
+[filter objects by prefix](/storage-transfer/docs/filtering-objects-from-transfers)
+or by last modified date. If you specified a folder as your source location, prefix filters
 are relative to that folder. For example, if your source is `my-test-bucket/path/`, an
 include filter of `file` includes all files starting with
 `my-test-bucket/path/file`.
@@ -270,76 +234,11 @@ include filter of `file` includes all files starting with
 
 Click **Next step**.
 
-
-
-### Amazon S3
-
-See
-[Transfer from Amazon S3 to Cloud Storage](/storage-transfer/docs/create-transfers/agentless/s3).
 
 
 ### S3-compatible storage
 
-See
-[Transfer from S3-compatible storage to Cloud Storage](/storage-transfer/docs/create-transfers/agent-based/s3-compatible).
-
-
-### Microsoft Azure Blob Storage 
-
-- 
-
-Under **Source type**, select **Azure Blob Storage or Data Lake Storage Gen2**.
-
-- 
-
-Click **Next step**.
-
-- 
-
-Specify the following:
-
-- 
-
-**Storage account name** — the source Microsoft Azure Storage account
-name.
-
-The storage account name is displayed in the Microsoft Azure Storage
-portal under **All services > Storage > Storage accounts**.
-
-- 
-
-**Container name** — the Microsoft Azure Storage container name.
-
-The container name is displayed in the Microsoft Azure Storage portal
-under **Storage explorer > Blob containers**. To transfer
-all containers in a storage account, enter `*` as the value.
-See
-[Transfer all containers in an Azure Storage account](/storage-transfer/docs/create-transfers/agentless/azure-all-containers)
-for more information.
-
-- 
-
-**Shared access signature (SAS)** — the Microsoft Azure Storage SAS
-token created from a stored access policy. For more information,
-see [Grant limited access to Azure Storage resources using
-shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
-
-The default expiration time for SAS tokens is 8 hours. When you create
-your SAS token, be sure to set a reasonable expiration time that enables you to
-successfully complete your transfer.
-
-- Optionally, choose to
-[filter objects by prefix](/storage-transfer/docs/filtering-objects-from-transfers),
-by last modified date, or by
-[storage class](/storage-transfer/docs/filtering-by-storage-class). If you specified a folder as your source location, prefix filters
-are relative to that folder. For example, if your source is `my-test-bucket/path/`, an
-include filter of `file` includes all files starting with
-`my-test-bucket/path/file`.
-
-- 
-
-Click **Next step**.
-
+See [Transfer from S3-compatible storage to Cloud Storage](/storage-transfer/docs/create-transfers/agent-based/s3-compatible).
 
 
 ### File system
@@ -363,38 +262,6 @@ Specify the fully qualified path of the file system directory.
 If you specify a path other than root, see
 [Specifying source and destination paths](#source-destination-paths)
 for important details.
-
-- 
-
-Click **Next step**.
-
-
-
-### HDFS
-
-See
-[Transfer from HDFS to Cloud Storage](/storage-transfer/docs/create-transfers/agent-based/hdfs).
-
-
-### URL list
-
-- 
-
-Under **Source type**, select **URL list** and click **Next step**.
-
-- 
-
-Under **URL of TSV file**, provide the URL to a tab-separated values
-(TSV) file. See [Creating a URL List](/storage-transfer/docs/create-url-list) for details
-about how to create the TSV file.
-
-- Optionally, choose to
-[filter objects by prefix](/storage-transfer/docs/filtering-objects-from-transfers),
-by last modified date, or by
-[storage class](/storage-transfer/docs/filtering-by-storage-class). If you specified a folder as your source location, prefix filters
-are relative to that folder. For example, if your source is `my-test-bucket/path/`, an
-include filter of `file` includes all files starting with
-`my-test-bucket/path/file`.
 
 - 
 
@@ -709,23 +576,13 @@ To transfer from a specific folder, specify
 `gs:// BUCKET_NAME / FOLDER_PATH /`,
 including the trailing slash.
 
-- Amazon S3: `s3:// BUCKET_NAME/FOLDER_PATH `
-
 - S3-compatible storage: `s3:// BUCKET_NAME `. The
 bucket name is relative to the endpoint. For example, if your data
 resides at `https://us-east-1.example.com/folder1/bucket_a`, enter
 `s3://folder1/bucket_a`.
 
-- Microsoft Azure Storage:
-`https://myaccount.blob.core.windows.net/ CONTAINER_NAME `
-
-- URL list: `https:// PATH_TO_URL_LIST ` or
-`http:// PATH_TO_URL_LIST `
-
 - POSIX file system: `posix:// /PATH `. This must be
 an absolute path from the root of the agent host machine.
-
-- HDFS: `hdfs:// /PATH `
 
 If you specify a path or folder value, see
 [Specifying source and destination paths](#source-destination-paths)
@@ -776,14 +633,6 @@ Additional options include:
 
 - 
 
-`--source-creds-file` specifies the relative path to a local file on your
-machine that includes AWS or Azure credentials for the transfer source.
-For credential file formatting information, see the
-[TransferSpec](/storage-transfer/docs/reference/rest/v1/TransferSpec)
-reference.
-
-- 
-
 `--do-not-run` prevents Storage Transfer Service from running the job
 upon submission of the command. To run the job,
 [update](/storage-transfer/docs/manage-transfers#update-job) it to
@@ -799,9 +648,7 @@ formatting, see
 
 - 
 
-**Job information**: You can specify `--name`, `--description`,
-and `--source-creds-file`. Note that `--name` is not supported for cross-bucket
-replication jobs.
+**Job information**: You can specify `--name` and `--description`.
 
 - 
 
@@ -839,11 +686,13 @@ with `--notification-pubsub-topic`, `--notification-event-types`, and
 
 - 
 
-**Cloud Logging**: Enable Cloud Logging for agentless transfers, or
-transfers from S3-compatible sources, with `--log-actions` and
-`--log-action-states`. See
+**Cloud Logging**: Enable Cloud Logging for transfers with
+`--log-actions` and `--log-action-states` (`find` is supported only for
+agentless transfers). See
 [Cloud Logging for Storage Transfer Service](/storage-transfer/docs/transfer-logs)
-for details.
+for details. For file system transfers, you can also enable
+[file system transfer logs](/storage-transfer/docs/on-prem-transfer-log-format)
+with `--enable-posix-transfer-logs`.
 
 Transfers from S3-compatible sources also use the following options:
 
@@ -862,7 +711,7 @@ Amazon's [SigV4](https://docs.aws.amazon.com/general/latest/gr/signature-version
 are `PATH_STYLE` or `VIRTUAL_HOSTED_STYLE`. Path style uses the format
 `https://s3.example.com/ BUCKET_NAME / KEY_NAME `.
 Virtual hosted style uses the format
-`https:// BUCKET_NAME .s3.example.com/ KEY_NAME .
+`https:// BUCKET_NAME .s3.example.com/ KEY_NAME `.
 
 - `--source-network-protocol` specifies the network protocol that agents
 should use for this job. Valid values are `HTTP` or `HTTPS`.
@@ -876,10 +725,6 @@ To view all options, run `gcloud transfer jobs create --help` or refer to the
 [`gcloud` reference documentation](/sdk/gcloud/reference/transfer/jobs/create).
 
 ### Examples
-
-#### Amazon S3 to Cloud Storage
-
-See [Transfer from Amazon S3 to Cloud Storage](/storage-transfer/docs/create-transfers/agentless/s3).
 
 #### S3-compatible storage to Cloud Storage
 
@@ -937,15 +782,14 @@ specifying the schedule of a transfer job, see
 ## Transfer between Cloud Storage buckets
 
 In this example, you'll learn how to move files from one Cloud Storage
-bucket to another. For example, you can move data to a bucket in another
-[location](/storage/docs/bucket-locations).
+bucket to another.
 
 Request using
 [transferJobs create](/storage-transfer/docs/reference/rest/v1/transferJobs/create):
 
 
 ```
-POST h tt ps : //storagetransfer.googleapis.com/v1/transferJobs 
+POST h tt ps : //storagetransfer.s3nsapis.fr/v1/transferJobs 
 { 
 "description" : "YOUR DESCRIPTION" , 
 "status" : "ENABLED" , 
@@ -980,8 +824,6 @@ Response:
 ```
 200 OK 
 { 
-"transferJob" : [ 
-{ 
 "creationTime" : "2015-01-01T01:01:00.000000000Z" , 
 "description" : "YOUR DESCRIPTION" , 
 "name" : "transferJobs/JOB_ID" , 
@@ -1001,123 +843,15 @@ Response:
 }, 
 "transferSpec" : { 
 "gcsDataSource" : { 
-"bucketName" : "GCS_SOURCE_NAME" , 
+"bucketName" : "GCS_SOURCE_NAME" 
 }, 
 "gcsDataSink" : { 
-"bucketName" : "GCS_NEARLINE_SINK_NAME" 
-}, 
-"objectConditions" : { 
-"minTimeElapsedSinceLastModification" : "2592000.000s" 
+"bucketName" : "GCS_SINK_NAME" 
 }, 
 "transferOptions" : { 
 "deleteObjectsFromSourceAfterTransfer" : true 
 } 
 } 
-} 
-] 
-} 
-```
-
-
-## Transfer from Amazon S3 to Cloud Storage
-
-See [Transfer from Amazon S3 to Cloud Storage](/storage-transfer/docs/create-transfers/agentless/s3).
-
-## Transfer between Microsoft Azure Blob Storage and Cloud Storage
-
-In this example, you'll learn how to move files from Microsoft Azure Storage to a
-Cloud Storage bucket, using a Microsoft Azure Storage shared access
-signature (SAS) token.
-
-For more information on Microsoft Azure Storage SAS, see
-[Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
-
-Before starting, review
-[Configure access to Microsoft Azure Storage](/storage-transfer/docs/source-microsoft-azure)
-and [Pricing](https://documentation.s3ns.fr/storage-transfer/pricing) to understand the implications of
-moving data from Microsoft Azure Storage to Cloud Storage.
-
-Request using [transferJobs create](/storage-transfer/docs/reference/rest/v1/transferJobs/create):
-
-```
-POST h tt ps : //storagetransfer.googleapis.com/v1/transferJobs 
-{ 
-"description" : "YOUR DESCRIPTION" , 
-"status" : "ENABLED" , 
-"projectId" : "PROJECT_ID" , 
-"schedule" : { 
-"scheduleStartDate" : { 
-"day" : 14 , 
-"month" : 2 , 
-"year" : 2020 
-}, 
-"scheduleEndDate" : { 
-"day" : 14 
-"month" : 2 , 
-"year" : 2020 
-}, 
-"startTimeOfDay" : { 
-"hours" : 1 , 
-"minutes" : 1 
-} 
-}, 
-"transferSpec" : { 
-"azureBlobStorageDataSource" : { 
-"storageAccount" : "AZURE_SOURCE_NAME" , 
-"azureCredentials" : { 
-"sasToken" : "AZURE_SAS_TOKEN" , 
-}, 
-"container" : "AZURE_CONTAINER" , 
-}, 
-"gcsDataSink" : { 
-"bucketName" : "GCS_SINK_NAME" 
-} 
-} 
-} 
-```
-
-Response:
-
-```
-200 OK 
-{ 
-"transferJob" : [ 
-{ 
-"creationTime" : "2020-02-14T01:01:00.000000000Z" , 
-"description" : "YOUR DESCRIPTION" , 
-"name" : "transferJobs/JOB_ID" , 
-"status" : "ENABLED" , 
-"lastModificationTime" : "2020-02-14T01:01:00.000000000Z" , 
-"projectId" : "PROJECT_ID" , 
-"schedule" : { 
-"scheduleStartDate" : { 
-"day" : 14 
-"month" : 2 , 
-"year" : 2020 
-}, 
-"scheduleEndDate" : { 
-"day" : 14 , 
-"month" : 2 , 
-"year" : 2020 
-}, 
-"startTimeOfDay" : { 
-"hours" : 1 , 
-"minutes" : 1 
-} 
-}, 
-"transferSpec" : { 
-"azureBlobStorageDataSource" : { 
-"storageAccount" : "AZURE_SOURCE_NAME" , 
-"azureCredentials" : { 
-"sasToken" : "AZURE_SAS_TOKEN" , 
-}, 
-"container" : "AZURE_CONTAINER" , 
-}, 
-"objectConditions" : {}, 
-"transferOptions" : {} 
-} 
-} 
-] 
 } 
 ```
 
@@ -1143,8 +877,10 @@ For more information about the Storage Transfer Service client libraries, see
 ## Transfer between Cloud Storage buckets
 
 In this example, you'll learn how to move files from one Cloud Storage
-bucket to another. For example, you can move data to a bucket in another
-[location](/storage/docs/bucket-locations).
+bucket to another.
+
+Before running code samples, set the `GOOGLE_CLOUD_UNIVERSE_DOMAIN` environment
+variable to `s3nsapis.fr`.
 
 
 
@@ -1272,7 +1008,7 @@ return resp , nil
 
 
 
-Looking for older samples? See the [Storage Transfer Service Migration Guide](/storage-transfer/docs/reference/migration-guide).
+Looking for older samples? See the [Storage Transfer Service Migration Guide](/storage-transfer/docs/migration-guide).
 
 
 
@@ -1501,7 +1237,7 @@ createDailyNearline30DayMigration ();
 
 
 
-Looking for older samples? See the [Storage Transfer Service Migration Guide](/storage-transfer/docs/reference/migration-guide).
+Looking for older samples? See the [Storage Transfer Service Migration Guide](/storage-transfer/docs/migration-guide).
 
 
 
@@ -1597,745 +1333,6 @@ print ( f "Created transferJob: { result . name } " )
 
 
 
-## Transfer from Amazon S3 to Cloud Storage
-
-See [Transfer from Amazon S3 to Cloud Storage](/storage-transfer/docs/create-transfers/agentless/s3).
-
-## Transfer between Microsoft Azure Blob Storage and Cloud Storage
-
-In this example, you'll learn how to move files from Microsoft Azure Storage to a
-Cloud Storage bucket, using a Microsoft Azure Storage shared access
-signature (SAS) token.
-
-For more information on Microsoft Azure Storage SAS, see
-[Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
-
-Before starting, review
-[Configure access to Microsoft Azure Storage](/storage-transfer/docs/source-microsoft-azure)
-and [Pricing](https://documentation.s3ns.fr/storage-transfer/pricing) to understand the implications of
-moving data from Microsoft Azure Storage to Cloud Storage.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Go 
-
-
-
-
-
-
-
-
-To learn how to install and use the client library for Storage Transfer Service, see
-[Storage Transfer Service client libraries](/storage-transfer/docs/reference/libraries).
-
-
-
-For more information, see the
-[Storage Transfer Service Go API
-reference documentation](https://pkg.go.dev/cloud.google.com/go/storagetransfer@v1.0.0/apiv1).
-
-
-
-
-
-To authenticate to Storage Transfer Service, set up Application Default Credentials.
-For more information, see
-
-[Set up authentication for a local development environment](/docs/authentication/set-up-adc-local-dev-environment).
-
-
-
-
-
-Before running code samples, set the `GOOGLE_CLOUD_UNIVERSE_DOMAIN` environment
-variable to `s3nsapis.fr`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-import ( 
-"context" 
-"fmt" 
-"io" 
-"os" 
-
-storagetransfer "cloud.google.com/go/storagetransfer/apiv1" 
-"cloud.google.com/go/storagetransfer/apiv1/storagetransferpb" 
-) 
-
-func transferFromAzure ( w io . Writer , projectID string , azureStorageAccountName string , azureSourceContainer string , gcsSinkBucket string ) ( * storagetransferpb . TransferJob , error ) { 
-// Your Google Cloud Project ID. 
-// projectID := "my-project-id" 
-
-// The name of your Azure Storage account. 
-// azureStorageAccountName := "my-azure-storage-acc" 
-
-// The name of the Azure container to transfer objects from. 
-// azureSourceContainer := "my-source-container" 
-
-// The name of the GCS bucket to transfer objects to. 
-// gcsSinkBucket := "my-sink-bucket" 
-
-ctx := context . Background () 
-client , err := storagetransfer . [ NewClient ](https://documentation.s3ns.fr/go/docs/reference/cloud.google.com/go/storagetransfer/latest/apiv1.html#cloud_google_com_go_storagetransfer_apiv1_Client_NewClient) ( ctx ) 
-if err != nil { 
-return nil , fmt . Errorf ( "storagetransfer.NewClient: %w" , err ) 
-} 
-defer client . [ Close ](https://documentation.s3ns.fr/go/docs/reference/cloud.google.com/go/storagetransfer/latest/apiv1.html#cloud_google_com_go_storagetransfer_apiv1_Client_Close) () 
-
-// The Azure SAS token, should be accessed via environment variable for security 
-azureSasToken := os . Getenv ( "AZURE_SAS_TOKEN" ) 
-
-req := & storagetransferpb . CreateTransferJobRequest { 
-TransferJob : & storagetransferpb . TransferJob { 
-ProjectId : projectID , 
-TransferSpec : & storagetransferpb . TransferSpec { 
-DataSource : & storagetransferpb . TransferSpec_AzureBlobStorageDataSource { 
-AzureBlobStorageDataSource : & storagetransferpb . AzureBlobStorageData { 
-StorageAccount : azureStorageAccountName , 
-AzureCredentials : & storagetransferpb . AzureCredentials { 
-SasToken : azureSasToken , 
-}, 
-Container : azureSourceContainer , 
-}, 
-}, 
-DataSink : & storagetransferpb . TransferSpec_GcsDataSink { 
-GcsDataSink : & storagetransferpb . GcsData { BucketName : gcsSinkBucket }}, 
-}, 
-Status : storagetransferpb . [ TransferJob_ENABLED ](https://documentation.s3ns.fr/go/docs/reference/cloud.google.com/go/storagetransfer/latest/apiv1/storagetransferpb.html#cloud_google_com_go_storagetransfer_apiv1_storagetransferpb_TransferJob_STATUS_UNSPECIFIED_TransferJob_ENABLED_TransferJob_DISABLED_TransferJob_DELETED) , 
-}, 
-} 
-resp , err := client . CreateTransferJob ( ctx , req ) 
-if err != nil { 
-return nil , fmt . Errorf ( "failed to create transfer job: %w" , err ) 
-} 
-if _ , err = client . RunTransferJob ( ctx , & storagetransferpb . RunTransferJobRequest { 
-ProjectId : projectID , 
-JobName : resp . [ Name ](https://documentation.s3ns.fr/go/docs/reference/cloud.google.com/go/storagetransfer/latest/apiv1.html#cloud_google_com_go_storagetransfer_apiv1_RunTransferJobOperation_Name) , 
-}); err != nil { 
-return nil , fmt . Errorf ( "failed to run transfer job: %w" , err ) 
-} 
-fmt . Fprintf ( w , "Created and ran transfer job from %v to %v with name %v" , azureSourceContainer , gcsSinkBucket , resp . [ Name ](https://documentation.s3ns.fr/go/docs/reference/cloud.google.com/go/storagetransfer/latest/apiv1.html#cloud_google_com_go_storagetransfer_apiv1_RunTransferJobOperation_Name) ) 
-return resp , nil 
-} 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Java 
-
-
-
-
-
-
-
-
-To learn how to install and use the client library for Storage Transfer Service, see
-[Storage Transfer Service client libraries](/storage-transfer/docs/reference/libraries).
-
-
-
-For more information, see the
-[Storage Transfer Service Java API
-reference documentation](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto).
-
-
-
-
-
-To authenticate to Storage Transfer Service, set up Application Default Credentials.
-For more information, see
-
-[Set up authentication for a local development environment](/docs/authentication/set-up-adc-local-dev-environment).
-
-
-
-
-
-Before running code samples, set the `GOOGLE_CLOUD_UNIVERSE_DOMAIN` environment
-variable to `s3nsapis.fr`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-import com.google.storagetransfer.v1.proto.[StorageTransferServiceClient](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.StorageTransferServiceClient.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferProto](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferProto.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferProto](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferProto.html).[RunTransferJobRequest](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferProto.RunTransferJobRequest.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[AzureBlobStorageData](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureBlobStorageData.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[AzureCredentials](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureCredentials.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[GcsData](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.GcsData.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[TransferJob](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferJob.html) ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[TransferJob](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferJob.html).Status ; 
-import com.google.storagetransfer.v1.proto.[TransferTypes](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.html).[TransferSpec](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferSpec.html) ; 
-import java.io.IOException ; 
-import java.util.concurrent.ExecutionException ; 
-
-public class TransferFromAzure { 
-public static void main ( String [] args ) 
-throws IOException , ExecutionException , InterruptedException { 
-// TODO(developer): Replace these variables before running the sample. 
-// Your Google Cloud Project ID 
-String projectId = "my-project-id" ; 
-
-// Your Azure Storage Account name 
-String azureStorageAccount = "my-azure-account" ; 
-
-// The Azure source container to transfer data from 
-String azureSourceContainer = "my-source-container" ; 
-
-// The GCS bucket to transfer data to 
-String gcsSinkBucket = "my-sink-bucket" ; 
-
-transferFromAzureBlobStorage ( 
-projectId , azureStorageAccount , azureSourceContainer , gcsSinkBucket ); 
-} 
-
-/** 
-* Creates and runs a transfer job to transfer all data from an Azure container to a GCS bucket. 
-*/ 
-public static void transferFromAzureBlobStorage ( 
-String projectId , 
-String azureStorageAccount , 
-String azureSourceContainer , 
-String gcsSinkBucket ) 
-throws IOException , ExecutionException , InterruptedException { 
-
-// Your Azure SAS token, should be accessed via environment variable 
-String azureSasToken = System . getenv ( "AZURE_SAS_TOKEN" ); 
-
-[ TransferSpec ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferSpec.html) transferSpec = 
-[ TransferSpec ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferSpec.html) . newBuilder () 
-. [ setAzureBlobStorageDataSource ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferSpec.Builder.html#com_google_storagetransfer_v1_proto_TransferTypes_TransferSpec_Builder_setAzureBlobStorageDataSource_com_google_storagetransfer_v1_proto_TransferTypes_AzureBlobStorageData_) ( 
-[ AzureBlobStorageData ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureBlobStorageData.html) . newBuilder () 
-. [ setAzureCredentials ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureBlobStorageData.Builder.html#com_google_storagetransfer_v1_proto_TransferTypes_AzureBlobStorageData_Builder_setAzureCredentials_com_google_storagetransfer_v1_proto_TransferTypes_AzureCredentials_) ( 
-[ AzureCredentials ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureCredentials.html) . newBuilder (). [ setSasToken ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureCredentials.Builder.html#com_google_storagetransfer_v1_proto_TransferTypes_AzureCredentials_Builder_setSasToken_java_lang_String_) ( azureSasToken ). build ()) 
-. [ setContainer ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureBlobStorageData.Builder.html#com_google_storagetransfer_v1_proto_TransferTypes_AzureBlobStorageData_Builder_setContainer_java_lang_String_) ( azureSourceContainer ) 
-. [ setStorageAccount ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.AzureBlobStorageData.Builder.html#com_google_storagetransfer_v1_proto_TransferTypes_AzureBlobStorageData_Builder_setStorageAccount_java_lang_String_) ( azureStorageAccount )) 
-. setGcsDataSink ( [ GcsData ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.GcsData.html) . newBuilder (). setBucketName ( gcsSinkBucket ). build ()) 
-. build (); 
-
-[ TransferJob ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferJob.html) transferJob = 
-[ TransferJob ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferJob.html) . newBuilder () 
-. setProjectId ( projectId ) 
-. setStatus ( Status . ENABLED ) 
-. setTransferSpec ( transferSpec ) 
-. build (); 
-
-// Initialize client that will be used to send requests. This client only needs to be created 
-// once, and can be reused for multiple requests. After completing all of your requests, call 
-// the "close" method on the client to safely clean up any remaining background resources, 
-// or use "try-with-close" statement to do this automatically. 
-try ( [ StorageTransferServiceClient ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.StorageTransferServiceClient.html) storageTransfer = [ StorageTransferServiceClient ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.StorageTransferServiceClient.html) . create ()) { 
-// Create the transfer job 
-[ TransferJob ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferTypes.TransferJob.html) response = 
-storageTransfer . createTransferJob ( 
-[ TransferProto ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferProto.html) . CreateTransferJobRequest . newBuilder () 
-. setTransferJob ( transferJob ) 
-. build ()); 
-
-// Run the created job 
-storageTransfer 
-. [ runTransferJobAsync ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.StorageTransferServiceClient.html#com_google_storagetransfer_v1_proto_StorageTransferServiceClient_runTransferJobAsync_com_google_storagetransfer_v1_proto_TransferProto_RunTransferJobRequest_) ( 
-[ RunTransferJobRequest ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-storage-transfer/latest/com.google.storagetransfer.v1.proto.TransferProto.RunTransferJobRequest.html) . newBuilder () 
-. setProjectId ( projectId ) 
-. setJobName ( response . getName ()) 
-. build ()) 
-. get (); 
-
-System . out . println ( 
-"Created and ran a transfer job from " 
-+ azureSourceContainer 
-+ " to " 
-+ gcsSinkBucket 
-+ " with " 
-+ "name " 
-+ response . getName ()); 
-} 
-} 
-} 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Node.js 
-
-
-
-
-
-
-
-
-To learn how to install and use the client library for Storage Transfer Service, see
-[Storage Transfer Service client libraries](/storage-transfer/docs/reference/libraries).
-
-
-
-For more information, see the
-[Storage Transfer Service Node.js API
-reference documentation](https://googleapis.dev/nodejs/storagetransfer/latest/index.html).
-
-
-
-
-
-To authenticate to Storage Transfer Service, set up Application Default Credentials.
-For more information, see
-
-[Set up authentication for a local development environment](/docs/authentication/set-up-adc-local-dev-environment).
-
-
-
-
-
-Before running code samples, set the `GOOGLE_CLOUD_UNIVERSE_DOMAIN` environment
-variable to `s3nsapis.fr`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-// Imports the Google Cloud client library 
-const { 
-StorageTransferServiceClient , 
-} = require ( '[@google-cloud/storage-transfer](https://documentation.s3ns.fr/nodejs/docs/reference/storage-transfer/latest/overview.html)' ); 
-
-/** 
-* TODO(developer): Uncomment the following lines before running the sample. 
-*/ 
-// The ID of the Google Cloud Platform Project that owns the job 
-// projectId = 'my-project-id' 
-
-// A useful description for your transfer job 
-// description = 'My transfer job' 
-
-// Azure Storage Account name 
-// azureStorageAccount = 'accountname' 
-
-// Azure Storage Account name 
-// azureSourceContainer = 'my-azure-source-bucket' 
-
-// Azure Shared Access Signature token 
-// azureSASToken = '?sv=...' 
-
-// Google Cloud Storage destination bucket name 
-// gcsSinkBucket = 'my-gcs-destination-bucket' 
-
-// Creates a client 
-const client = new [ StorageTransferServiceClient ](https://documentation.s3ns.fr/nodejs/docs/reference/storage-transfer/latest/overview.html) (); 
-
-/** 
-* Creates a one-time transfer job from Azure Blob Storage to Google Cloud Storage. 
-*/ 
-async function transferFromBlobStorage () { 
-// Setting the start date and the end date as the same time creates a 
-// one-time transfer 
-const now = new [ Date ](https://documentation.s3ns.fr/nodejs/docs/reference/storage-transfer/latest/storage-transfer/protos.google.type.date.html) (); 
-const oneTimeSchedule = { 
-day : now . getDate (), 
-month : now . getMonth () + 1 , 
-year : now . getFullYear (), 
-}; 
-
-// Runs the request and creates the job 
-const [ transferJob ] = await client . createTransferJob ({ 
-transferJob : { 
-projectId , 
-description , 
-status : '[ENABLED](https://documentation.s3ns.fr/nodejs/docs/reference/storage-transfer/latest/storage-transfer/protos.google.storagetransfer.v1.transferjob.status.html)' , 
-schedule : { 
-scheduleStartDate : oneTimeSchedule , 
-scheduleEndDate : oneTimeSchedule , 
-}, 
-transferSpec : { 
-azureBlobStorageDataSource : { 
-azureCredentials : { 
-sasToken : azureSASToken , 
-}, 
-container : azureSourceContainer , 
-storageAccount : azureStorageAccount , 
-}, 
-gcsDataSink : { 
-bucketName : gcsSinkBucket , 
-}, 
-}, 
-}, 
-}); 
-
-console . log ( 
-`Created and ran a transfer job from ' ${ azureSourceContainer } ' to ' ${ gcsSinkBucket } ' with name ${ transferJob . name } ` 
-); 
-} 
-
-transferFromBlobStorage (); 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Python 
-
-
-
-
-
-
-
-
-To learn how to install and use the client library for Storage Transfer Service, see
-[Storage Transfer Service client libraries](/storage-transfer/docs/reference/libraries).
-
-
-
-For more information, see the
-[Storage Transfer Service Python API
-reference documentation](https://documentation.s3ns.fr/python/docs/reference/storagetransfer/latest).
-
-
-
-
-
-To authenticate to Storage Transfer Service, set up Application Default Credentials.
-For more information, see
-
-[Set up authentication for a local development environment](/docs/authentication/set-up-adc-local-dev-environment).
-
-
-
-
-
-Before running code samples, set the `GOOGLE_CLOUD_UNIVERSE_DOMAIN` environment
-variable to `s3nsapis.fr`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-from datetime import datetime 
-
-from google.cloud import storage_transfer 
-
-def create_one_time_azure_transfer ( 
-project_id : str , 
-description : str , 
-azure_storage_account : str , 
-azure_sas_token : str , 
-source_container : str , 
-sink_bucket : str , 
-): 
-"""Creates a one-time transfer job from Azure Blob Storage to Google Cloud 
-Storage.""" 
-
-# Initialize client that will be used to create storage transfer requests. 
-# This client only needs to be created once, and can be reused for 
-# multiple requests. 
-client = storage_transfer . [ StorageTransferServiceClient ](https://documentation.s3ns.fr/python/docs/reference/storagetransfer/latest/google.cloud.storage_transfer_v1.services.storage_transfer_service.StorageTransferServiceClient.html) () 
-
-# The ID of the Google Cloud Platform Project that owns the job 
-# project_id = 'my-project-id' 
-
-# A useful description for your transfer job 
-# description = 'My transfer job' 
-
-# Azure Storage Account name 
-# azure_storage_account = 'accountname' 
-
-# Azure Shared Access Signature token 
-# azure_sas_token = '?sv=...' 
-
-# Azure Blob source container name 
-# source_container = 'my-azure-source-bucket' 
-
-# Google Cloud Storage destination bucket name 
-# sink_bucket = 'my-gcs-destination-bucket' 
-
-now = datetime . utcnow () 
-# Setting the start date and the end date as 
-# the same time creates a one-time transfer 
-one_time_schedule = { "day" : now . day , "month" : now . month , "year" : now . year } 
-
-transfer_job_request = storage_transfer . [ CreateTransferJobRequest ](https://documentation.s3ns.fr/python/docs/reference/storagetransfer/latest/google.cloud.storage_transfer_v1.types.CreateTransferJobRequest.html) ( 
-{ 
-"transfer_job" : { 
-"project_id" : project_id , 
-"description" : description , 
-"status" : storage_transfer . [ TransferJob ](https://documentation.s3ns.fr/python/docs/reference/storagetransfer/latest/google.cloud.storage_transfer_v1.types.TransferJob.html) . Status . ENABLED , 
-"schedule" : { 
-"schedule_start_date" : one_time_schedule , 
-"schedule_end_date" : one_time_schedule , 
-}, 
-"transfer_spec" : { 
-"azure_blob_storage_data_source" : { 
-"storage_account" : azure_storage_account , 
-"azure_credentials" : { "sas_token" : azure_sas_token }, 
-"container" : source_container , 
-}, 
-"gcs_data_sink" : { 
-"bucket_name" : sink_bucket , 
-}, 
-}, 
-} 
-} 
-) 
-
-result = client . [ create_transfer_job ](https://documentation.s3ns.fr/python/docs/reference/storagetransfer/latest/google.cloud.storage_transfer_v1.services.storage_transfer_service.StorageTransferServiceClient.html#google_cloud_storage_transfer_v1_services_storage_transfer_service_StorageTransferServiceClient_create_transfer_job) ( transfer_job_request ) 
-print ( f "Created transferJob: { result . name } " ) 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Transfer from a file system
 
 See [Transfer from a file system to Cloud Storage](/storage-transfer/docs/create-transfers/agent-based/file-system-to-cloud-storage).
@@ -2409,7 +1406,7 @@ field.
 URI. For example,
 `gs:// DESTINATION_BUCKET / DESTINATION_PATH /`.
 
-- With the REST API or client libraries, add a `path` field to your data source
-specification. For example, the `gcsDataSource` or `gcsDataSink` field in your
+- With the REST API or client libraries, add a `path` field to your data sink
+specification. For example, the `gcsDataSink` field in your
 [`TransferSpec`](/storage-transfer/docs/reference/rest/v1/TransferSpec)
 specification. File system transfers use `rootDirectory` instead of `path`.

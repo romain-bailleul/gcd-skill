@@ -10,10 +10,10 @@ All products share these platform-wide constraints:
 - **No Cloud Shell:** Install `gcloud` and CLI tools locally or on a sovereign cloud VM.
 
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:START -->
-> **Auto-synced coverage:** 38 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-13`.
+> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-19`.
 
 <details>
-<summary>Tracked <code>tpc-differences</code> inventory (38 guides)</summary>
+<summary>Tracked <code>tpc-differences</code> inventory (40 guides)</summary>
 
 | Product | S3NS SecNumCloud 3.2 | Differences File | Last Updated | Digest |
 |---|---|---|---|---|
@@ -23,26 +23,28 @@ All products share these platform-wide constraints:
 | BigQuery | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-10 | `40eb9066e7` |
 | Bigtable | Qualification en cours | `bigtable_tpc-differences.md` | 2026-11-10 | `8399e6dd61` |
 | Cloud Armor | Qualifié SecNumCloud 3.2 | `armor_tpc-differences.md` | 2026-11-10 | `82802e7d6b` |
+| Cloud Asset Inventory | — | `asset-inventory_tpc-differences.md` | 2026-11-10 | `8b17425588` |
 | Cloud Billing | — | `billing_tpc-differences.md` | 2026-11-10 | `c908f78403` |
+| Cloud Build | — | `build_tpc-differences.md` | 2026-11-10 | `e394f41ba4` |
 | Cloud DNS | Qualifié SecNumCloud 3.2 | `dns_tpc-differences.md` | 2026-11-10 | `fbb94d9e80` |
 | Cloud Interconnect | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-10 | `e8eefa543b` |
-| Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-10 | `407d108d82` |
+| Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-18 | `407d108d82` |
 | Cloud Load Balancing | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-10 | `0b3869431a` |
-| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-10 | `3c7ede3f89` |
-| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-10 | `64c4c68e30` |
+| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-18 | `3c7ede3f89` |
+| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-18 | `64c4c68e30` |
 | Cloud NAT | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-10 | `355f0cd2d2` |
 | Cloud NGFW | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-10 | `b038ad3e50` |
 | Cloud Quotas | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-10 | `8ab8f5aa35` |
 | Cloud Router | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-11-10 | `539f8b73c2` |
-| Cloud Run | Qualification en cours | `run_tpc-differences.md` | 2026-11-10 | `a9f3e4b762` |
+| Cloud Run | Qualification en cours | `run_tpc-differences.md` | 2026-11-18 | `a9f3e4b762` |
 | Cloud SQL | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-12 | `7ceca2ae72` |
-| Cloud Storage | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-11 | `f5a3d260b4` |
+| Cloud Storage | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-17 | `f5a3d260b4` |
 | Cloud VPN | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-10 | `09d1827aa5` |
 | Compute Engine | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-10 | `3c440f16c6` |
 | Container-Optimized OS | Qualifié SecNumCloud 3.2 | `container-optimized-os_tpc-differences.md` | 2026-11-10 | `e4ae3ed663` |
 | Filestore | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-10 | `63ca06de02` |
 | Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-13 | `abc01a21ee` |
-| IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-13 | `bc966fb7ef` |
+| IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-17 | `bc966fb7ef` |
 | Managed Airflow (Cloud Composer 3) | Qualification en cours | `composer_tpc-differences.md` | 2026-11-10 | `8b00656c51` |
 | Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-10 | `4fd95170bf` |
 | Network Service Tiers | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-10 | `2dbc42433d` |
@@ -51,7 +53,7 @@ All products share these platform-wide constraints:
 | Resource Manager | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-10 | `4ae45cb244` |
 | Secret Manager | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-11-10 | `40aa632c10` |
 | Service Usage | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-11-10 | `c466abb91d` |
-| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-10 | `847b76ecde` |
+| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-19 | `70383282c9` |
 | Terraform | — | `terraform_tpc-differences.md` | 2026-11-10 | `bcb0fd2998` |
 | VPC | Qualifié SecNumCloud 3.2 | `vpc_tpc-differences.md` | 2026-11-10 | `06a8de4766` |
 | VPC Service Controls | Qualifié SecNumCloud 3.2 | `vpc-service-controls_tpc-differences.md` | 2026-11-10 | `1f38179c73` |
@@ -167,6 +169,20 @@ All products share these platform-wide constraints:
 
 ---
 
+## Cloud Asset Inventory
+<!-- AUTO-GENERATED-PRODUCT:asset-inventory:START -->
+
+**Workflows and tools:**
+- **API availability:** The following APIs are unavailable in Cloud de Confiance by S3NS: - Analysis APIs: These APIs are linked to Policy Analyzer, which is unavailable in Cloud de Confiance by S3NS. Policy Analyzer lets you find out which principals (for example, users, service accounts, groups, and domains) have what access to which resources based on your IAM allow policies. - Feed APIs: These APIs let you set up real-time notifications about resource and policy changes through [Pub/Sub](https://documentation.s3ns.fr/pubsub/docs/overview). - Query APIs: These APIs let you query your assets using a [BigQuery](https://documentation.s3ns.fr/bigquery/docs/introduction) SQL-compatible dialect.
+- **Asset Query UI:** The **Asset Query** interface for building SQL queries in the Cloud de Confiance console is unavailable.
+- **Asset type availability:** [Asset types](https://documentation.s3ns.fr/asset-inventory/docs/asset-types) from products and features that aren't available in Cloud de Confiance by S3NS are similarly unavailable. For a list of available products, see [Products and Services](https://documentation.s3ns.fr/products).
+
+**Insights and observability:**
+- **Overview:** The Cloud Asset Inventory **Overview** dashboard in the Cloud de Confiance console is unavailable.
+
+<!-- AUTO-GENERATED-PRODUCT:asset-inventory:END -->
+---
+
 ## Cloud Billing
 
 - **Account management:** Billing accounts and invoicing are managed by the sovereign cloud operator (not self-service in Google Cloud).
@@ -176,6 +192,45 @@ All products share these platform-wide constraints:
   - Cost Table, Cost Breakdown, and Pricing reports in the console (BigQuery billing export is the primary way to analyze costs)
   - Gemini Cloud Assist in Billing
 
+---
+
+## Cloud Build
+<!-- AUTO-GENERATED-PRODUCT:build:START -->
+
+**Key differences:**
+- Only the [default pool](https://documentation.s3ns.fr/build/docs/overview#default_pools_and_private_pools) is available. Private pools aren't available.
+- You can only create builds directly, using the `CreateBuild` API or `gcloud builds submit` from the command line. You can't use triggers.
+- Default Cloud Storage buckets [aren't fully supported](#observability-differences) for storing log files.
+
+**Hardware and OS:**
+- **Machine types:** Only c3-standard-4 machines are available.
+- **Storage:** Hyperdisk Balanced is the only available storage option for Cloud Build. The `diskSizeGb` field is not available.
+
+**Integrations:**
+- **Provenance:** Cloud Build doesn't support provenance.
+- **Builders:** Cloud Build builders aren't available or supported.
+- **Build notifications:** open-source Cloud Build notifiers don't work without modification.
+- **Image types:** Docker is the only artifact type supported for uploading to Artifact Registry.
+- **Configuration:** There is no Terraform provider for managing Cloud Build resources.
+
+**Security and access control:**
+- **Secrets:** There is no Secret Manager integration with Cloud Build.
+- **Customer Managed Encryption Keys (CMEK):** Cloud Build doesn't support CMEK.
+
+**Network:**
+- **Service Networking:** Private networking isn't available.
+
+**Workflows and tools:**
+- **Creating builds:** You can create builds using the Cloud Build API or the Google Cloud CLI only. Triggers aren't available.
+- **Worker pools:** Only the [default pool](https://documentation.s3ns.fr/build/docs/overview#default_pools_and_private_pools) is available. You can't create or use private pools.
+- **Scheduled builds:** Scheduled builds aren't available.
+- **Google Cloud CLI:** The only gcloud CLI commands available are those for creating and managing builds, and `get-default-service-account`.
+- **Cloud de Confiance console:** The only pages available in the Cloud de Confiance console are the Builds page and the Permissions page. The Dashboard, Repositories, Triggers, and Worker Pool pages aren't available.
+
+**Insights and observability:**
+- **Logging:** Unlike in Google Cloud, build logs aren't automatically stored in a default Cloud de Confiance by S3NS-owned Cloud Storage bucket. Instead, if you don't specify the `LogsBucket` option in your build config, Cloud Build uses a user-owned default Cloud Storage bucket in the same region as your build. Alternatively, you can specify a user-created Cloud Storage bucket. To use Cloud Storage to store logs, configure your builds to use one of the following: - A user-created Cloud Storage bucket - A user-owned default logs bucket in a project that's in the same region as the build `LEGACY_BUCKET` is not available as a value for `DefaultLogsBucketBehavior` in the build configuration file.
+
+<!-- AUTO-GENERATED-PRODUCT:build:END -->
 ---
 
 ## Cloud DNS
@@ -730,6 +785,19 @@ Features in preview are not available.
   - Microsoft Azure Blob Storage transfers
   - Transfers from URL lists
   - Event-driven transfers
+
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:storage-transfer:START -->
+**Latest upstream documentation updates (`2026-11-19`):**
+- Event-driven transfers and cross-bucket replication are unavailable.
+- Agentless transfers from Amazon S3 are unavailable. Agents are required for transfers from S3-compatible sources.
+- Transfers from Azure Blob Storage, HDFS, and URL lists are unavailable.
+- **Integrations — Data sources:** The following sources are unavailable: - Azure Blob Storage - Hadoop Distributed File System (HDFS) - URL lists Transfers from Amazon S3 and other S3-compatible storage must use transfer agents. Agentless transfers from Amazon S3 are unavailable.
+- **Workflows and tools — Event-driven transfers:** Event-driven transfers are unavailable.
+- **Workflows and tools — Cross-bucket replication:** Cross-bucket replication is unavailable. Use scheduled or one-time transfers between Cloud Storage buckets instead.
+- **Workflows and tools — Object filtering:** Filtering source objects by wildcard (glob pattern) or by Amazon S3 storage class is unavailable.
+- **Workflows and tools — Agents:** Transfer agents must be started with the `--universe-domain=s3nsapis.fr` flag so that they contact Cloud de Confiance by S3NS endpoints. `gcloud transfer agents install` sets this flag and pulls the agent image from the Cloud de Confiance by S3NS registry automatically. If you start the agent container with `docker run` or `podman run`, pass this flag explicitly.
+- **Workflows and tools — Cloud Shell:** Cloud Shell is not available in Cloud de Confiance by S3NS. You must install and configure the gcloud CLI on a local machine to access Cloud de Confiance by S3NS.
+<!-- AUTO-SYNC:UPSTREAM-DIFFS:storage-transfer:END -->
 
 ---
 

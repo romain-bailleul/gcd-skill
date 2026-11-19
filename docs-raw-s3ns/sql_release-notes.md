@@ -1,7 +1,7 @@
 # Cloud SQL release notes
 
 Source: https://documentation.s3ns.fr/sql/docs/release-notes
-Last updated: 2026-11-16
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/sql/docs/tpc-differences) for more details.
 
@@ -178,6 +178,27 @@ reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the
 
 
 
+
+
+
+## November 17, 2026
+
+**Cloud SQL for MySQL**
+
+Feature 
+
+
+Blue-green deployments for Cloud SQL for MySQL are
+[generally available](https://documentation.s3ns.fr/products#product-launch-stages).
+
+Blue-green deployments let you update databases—such as performing major
+version upgrades from MySQL 8.0 to 8.4 and staging hardware or configuration
+modifications in a green staging environment—while minimizing downtime.
+You can create and manage blue-green deployments using the Google Cloud console,
+the gcloud CLI, the Cloud SQL Admin API, or Terraform.
+
+For more information, see [About blue-green deployments in
+Cloud SQL](/sql/docs/mysql/about-blue-green-deployments).
 
 
 
