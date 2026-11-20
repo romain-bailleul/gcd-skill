@@ -1,7 +1,7 @@
 # Filestore in Google Cloud Dedicated versus Google Cloud
 
 Source: https://berlin.devsitetest.how/filestore/docs/tpc-differences
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 - 
 
@@ -170,6 +170,7 @@ Google Cloud Dedicated.
 | 
 Filestore regional service tier with the capacity range of 1 TiB to 9.75 TiB is available in Google Cloud Dedicated.
 Filestore basic SSD, basic HDD, zonal, and enterprise service tiers are not available in Google Cloud Dedicated.
+| 
 |
 
 | 
@@ -195,14 +196,16 @@ Filestore CSI driver for Google Kubernetes Engine is the only product integratio
 ### Network
 
 
-| **File system protocols**
+
+| 
+**File system protocols**
 | 
 While NFSv4.1 file system protocol is available in Google Cloud Dedicated, the integration with Microsoft Managed Active Directory is not available.
 | 
 |
 
 | 
-| **Connectivity**
+**Connectivity**
 | 
 Direct Peering is the only option available in Google Cloud Dedicated to establish connectivity between the Virtual Private Cloud network and a Filestore instance. Private services access and Private Service Connect capabilities are not available in Google Cloud Dedicated. 
 | 
