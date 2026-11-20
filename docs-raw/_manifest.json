@@ -163,9 +163,9 @@
   "/asset-inventory/docs/asset-names": {
     "title": "Asset names",
     "filename": "asset-inventory_asset-names.md",
-    "size": 59200,
+    "size": 59187,
     "url": "https://berlin.devsitetest.how/asset-inventory/docs/asset-names",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-19"
   },
   "/asset-inventory/docs/asset-types": {
     "title": "Asset types",
@@ -422,9 +422,9 @@
   "/bigquery/docs/troubleshoot-quotas": {
     "title": "Troubleshoot quota and limit errors",
     "filename": "bigquery_troubleshoot-quotas.md",
-    "size": 76965,
+    "size": 79994,
     "url": "https://berlin.devsitetest.how/bigquery/docs/troubleshoot-quotas",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/bigtable/docs": {
     "title": "Bigtable documentation",
@@ -807,9 +807,9 @@
   "/compute/docs/disks/hyperdisks": {
     "title": "Google Cloud Hyperdisk overview",
     "filename": "compute_disks_hyperdisks.md",
-    "size": 28864,
+    "size": 29008,
     "url": "https://berlin.devsitetest.how/compute/docs/disks/hyperdisks",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-19"
   },
   "/compute/docs/gpus": {
     "title": "GPU machine types",
@@ -1145,7 +1145,7 @@
     "filename": "compute-area.md",
     "size": 3026,
     "url": "https://berlin.devsitetest.how/docs/compute-area",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-19"
   },
   "/docs/data": {
     "title": "Data analytics",
@@ -1997,9 +1997,9 @@
   "/filestore/docs/tpc-differences": {
     "title": "Filestore in Google Cloud Dedicated versus Google Cloud",
     "filename": "filestore_tpc-differences.md",
-    "size": 3946,
+    "size": 3949,
     "url": "https://berlin.devsitetest.how/filestore/docs/tpc-differences",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/filestore/docs/troubleshooting": {
     "title": "Troubleshoot slow performance",
@@ -2041,42 +2041,42 @@
     "filename": "gemini-enterprise-agent-platform_machine-learning_model-registry_introduction.md",
     "size": 3133,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/machine-learning/model-registry/introduction",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/gemini-enterprise-agent-platform/machine-learning/predictions": {
     "title": "Overview of getting inferences on Agent Platform",
     "filename": "gemini-enterprise-agent-platform_machine-learning_predictions.md",
     "size": 3686,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/machine-learning/predictions",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/gemini-enterprise-agent-platform/models/model-garden/explore-models": {
     "title": "Overview of Model Garden",
     "filename": "gemini-enterprise-agent-platform_models_model-garden_explore-models.md",
     "size": 5351,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/models/model-garden/explore-models",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/gemini-enterprise-agent-platform/models/open-models/choose-serving-option": {
     "title": "Open models overview",
     "filename": "gemini-enterprise-agent-platform_models_open-models_choose-serving-option.md",
     "size": 6731,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/models/open-models/choose-serving-option",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/gemini-enterprise-agent-platform/overview": {
     "title": "Agent Platform overview",
     "filename": "gemini-enterprise-agent-platform_overview.md",
     "size": 1444,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/overview",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/gemini-enterprise-agent-platform/tpc-differences": {
     "title": "Agent Platform in Google Cloud Dedicated versus Google Cloud",
     "filename": "gemini-enterprise-agent-platform_tpc-differences.md",
     "size": 7435,
     "url": "https://berlin.devsitetest.how/gemini-enterprise-agent-platform/tpc-differences",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/iam/docs": {
     "title": "Identity and Access Management documentation",
@@ -2263,9 +2263,9 @@
   "/kubernetes-engine/docs": {
     "title": "Google Kubernetes Engine documentation",
     "filename": "kubernetes-engine.md",
-    "size": 3664,
+    "size": 3652,
     "url": "https://berlin.devsitetest.how/kubernetes-engine/docs",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-19"
   },
   "/kubernetes-engine/docs/concepts/kubernetes-engine-overview": {
     "title": "GKE overview",
@@ -2319,9 +2319,9 @@
   "/kubernetes-engine/docs/tpc-differences": {
     "title": "GKE in Google Cloud Dedicated versus Google Cloud",
     "filename": "kubernetes-engine_tpc-differences.md",
-    "size": 13758,
+    "size": 13820,
     "url": "https://berlin.devsitetest.how/kubernetes-engine/docs/tpc-differences",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-19"
   },
   "/load-balancing/docs": {
     "title": "Cloud Load Balancing documentation",
@@ -2349,21 +2349,21 @@
     "filename": "logging.md",
     "size": 3354,
     "url": "https://berlin.devsitetest.how/logging/docs",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/audit": {
     "title": "Cloud Audit Logs overview",
     "filename": "logging_audit.md",
     "size": 20390,
     "url": "https://berlin.devsitetest.how/logging/docs/audit",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/buckets": {
     "title": "Configure log buckets",
     "filename": "logging_buckets.md",
     "size": 26063,
     "url": "https://berlin.devsitetest.how/logging/docs/buckets",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/reference/libraries": {
     "title": "Logging client libraries",
@@ -2384,98 +2384,98 @@
     "filename": "logging_release-notes.md",
     "size": 3450,
     "url": "https://berlin.devsitetest.how/logging/docs/release-notes",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/tpc-differences": {
     "title": "Logging in Google Cloud Dedicated versus Google Cloud",
     "filename": "logging_tpc-differences.md",
     "size": 5677,
     "url": "https://berlin.devsitetest.how/logging/docs/tpc-differences",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/view/building-queries": {
     "title": "Build and save queries by using the Logging query language",
     "filename": "logging_view_building-queries.md",
     "size": 22944,
     "url": "https://berlin.devsitetest.how/logging/docs/view/building-queries",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/view/logs-viewer-interface": {
     "title": "View and analyze log entries",
     "filename": "logging_view_logs-viewer-interface.md",
     "size": 39608,
     "url": "https://berlin.devsitetest.how/logging/docs/view/logs-viewer-interface",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/logging/docs/write-query-log-entries-gcloud": {
     "title": "Quickstart: Write and query log entries with the gcloud CLI",
     "filename": "logging_write-query-log-entries-gcloud.md",
     "size": 11918,
     "url": "https://berlin.devsitetest.how/logging/docs/write-query-log-entries-gcloud",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/managed-spark/docs": {
     "title": "Managed Service for Apache Spark documentation",
     "filename": "managed-spark.md",
     "size": 3789,
     "url": "https://berlin.devsitetest.how/managed-spark/docs",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/gcloud-installation": {
     "title": "gcloud CLI",
     "filename": "managed-spark_gcloud-installation.md",
     "size": 1416,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/gcloud-installation",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/guides/images": {
     "title": "Create a Managed Service for Apache Spark custom image",
     "filename": "managed-spark_guides_images.md",
     "size": 23852,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/guides/images",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/quickstarts/update-cluster-console": {
     "title": "Quickstart: Create a cluster by using the Google Cloud Dedicated console",
     "filename": "managed-spark_quickstarts_update-cluster-console.md",
     "size": 8952,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/quickstarts/update-cluster-console",
-    "last_updated": "2026-11-12"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/reference/libraries": {
     "title": "Dataproc client libraries",
     "filename": "managed-spark_reference_libraries.md",
     "size": 22550,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/reference/libraries",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/release-notes": {
     "title": "Managed Service for Apache Spark release notes",
     "filename": "managed-spark_release-notes.md",
     "size": 2338,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/release-notes",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/support/diagnose-command": {
     "title": "View cluster diagnostic data",
     "filename": "managed-spark_support_diagnose-command.md",
     "size": 16371,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/support/diagnose-command",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/tpc-differences": {
     "title": "Managed Service for Apache Spark in Google Cloud Dedicated versus Google Cloud",
     "filename": "managed-spark_tpc-differences.md",
     "size": 6992,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/tpc-differences",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/tutorials/bigquery-connector-mapreduce-example": {
     "title": "Write a MapReduce job with the BigQuery connector",
     "filename": "managed-spark_tutorials_bigquery-connector-mapreduce-example.md",
     "size": 21657,
     "url": "https://berlin.devsitetest.how/managed-spark/docs/tutorials/bigquery-connector-mapreduce-example",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-19"
   },
   "/managed-spark/docs/tutorials/gcs-connector-spark-tutorial": {
     "title": "Use the Cloud Storage connector with Apache Spark",
@@ -2489,28 +2489,28 @@
     "filename": "monitoring.md",
     "size": 2733,
     "url": "https://berlin.devsitetest.how/monitoring/docs",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/monitoring/docs/reference/libraries": {
     "title": "Monitoring client libraries",
     "filename": "monitoring_reference_libraries.md",
-    "size": 39071,
+    "size": 39072,
     "url": "https://berlin.devsitetest.how/monitoring/docs/reference/libraries",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-13"
   },
   "/monitoring/docs/release-notes": {
     "title": "Monitoring release notes",
     "filename": "monitoring_release-notes.md",
     "size": 3450,
     "url": "https://berlin.devsitetest.how/monitoring/docs/release-notes",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/monitoring/docs/tpc-differences": {
     "title": "Monitoring in Google Cloud Dedicated versus Google Cloud",
     "filename": "monitoring_tpc-differences.md",
     "size": 4229,
     "url": "https://berlin.devsitetest.how/monitoring/docs/tpc-differences",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-20"
   },
   "/nat/docs": {
     "title": "Cloud NAT documentation",
@@ -2720,7 +2720,7 @@
     "filename": "release-notes.md",
     "size": 237898,
     "url": "https://berlin.devsitetest.how/release-notes",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -3070,7 +3070,7 @@
     "filename": "sql_release-notes.md",
     "size": 65513,
     "url": "https://berlin.devsitetest.how/sql/docs/release-notes",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Google Cloud Dedicated versus Google Cloud",

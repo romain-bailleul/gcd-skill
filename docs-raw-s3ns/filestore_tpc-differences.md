@@ -1,7 +1,7 @@
 # Filestore in Cloud de Confiance versus Google Cloud
 
 Source: https://documentation.s3ns.fr/filestore/docs/tpc-differences
-Last updated: 2026-11-10
+Last updated: 2026-11-19
 
 - 
 
@@ -170,6 +170,7 @@ Cloud de Confiance.
 | 
 Filestore regional service tier with the capacity range of 1 TiB to 9.75 TiB is available in Cloud de Confiance.
 Filestore basic SSD, basic HDD, zonal, and enterprise service tiers are not available in Cloud de Confiance.
+| 
 |
 
 | 
@@ -195,14 +196,16 @@ Filestore CSI driver for Google Kubernetes Engine is the only product integratio
 ### Network
 
 
-| **File system protocols**
+
+| 
+**File system protocols**
 | 
 While NFSv4.1 file system protocol is available in Cloud de Confiance, the integration with Microsoft Managed Active Directory is not available.
 | 
 |
 
 | 
-| **Connectivity**
+**Connectivity**
 | 
 Direct Peering is the only option available in Cloud de Confiance to establish connectivity between the Virtual Private Cloud network and a Filestore instance. Private services access and Private Service Connect capabilities are not available in Cloud de Confiance. 
 | 

@@ -10,7 +10,7 @@ All products share these platform-wide constraints:
 - **No Cloud Shell:** Install `gcloud` and CLI tools locally or on a sovereign cloud VM.
 
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:START -->
-> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-19`.
+> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-20`.
 
 <details>
 <summary>Tracked <code>tpc-differences</code> inventory (40 guides)</summary>
@@ -18,7 +18,7 @@ All products share these platform-wide constraints:
 | Product | S3NS SecNumCloud 3.2 | Differences File | Last Updated | Digest |
 |---|---|---|---|---|
 | Access Context Manager | Qualifié SecNumCloud 3.2 | `access-context-manager_tpc-differences.md` | 2026-11-10 | `74571076b2` |
-| Agent Platform (Gemini Enterprise Agent Platform) | Qualification en cours | `gemini-enterprise-agent-platform_tpc-differences.md` | 2026-11-10 | `9cf6ccf3df` |
+| Agent Platform (Gemini Enterprise Agent Platform) | Qualification en cours | `gemini-enterprise-agent-platform_tpc-differences.md` | 2026-11-20 | `9cf6ccf3df` |
 | Artifact Registry | Qualifié SecNumCloud 3.2 | `artifact-registry_tpc-differences.md` | 2026-11-10 | `881c6a448e` |
 | BigQuery | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-10 | `40eb9066e7` |
 | Bigtable | Qualification en cours | `bigtable_tpc-differences.md` | 2026-11-10 | `8399e6dd61` |
@@ -30,8 +30,8 @@ All products share these platform-wide constraints:
 | Cloud Interconnect | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-10 | `e8eefa543b` |
 | Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-18 | `407d108d82` |
 | Cloud Load Balancing | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-10 | `0b3869431a` |
-| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-18 | `3c7ede3f89` |
-| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-18 | `64c4c68e30` |
+| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-20 | `3c7ede3f89` |
+| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-20 | `64c4c68e30` |
 | Cloud NAT | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-10 | `355f0cd2d2` |
 | Cloud NGFW | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-10 | `b038ad3e50` |
 | Cloud Quotas | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-10 | `8ab8f5aa35` |
@@ -42,11 +42,11 @@ All products share these platform-wide constraints:
 | Cloud VPN | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-10 | `09d1827aa5` |
 | Compute Engine | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-10 | `3c440f16c6` |
 | Container-Optimized OS | Qualifié SecNumCloud 3.2 | `container-optimized-os_tpc-differences.md` | 2026-11-10 | `e4ae3ed663` |
-| Filestore | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-10 | `63ca06de02` |
-| Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-13 | `abc01a21ee` |
+| Filestore | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-19 | `63ca06de02` |
+| Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-19 | `d79a61c00c` |
 | IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-17 | `bc966fb7ef` |
 | Managed Airflow (Cloud Composer 3) | Qualification en cours | `composer_tpc-differences.md` | 2026-11-10 | `8b00656c51` |
-| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-10 | `4fd95170bf` |
+| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-19 | `4fd95170bf` |
 | Network Service Tiers | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-10 | `2dbc42433d` |
 | Organization Policy | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-11-10 | `4208565439` |
 | Pub/Sub | Qualifié SecNumCloud 3.2 | `pubsub_tpc-differences.md` | 2026-11-10 | `d649238759` |
@@ -583,7 +583,7 @@ Google Accounts, Google Groups, and Cloud Identity are unavailable.
 - Performance HPA profile, VPA InPlaceOrRecreate mode
 
 <!-- AUTO-SYNC:UPSTREAM-DIFFS:kubernetes-engine:START -->
-**Latest upstream documentation updates (`2026-11-13`):**
+**Latest upstream documentation updates (`2026-11-19`):**
 - **GKE modes:** Only GKE Autopilot clusters are available. GKE Standard clusters are unavailable.
 - **Storage:** Only Hyperdisk Balanced storage types are available. Other storage types are unavailable.
 - **Compute Engine virtual machines:** Only the C3 and A3 machine series are available. Other machine types are unavailable.
@@ -591,6 +591,7 @@ Google Accounts, Google Groups, and Cloud Identity are unavailable.
 - **Hardware and OS — Modes of operation:** Only GKE Autopilot clusters are available. GKE Standard clusters are unavailable.
 - **Hardware and OS — Compute Engine virtual machines:** Only the C3 and A3 machine series are available. Other machine types are unavailable.
 - **Hardware and OS — GPUs and TPUs:** GPUs are available on A3 machine types. The only available Edge machine type is `a3-edgegpu-8g-nolssd` and it must be set explicitly by using a [custom ComputeClass](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/autopilot-gpus#request-machine-custom). TPUs are unavailable.
+- **Hardware and OS — Node pools:** The following node configuration features are unavailable: - Arm workloads - Spot VMs - Compact placement
 - **Hardware and OS — Release channels:** Only the Stable and Regular release channels are available. For clusters enrolled in the Rapid channel, the features might be available in preview.
 - **Hardware and OS — GKE Hypercluster:** GKE Hypercluster isn't available.
 - **Availability and disaster recovery — Regions and zones:** Cloud de Confiance has only a single region, though with multiple zones. Multi-region features and cross-region failover are not supported. Deployment across multiple zones for resiliency is supported.
@@ -605,7 +606,7 @@ Google Accounts, Google Groups, and Cloud Identity are unavailable.
 - **Integrations — Filestore:** The [Filestore CSI driver](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver) is available only with the Filestore regional service tier by [creating a custom StorageClass](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver#storage-class). Automatically installed Filestore StorageClasses and Filestore multishares for GKE are unavailable. For more information, see the [Filestore differences page](https://documentation.s3ns.fr/filestore/docs/tpc-differences).
 - **Security — Security features:** The following security features are unavailable: - GKE security posture - Binary Authorization for GKE - Confidential Google Kubernetes Engine Nodes - GKE control plane authority - Policy Controller - Agent Identity for GKE (Preview)
 - **Security — Authentication:** Connect gateway is unavailable.
-- **Security — Workload identity:** Workload identity pool domains (and the Kubernetes principal identifiers that use them) are specified slightly differently in Google Cloud and Cloud de Confiance by S3NS, using `s3ns.svc.id.goog` rather than `svc.id.goog`. So, for example, when specifying a Kubernetes ServiceAccount using Workload Identity Federation for GKE in an [IAM policy](https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/workload-identity#kubernetes-resources-iam-policies), you use `.../ PROJECT_ID .s3ns.svc.id.goog/subject/ns/ NAMESPACE /sa/ KUBERNETES_SERVICE_ACCOUNT`.
+- **Security — Workload identity:** Workload identity pool domains (and the Kubernetes principal identifiers that use them) are specified slightly differently in Google Cloud and Cloud de Confiance by S3NS, using `s3ns.svc.id.goog` rather than `svc.id.goog`. So, for example, when specifying a Kubernetes ServiceAccount using Workload Identity Federation for GKE in an [IAM policy](https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/workload-identity#kubernetes-resources-iam-policies), you use `.../ PROJECT_ID .s3ns.svc.id.goog/subject/ns/ NAMESPACE /sa/ KUBERNETES_SERVICE_ACCOUNT `.
 - **Security — Node security:** Secure kernel module loading is unavailable.
 - **Security — Service agent provisioning:** In Cloud de Confiance, service agents (universe-managed service accounts) are provisioned **Just-In-Time (JIT)** when you create your first resource for a service, rather than when the API is enabled. If you need to grant permissions to a service agent before creating resources (for example, when configuring a [Shared VPC](https://documentation.s3ns.fr/kubernetes-engine/docs/how-to/cluster-shared-vpc)), you must manually create the service agent and grant it the required default roles. For instructions on how to manually trigger service agent creation grant roles, see [Create and grant roles to service agents](https://documentation.s3ns.fr/iam/docs/create-service-agent). Then, grant the default `Kubernetes Engine Service Agent` (`service- PROJECT_NUMBER @container-engine-robot.s3ns-system.iam.gserviceaccount.com`) to the agent that you create.
 - **Security — GKE Sandbox:** In Cloud de Confiance, only the gVisor sandbox type has been tested for use with GKE Pods.

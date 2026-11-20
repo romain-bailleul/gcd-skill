@@ -1,7 +1,7 @@
 # Overview of Model Garden
 
 Source: https://berlin.devsitetest.how/gemini-enterprise-agent-platform/models/model-garden/explore-models
-Last updated: 2026-11-19
+Last updated: 2026-11-20
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/gemini-enterprise-agent-platform/tpc-differences) for more details.
 

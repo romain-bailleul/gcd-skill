@@ -1,7 +1,7 @@
 # Google Cloud Hyperdisk overview
 
 Source: https://documentation.s3ns.fr/compute/docs/disks/hyperdisks
-Last updated: 2026-11-13
+Last updated: 2026-11-19
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/compute/docs/tpc-differences) for more details.
 
@@ -634,6 +634,7 @@ A3 (H200)
 A4 
 A4X 
 A4X Max 
+A5X 
 C2 
 C2D 
 C3 
@@ -641,6 +642,7 @@ C3D
 C4 
 C4A 
 C4D 
+C4N 
 E2 
 G2 
 G4 
@@ -650,6 +652,7 @@ M1
 M2 
 M3 
 M4 
+M4N 
 N1 
 N1+GPU 
 N2 
@@ -669,6 +672,8 @@ T2D
 X4 
 X5 
 Z3 
+Z4D 
+Z4M 
 
 
 
@@ -753,7 +758,7 @@ A3 (H200) |
 **—** 
 | 
 
-**—** 
+
 | 
 |
 | 
@@ -798,16 +803,34 @@ A4X Max |
 
 | 
 
-
-| 
-
 **—** 
 | 
 
-**—** 
+
 | 
 
-**—** 
+
+| 
+
+
+| 
+|
+| 
+A5X | 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
 | 
 |
 | 
@@ -897,7 +920,7 @@ C4 |
 
 | 
 
-**—** 
+
 | 
 |
 | 
@@ -924,16 +947,34 @@ C4D |
 
 | 
 
-**—** 
+
+| 
+
+
 | 
 
 
 | 
 
-**—** 
+
+| 
+|
+| 
+C4N | 
+
+
 | 
 
-**—** 
+
+| 
+
+
+| 
+
+
+| 
+
+
 | 
 |
 | 
@@ -1092,10 +1133,28 @@ M4 |
 
 | 
 
-**—** 
+
 | 
 
 **—** 
+| 
+|
+| 
+M4N | 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
 | 
 |
 | 
@@ -1185,7 +1244,7 @@ N4 |
 
 | 
 
-**—** 
+
 | 
 |
 | 
@@ -1203,7 +1262,7 @@ N4A |
 
 | 
 
-**—** 
+
 | 
 |
 | 
@@ -1221,7 +1280,7 @@ N4D |
 
 | 
 
-**—** 
+
 | 
 |
 | 
@@ -1438,6 +1497,42 @@ Z3 |
 | 
 
 **—** 
+| 
+|
+| 
+Z4D | 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
+| 
+|
+| 
+Z4M | 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
+| 
+
+
 | 
 | 
 
