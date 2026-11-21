@@ -1,7 +1,7 @@
 # Asset names
 
 Source: https://berlin.devsitetest.how/asset-inventory/docs/asset-names
-Last updated: 2026-11-19
+Last updated: 2026-11-20
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/asset-inventory/docs/tpc-differences) for more details.
 
@@ -11286,6 +11286,32 @@ Name format |
 
 | 
 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -163,16 +163,16 @@
   "/asset-inventory/docs/asset-names": {
     "title": "Asset names",
     "filename": "asset-inventory_asset-names.md",
-    "size": 59187,
+    "size": 59213,
     "url": "https://berlin.devsitetest.how/asset-inventory/docs/asset-names",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/asset-inventory/docs/asset-types": {
     "title": "Asset types",
     "filename": "asset-inventory_asset-types.md",
     "size": 55979,
     "url": "https://berlin.devsitetest.how/asset-inventory/docs/asset-types",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-20"
   },
   "/asset-inventory/docs/client-libraries": {
     "title": "Cloud Asset Inventory client libraries",
@@ -709,9 +709,9 @@
   "/composer/docs/composer-versions": {
     "title": "Managed Service for Apache Airflow version list",
     "filename": "composer_composer-versions.md",
-    "size": 1675138,
+    "size": 1676600,
     "url": "https://berlin.devsitetest.how/composer/docs/composer-versions",
-    "last_updated": "2026-11-16"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/gcloud-installation": {
     "title": "Using Google Cloud CLI with Managed Airflow",
@@ -746,7 +746,7 @@
     "filename": "composer_latest_run-apache-airflow-dag.md",
     "size": 12412,
     "url": "https://berlin.devsitetest.how/composer/docs/latest/run-apache-airflow-dag",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/latest/save-load-snapshots": {
     "title": "Save and load environment snapshots",
@@ -788,7 +788,7 @@
     "filename": "composer_release-notes.md",
     "size": 64500,
     "url": "https://berlin.devsitetest.how/composer/docs/release-notes",
-    "last_updated": "2026-11-16"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/tpc-differences": {
     "title": "Managed Airflow in Google Cloud Dedicated versus Google Cloud",
@@ -849,9 +849,9 @@
   "/compute/docs/tpc-differences": {
     "title": "Compute Engine in Google Cloud Dedicated versus Google Cloud",
     "filename": "compute_tpc-differences.md",
-    "size": 14303,
+    "size": 14363,
     "url": "https://berlin.devsitetest.how/compute/docs/tpc-differences",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/compute/shielded-vm/docs": {
     "title": "Shielded VM documentation",
@@ -2263,9 +2263,9 @@
   "/kubernetes-engine/docs": {
     "title": "Google Kubernetes Engine documentation",
     "filename": "kubernetes-engine.md",
-    "size": 3652,
+    "size": 3640,
     "url": "https://berlin.devsitetest.how/kubernetes-engine/docs",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/kubernetes-engine/docs/concepts/kubernetes-engine-overview": {
     "title": "GKE overview",
@@ -2655,9 +2655,9 @@
   "/pubsub/docs/create-topic": {
     "title": "Create a topic",
     "filename": "pubsub_create-topic.md",
-    "size": 24413,
+    "size": 24848,
     "url": "https://berlin.devsitetest.how/pubsub/docs/create-topic",
-    "last_updated": "2026-11-12"
+    "last_updated": "2026-11-20"
   },
   "/pubsub/docs/monitoring": {
     "title": "Monitor Pub/Sub in Cloud Monitoring",
@@ -2720,7 +2720,7 @@
     "filename": "release-notes.md",
     "size": 237898,
     "url": "https://berlin.devsitetest.how/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-21"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -3070,7 +3070,7 @@
     "filename": "sql_release-notes.md",
     "size": 65513,
     "url": "https://berlin.devsitetest.how/sql/docs/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-21"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Google Cloud Dedicated versus Google Cloud",

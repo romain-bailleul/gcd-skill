@@ -163,16 +163,16 @@
   "/asset-inventory/docs/asset-names": {
     "title": "Asset names",
     "filename": "asset-inventory_asset-names.md",
-    "size": 59185,
+    "size": 59211,
     "url": "https://documentation.s3ns.fr/asset-inventory/docs/asset-names",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/asset-inventory/docs/asset-types": {
     "title": "Asset types",
     "filename": "asset-inventory_asset-types.md",
     "size": 55593,
     "url": "https://documentation.s3ns.fr/asset-inventory/docs/asset-types",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-20"
   },
   "/asset-inventory/docs/client-libraries": {
     "title": "Cloud Asset Inventory client libraries",
@@ -709,9 +709,9 @@
   "/composer/docs/composer-versions": {
     "title": "Managed Service for Apache Airflow version list",
     "filename": "composer_composer-versions.md",
-    "size": 1675117,
+    "size": 1676579,
     "url": "https://documentation.s3ns.fr/composer/docs/composer-versions",
-    "last_updated": "2026-11-16"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/gcloud-installation": {
     "title": "Using Google Cloud CLI with Managed Airflow",
@@ -746,7 +746,7 @@
     "filename": "composer_latest_run-apache-airflow-dag.md",
     "size": 12328,
     "url": "https://documentation.s3ns.fr/composer/docs/latest/run-apache-airflow-dag",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/latest/save-load-snapshots": {
     "title": "Save and load environment snapshots",
@@ -788,7 +788,7 @@
     "filename": "composer_release-notes.md",
     "size": 64358,
     "url": "https://documentation.s3ns.fr/composer/docs/release-notes",
-    "last_updated": "2026-11-16"
+    "last_updated": "2026-11-20"
   },
   "/composer/docs/tpc-differences": {
     "title": "Managed Airflow in Cloud de Confiance versus Google Cloud",
@@ -849,9 +849,9 @@
   "/compute/docs/tpc-differences": {
     "title": "Compute Engine in Cloud de Confiance versus Google Cloud",
     "filename": "compute_tpc-differences.md",
-    "size": 14071,
+    "size": 14131,
     "url": "https://documentation.s3ns.fr/compute/docs/tpc-differences",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-20"
   },
   "/compute/shielded-vm/docs": {
     "title": "Shielded VM documentation",
@@ -2256,9 +2256,9 @@
   "/kubernetes-engine/docs": {
     "title": "Google Kubernetes Engine documentation",
     "filename": "kubernetes-engine.md",
-    "size": 3643,
+    "size": 3631,
     "url": "https://documentation.s3ns.fr/kubernetes-engine/docs",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-20"
   },
   "/kubernetes-engine/docs/concepts/kubernetes-engine-overview": {
     "title": "GKE overview",
@@ -2648,9 +2648,9 @@
   "/pubsub/docs/create-topic": {
     "title": "Create a topic",
     "filename": "pubsub_create-topic.md",
-    "size": 24362,
+    "size": 24797,
     "url": "https://documentation.s3ns.fr/pubsub/docs/create-topic",
-    "last_updated": "2026-11-12"
+    "last_updated": "2026-11-20"
   },
   "/pubsub/docs/monitoring": {
     "title": "Monitor Pub/Sub in Cloud Monitoring",
@@ -2713,7 +2713,7 @@
     "filename": "release-notes.md",
     "size": 236659,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-21"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -3063,7 +3063,7 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-21"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",

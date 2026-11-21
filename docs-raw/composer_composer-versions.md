@@ -1,7 +1,7 @@
 # Managed Service for Apache Airflow version list
 
 Source: https://berlin.devsitetest.how/composer/docs/composer-versions
-Last updated: 2026-11-16
+Last updated: 2026-11-20
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -322,12 +322,66 @@ Notes |
 
 
 | 
+composer-3-airflow-3.3.1-build.10 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-10) | 
+November 20, 2026 | 
+November 20, 2027 | 
+Latest build | 
+|
+
+| 
+composer-3-airflow-3.2.2-build.14 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-14) | 
+November 20, 2026 | 
+November 20, 2027 | 
+Latest build | 
+|
+
+| 
+composer-3-airflow-2.11.1-build.27 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-27) | 
+November 20, 2026 | 
+November 20, 2027 | 
+Latest build, Default build | 
+|
+
+| 
+composer-3-airflow-3.3.1-build.9 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-9) | 
+November 16, 2026 | 
+November 16, 2027 | 
+| 
+|
+
+| 
+composer-3-airflow-3.2.2-build.13 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-13) | 
+November 16, 2026 | 
+November 16, 2027 | 
+| 
+|
+
+| 
+composer-3-airflow-2.11.1-build.26 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-26) | 
+November 16, 2026 | 
+November 16, 2027 | 
+| 
+|
+
+| 
 composer-3-airflow-3.3.1-build.8 | 
 3.11.8 | 
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-8) | 
 November 10, 2026 | 
 November 10, 2027 | 
-Latest build | 
+| 
 |
 
 | 
@@ -336,7 +390,7 @@ composer-3-airflow-3.2.2-build.12 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-12) | 
 November 10, 2026 | 
 November 10, 2027 | 
-Latest build | 
+| 
 |
 
 | 
@@ -345,7 +399,7 @@ composer-3-airflow-2.11.1-build.25 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-25) | 
 November 10, 2026 | 
 November 10, 2027 | 
-Latest build, Default build | 
+| 
 |
 
 | 
@@ -114532,12 +114586,30 @@ Notes |
 
 
 | 
+composer-2.18.2-airflow-2.11.1 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-2-18-2-airflow-2-11-1) | 
+November 20, 2026 | 
+November 20, 2027 | 
+Latest version, Default version | 
+|
+
+| 
+composer-2.18.1-airflow-2.11.1 | 
+3.11.8 | 
+[See packages](/composer/docs/versions-packages#composer-2-18-1-airflow-2-11-1) | 
+November 16, 2026 | 
+November 16, 2027 | 
+| 
+|
+
+| 
 composer-2.18.0-airflow-2.11.1 | 
 3.11.8 | 
 [See packages](/composer/docs/versions-packages#composer-2-18-0-airflow-2-11-1) | 
 November 10, 2026 | 
 November 10, 2027 | 
-Latest version, Default version | 
+| 
 |
 
 | 
