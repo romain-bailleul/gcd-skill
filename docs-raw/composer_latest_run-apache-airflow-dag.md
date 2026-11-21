@@ -1,7 +1,7 @@
 # Quickstart: Run an Apache Airflow DAG in Managed Airflow (Gen 3)
 
 Source: https://berlin.devsitetest.how/composer/docs/latest/run-apache-airflow-dag
-Last updated: 2026-11-10
+Last updated: 2026-11-20
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
