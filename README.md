@@ -245,7 +245,7 @@ Two workflows run in `.github/workflows/`:
 | Workflow | Runs on | What it does |
 |---|---|---|
 | `ci.yml` | every pull request, pushes to `main` | Python lint and unit tests, skill integrity, workflow lint and security |
-| `update-docs.yml` | every day at 05:17 Paris time, manual dispatch | Scrapes both regions, re-syncs the skill, checks it, writes the day's release note, and merges the result through a pull request |
+| `update-docs.yml` | every day at 05:17 Paris time, manual dispatch | Scrapes both regions, re-syncs the skill, checks it, writes the day's release note, and pushes the commit to `main` |
 
 The `ci.yml` jobs, and the failure each one prevents:
 
@@ -268,7 +268,7 @@ Each day, `update-docs.yml`:
 1. Scrapes both regions and re-syncs the skill.
 2. Runs `check-skill.py`, `sync-skill.py --check` and the unit tests on the result. These check that the files are intact and stay inert for agents, not what the docs say.
 3. Writes the day's release note, `docs-changes/YYYY-MM-DD.md` (see below).
-4. Commits everything to the `automation/docs-update` branch, opens or updates a pull request, and **merges it itself** (squash). The pull request is the dated record of the day, and reverting its commit undoes the day.
+4. Commits everything directly to `main` as a single commit. Reverting that commit undoes the day.
 
 A day with no change commits nothing and writes no note. A second run on the same day writes `YYYY-MM-DD-2.md`, so the first note is kept.
 
@@ -278,20 +278,17 @@ A day with no change commits nothing and writes no note. A second run on the sam
 - the number of pages only re-dated: the "Last updated" line moved but the text did not;
 - SecNumCloud 3.2 qualification moves, for S3NS.
 
-The pull request body carries the same note. Scraped titles, headings and names are shown in code spans, so the note cannot mention people, link issues or carry markup.
+The workflow run summary carries the same note. Scraped titles, headings and names are shown in code spans, so the note cannot mention people, link issues or carry markup.
 
-**When something goes wrong, the run turns red**, which is what GitHub emails you about, since nobody reads the pull request:
-- One region's scrape failed. The other region is still merged, and the note opens with a warning. The failed region keeps its previous pages.
-- `main` moved during the scrape. The pull request stays open and the next run rebuilds it, so generated files always match the code they were made with.
-- The merge was refused, for example by a branch rule.
-
-The branch is rebuilt from `main` on every run. Do not push to it: the next run overwrites it.
+**When something goes wrong, the run turns red**, which is what GitHub emails you about:
+- One region's scrape failed. The other region's changes are still pushed, and the note opens with a warning. The failed region keeps its previous pages.
+- `main` moved during the scrape. The push is skipped and the next run rebuilds from the new `main`, so generated files always match the code they were made with.
+- The push was refused, for example by a branch rule.
 
 To refresh at once, run the workflow by hand: **Actions → Update sovereign cloud docs → Run workflow**, on `main`.
 
-Two repository settings matter:
-- **Settings → Actions → General → Workflow permissions:** enable *Allow GitHub Actions to create and approve pull requests*. It is off by default on personal repositories, and without it the job fails when it opens the pull request.
-- **`main` must not require a review or status checks** for this merge. Workflows do not start on a pull request opened with `GITHUB_TOKEN`, so `ci.yml` never runs on it and required checks would never arrive. The job runs those checks itself before it commits.
+Repository setting:
+- **`main` must allow direct pushes from `GITHUB_TOKEN`** (no branch rule requiring a pull request or status checks for this push). Pushes made with `GITHUB_TOKEN` do not trigger `ci.yml`, so the job runs the skill checks and unit tests itself before it commits.
 
 Run the same checks locally:
 

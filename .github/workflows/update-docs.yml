@@ -39,16 +39,15 @@ jobs:
 
   scrape:
     needs: validate
-    # The pull request targets main, so only build it from main. A scheduled run
+    # The update pushes directly to main, so only run it on main. A scheduled run
     # always does; a manual run started on another branch skips this job.
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
       contents: write
-      pull-requests: write
     steps:
-      # Credentials stay persisted here: the last step pushes the update branch.
+      # Credentials stay persisted here: the last step pushes the commit to main.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: true  # zizmor: ignore[artipacked]
@@ -85,9 +84,9 @@ jobs:
           python3 -u scripts/sync-skill.py
           python3 -u scripts/sync-skill.py --check
 
-      # No person reviews the update and CI does not run on a pull request opened with
-      # GITHUB_TOKEN, so the checks CI would run on the scraped data run here, before the
-      # commit. They check that the files are intact, not what the docs say.
+      # Pushes made with GITHUB_TOKEN do not trigger CI, so the checks CI would run on
+      # the scraped data run here, before the commit. They check that the files are
+      # intact, not what the docs say.
       - name: Check the skill and the scraped data before committing
         run: |
           python3 scripts/check-skill.py
@@ -124,14 +123,13 @@ jobs:
             --region Berlin "$RUNNER_TEMP/previous/docs-raw" docs-raw \
             "${failed[@]}" --pr-body "$RUNNER_TEMP/note-body.md" >> "$GITHUB_OUTPUT"
 
-      # The update goes through a pull request, which the job merges itself: the pull
-      # request is the dated record of the day, and one revert undoes it. The branch is
-      # rebuilt from main on every run, so a day whose merge failed is superseded.
-      - name: Open, update and merge the docs update pull request
+      # Push one atomic commit directly to main: one revert undoes the day, and pushing
+      # with GITHUB_TOKEN avoids opening a bot pull request whose CI run requires
+      # maintainer approval and expires as a false failure. A non-force push also refuses
+      # to land if main moved during the scrape.
+      - name: Commit and push docs update to main
         if: steps.diff.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
-          UPDATE_BRANCH: automation/docs-update
           BASE_BRANCH: ${{ github.ref_name }}
           BASE_SHA: ${{ github.sha }}
           TRIGGER: ${{ github.event_name }}
@@ -141,16 +139,27 @@ jobs:
           NOTE_PATH: ${{ steps.note.outputs.note }}
         run: |
           title="chore: update scraped GCD/S3NS docs and sync skill ($NOTE_DATE)"
+          # The commit message carries no scraped text: commit messages are not markdown,
+          # so a heading such as "Fixes #3" would act on the issue.
+          body="Release note: $NOTE_PATH. Scrape: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME."
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git switch -C "$UPDATE_BRANCH"
           git add docs-raw/ docs-raw-s3ns/ references/ SKILL.md README.md docs-changes/
-          git commit -m "$title"
-          git push --force origin "$UPDATE_BRANCH"
-          head_sha="$(git rev-parse HEAD)"
+          git commit -m "$title" -m "$body"
+
+          # Generated files must match the code on main: if main moved during the scrape,
+          # fail without pushing so the next run rebuilds from the new main.
+          main_sha="$(git ls-remote origin "refs/heads/$BASE_BRANCH" | cut -f1)"
+          if [ "$main_sha" != "$BASE_SHA" ]; then
+            echo "ERROR: $BASE_BRANCH moved during the scrape; skipping push." >&2
+            exit 1
+          fi
+
+          git push origin "HEAD:refs/heads/$BASE_BRANCH"
 
           {
-            echo "Scraped on $NOTE_DATE (trigger: \`$TRIGGER\`). This pull request merges itself once opened."
+            echo "Scraped on $NOTE_DATE (trigger: \`$TRIGGER\`) and pushed to \`$BASE_BRANCH\`."
             echo
             echo "| Region | Scrape |"
             echo "|---|---|"
@@ -163,48 +172,15 @@ jobs:
             echo '```'
             echo
             cat "$RUNNER_TEMP/note-body.md"
-            echo
-            echo "This branch is rebuilt from \`$BASE_BRANCH\` on every run. Commits pushed to it are overwritten."
-          } > "$RUNNER_TEMP/pr-body.md"
+          } >> "$GITHUB_STEP_SUMMARY"
 
-          number="$(gh pr list --head "$UPDATE_BRANCH" --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')"
-          if [ -n "$number" ]; then
-            gh pr edit "$number" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
-          else
-            gh pr create --head "$UPDATE_BRANCH" --base "$BASE_BRANCH" --title "$title" --body-file "$RUNNER_TEMP/pr-body.md"
-            number="$(gh pr view "$UPDATE_BRANCH" --json number --jq .number)"
-          fi
-
-          # Generated files must match the code on main: if main moved during the scrape,
-          # leave the pull request open and let the next run rebuild it.
-          main_sha="$(git ls-remote origin "refs/heads/$BASE_BRANCH" | cut -f1)"
-          if [ "$main_sha" != "$BASE_SHA" ]; then
-            echo "ERROR: $BASE_BRANCH moved during the scrape; pull request #$number is left open." >&2
-            exit 1
-          fi
-
-          # The squash commit carries no scraped text: commit messages are not markdown,
-          # so a heading such as "Fixes #3" would act on the issue.
-          body="Release note: $NOTE_PATH. Scrape: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME."
-          # GitHub computes mergeability after the push, so the first attempt can be early.
-          for attempt in 1 2 3; do
-            if gh pr merge "$number" --squash --delete-branch --match-head-commit "$head_sha" \
-                 --subject "$title (#$number)" --body "$body"; then
-              exit 0
-            fi
-            echo "Merge attempt $attempt failed; retrying." >&2
-            sleep 15
-          done
-          echo "ERROR: could not merge pull request #$number." >&2
-          exit 1
-
-      # A failed region keeps its previous pages, so the run reports it: nobody reads
-      # the pull request, and a red run is what GitHub notifies the owner about.
+      # A failed region keeps its previous pages, so the run reports it: a red run is
+      # what GitHub notifies the owner about.
       - name: Fail the run when a region's scrape failed
         if: steps.scrape_s3ns.outcome != 'success' || steps.scrape_berlin.outcome != 'success'
         env:
           S3NS_OUTCOME: ${{ steps.scrape_s3ns.outcome }}
           BERLIN_OUTCOME: ${{ steps.scrape_berlin.outcome }}
         run: |
-          echo "ERROR: scrape outcome: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME. Any change from the other region was merged." >&2
+          echo "ERROR: scrape outcome: S3NS $S3NS_OUTCOME, Berlin $BERLIN_OUTCOME. Any change from the other region was pushed." >&2
           exit 1
