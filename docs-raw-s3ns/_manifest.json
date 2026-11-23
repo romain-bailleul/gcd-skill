@@ -1313,7 +1313,7 @@
     "filename": "get-started-tpc_setup-gcloud.md",
     "size": 4295,
     "url": "https://documentation.s3ns.fr/docs/get-started-tpc/setup-gcloud",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started-tpc/suggested-tutorials": {
     "title": "Suggested tutorials",
@@ -1334,7 +1334,7 @@
     "filename": "get-started_access-apis.md",
     "size": 3132,
     "url": "https://documentation.s3ns.fr/docs/get-started/access-apis",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started/authentication": {
     "title": "Authentication basics",
@@ -1355,7 +1355,7 @@
     "filename": "get-started_developer-environment.md",
     "size": 6433,
     "url": "https://documentation.s3ns.fr/docs/get-started/developer-environment",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started/interact-with-resources": {
     "title": "Ways to interact with Cloud de Confiance by S3NS",
@@ -2711,9 +2711,9 @@
   "/release-notes": {
     "title": "Google Cloud release notes",
     "filename": "release-notes.md",
-    "size": 236659,
+    "size": 210265,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-22"
+    "last_updated": "2026-11-23"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -2874,7 +2874,7 @@
     "filename": "run_release-notes.md",
     "size": 1828,
     "url": "https://documentation.s3ns.fr/run/docs/release-notes",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-23"
   },
   "/run/docs/resource-model": {
     "title": "Deployment options and resource model",
@@ -2900,9 +2900,9 @@
   "/sdk/docs/release-notes": {
     "title": "Google Cloud CLI - Release Notes",
     "filename": "sdk_release-notes.md",
-    "size": 1762235,
+    "size": 1762477,
     "url": "https://documentation.s3ns.fr/sdk/docs/release-notes",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/secret-manager/docs": {
     "title": "Secret Manager documentation",
@@ -3063,7 +3063,7 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-22"
+    "last_updated": "2026-11-23"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",

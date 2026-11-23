@@ -1,7 +1,7 @@
 # Google Cloud CLI - Release Notes
 
 Source: https://documentation.s3ns.fr/sdk/docs/release-notes
-Last updated: 2026-11-17
+Last updated: 2026-11-22
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/sdk/docs/tpc-differences) for more details.
 
@@ -138,6 +138,14 @@ Resources
 
 
 Copyright 2014-2026 Google Inc. All rights reserved.
+
+Subscribe to these release notes at [https://groups.google.com/forum/#!forum/google-cloud-sdk-announce](https://groups.google.com/forum/#!forum/google-cloud-sdk-announce).
+
+## 594.0.1 (2026-11-21)
+
+### Google Cloud CLI
+
+- General bug fixes.
 
 Subscribe to these release notes at [https://groups.google.com/forum/#!forum/google-cloud-sdk-announce](https://groups.google.com/forum/#!forum/google-cloud-sdk-announce).
 
