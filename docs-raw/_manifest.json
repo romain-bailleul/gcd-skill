@@ -1313,7 +1313,7 @@
     "filename": "get-started-tpc_setup-gcloud.md",
     "size": 4379,
     "url": "https://berlin.devsitetest.how/docs/get-started-tpc/setup-gcloud",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started-tpc/suggested-tutorials": {
     "title": "Suggested tutorials",
@@ -1334,7 +1334,7 @@
     "filename": "get-started_access-apis.md",
     "size": 3210,
     "url": "https://berlin.devsitetest.how/docs/get-started/access-apis",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started/authentication": {
     "title": "Authentication basics",
@@ -1355,7 +1355,7 @@
     "filename": "get-started_developer-environment.md",
     "size": 6488,
     "url": "https://berlin.devsitetest.how/docs/get-started/developer-environment",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/docs/get-started/interact-with-resources": {
     "title": "Ways to interact with Google Cloud Dedicated in Germany",
@@ -2718,9 +2718,9 @@
   "/release-notes": {
     "title": "Google Cloud release notes",
     "filename": "release-notes.md",
-    "size": 237898,
+    "size": 211362,
     "url": "https://berlin.devsitetest.how/release-notes",
-    "last_updated": "2026-11-22"
+    "last_updated": "2026-11-23"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -2881,7 +2881,7 @@
     "filename": "run_release-notes.md",
     "size": 1858,
     "url": "https://berlin.devsitetest.how/run/docs/release-notes",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-23"
   },
   "/run/docs/resource-model": {
     "title": "Deployment options and resource model",
@@ -2907,9 +2907,9 @@
   "/sdk/docs/release-notes": {
     "title": "Google Cloud CLI - Release Notes",
     "filename": "sdk_release-notes.md",
-    "size": 1762516,
+    "size": 1762758,
     "url": "https://berlin.devsitetest.how/sdk/docs/release-notes",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-22"
   },
   "/secret-manager/docs": {
     "title": "Secret Manager documentation",
@@ -3070,7 +3070,7 @@
     "filename": "sql_release-notes.md",
     "size": 65513,
     "url": "https://berlin.devsitetest.how/sql/docs/release-notes",
-    "last_updated": "2026-11-22"
+    "last_updated": "2026-11-23"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Google Cloud Dedicated versus Google Cloud",
