@@ -291,7 +291,7 @@
     "filename": "assured-workloads_access-transparency_privileged-access.md",
     "size": 3322,
     "url": "https://documentation.s3ns.fr/assured-workloads/access-transparency/docs/privileged-access",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-23"
   },
   "/assured-workloads/access-transparency/docs/reading-logs": {
     "title": "Understanding and using Access Transparency logs",
@@ -422,9 +422,9 @@
   "/bigquery/docs/troubleshoot-quotas": {
     "title": "Troubleshoot quota and limit errors",
     "filename": "bigquery_troubleshoot-quotas.md",
-    "size": 79869,
+    "size": 84884,
     "url": "https://documentation.s3ns.fr/bigquery/docs/troubleshoot-quotas",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/bigtable/docs": {
     "title": "Bigtable documentation",
@@ -765,9 +765,9 @@
   "/composer/docs/latest/use-monitoring-dashboard": {
     "title": "Use the monitoring dashboard",
     "filename": "composer_latest_use-monitoring-dashboard.md",
-    "size": 17075,
+    "size": 17146,
     "url": "https://documentation.s3ns.fr/composer/docs/latest/use-monitoring-dashboard",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-24"
   },
   "/composer/docs/latest/view-dags": {
     "title": "View DAGs, DAG runs, and tasks",
@@ -1927,9 +1927,9 @@
   "/filestore/docs/creating-instances": {
     "title": "Create an instance",
     "filename": "filestore_creating-instances.md",
-    "size": 34535,
+    "size": 35048,
     "url": "https://documentation.s3ns.fr/filestore/docs/creating-instances",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-23"
   },
   "/filestore/docs/csi-driver": {
     "title": "Access Filestore instances with the Filestore CSI driver",
@@ -1962,9 +1962,9 @@
   "/filestore/docs/mounting-fileshares": {
     "title": "Mounting file shares on Compute Engine clients",
     "filename": "filestore_mounting-fileshares.md",
-    "size": 24764,
+    "size": 24818,
     "url": "https://documentation.s3ns.fr/filestore/docs/mounting-fileshares",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-23"
   },
   "/filestore/docs/overview": {
     "title": "Filestore overview",
@@ -2263,9 +2263,9 @@
   "/kubernetes-engine/docs/concepts/kubernetes-engine-overview": {
     "title": "GKE overview",
     "filename": "kubernetes-engine_concepts_kubernetes-engine-overview.md",
-    "size": 6846,
+    "size": 6845,
     "url": "https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/kubernetes-engine-overview",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-23"
   },
   "/kubernetes-engine/docs/concepts/machine-learning": {
     "title": "Introduction to AI/ML workloads on GKE",
@@ -2305,7 +2305,7 @@
   "/kubernetes-engine/docs/release-notes": {
     "title": "GKE release notes",
     "filename": "kubernetes-engine_release-notes.md",
-    "size": 1522497,
+    "size": 1525978,
     "url": "https://documentation.s3ns.fr/kubernetes-engine/docs/release-notes",
     "last_updated": "2026-11-17"
   },
@@ -2342,21 +2342,21 @@
     "filename": "logging.md",
     "size": 3345,
     "url": "https://documentation.s3ns.fr/logging/docs",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/audit": {
     "title": "Cloud Audit Logs overview",
     "filename": "logging_audit.md",
     "size": 20207,
     "url": "https://documentation.s3ns.fr/logging/docs/audit",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/buckets": {
     "title": "Configure log buckets",
     "filename": "logging_buckets.md",
     "size": 25841,
     "url": "https://documentation.s3ns.fr/logging/docs/buckets",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/reference/libraries": {
     "title": "Logging client libraries",
@@ -2377,98 +2377,98 @@
     "filename": "logging_release-notes.md",
     "size": 3420,
     "url": "https://documentation.s3ns.fr/logging/docs/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/tpc-differences": {
     "title": "Logging in Cloud de Confiance versus Google Cloud",
     "filename": "logging_tpc-differences.md",
     "size": 5569,
     "url": "https://documentation.s3ns.fr/logging/docs/tpc-differences",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/view/building-queries": {
     "title": "Build and save queries by using the Logging query language",
     "filename": "logging_view_building-queries.md",
     "size": 22844,
     "url": "https://documentation.s3ns.fr/logging/docs/view/building-queries",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/view/logs-viewer-interface": {
     "title": "View and analyze log entries",
     "filename": "logging_view_logs-viewer-interface.md",
     "size": 39500,
     "url": "https://documentation.s3ns.fr/logging/docs/view/logs-viewer-interface",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/logging/docs/write-query-log-entries-gcloud": {
     "title": "Quickstart: Write and query log entries with the gcloud CLI",
     "filename": "logging_write-query-log-entries-gcloud.md",
     "size": 11824,
     "url": "https://documentation.s3ns.fr/logging/docs/write-query-log-entries-gcloud",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/managed-spark/docs": {
     "title": "Managed Service for Apache Spark documentation",
     "filename": "managed-spark.md",
     "size": 3786,
     "url": "https://documentation.s3ns.fr/managed-spark/docs",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/gcloud-installation": {
     "title": "gcloud CLI",
     "filename": "managed-spark_gcloud-installation.md",
     "size": 1404,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/gcloud-installation",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/guides/images": {
     "title": "Create a Managed Service for Apache Spark custom image",
     "filename": "managed-spark_guides_images.md",
     "size": 23788,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/guides/images",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/quickstarts/update-cluster-console": {
     "title": "Quickstart: Create a cluster by using the Cloud de Confiance console",
     "filename": "managed-spark_quickstarts_update-cluster-console.md",
     "size": 8896,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/quickstarts/update-cluster-console",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/reference/libraries": {
     "title": "Dataproc client libraries",
     "filename": "managed-spark_reference_libraries.md",
-    "size": 22497,
+    "size": 22049,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/reference/libraries",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/release-notes": {
     "title": "Managed Service for Apache Spark release notes",
     "filename": "managed-spark_release-notes.md",
     "size": 2300,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/release-notes",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/support/diagnose-command": {
     "title": "View cluster diagnostic data",
     "filename": "managed-spark_support_diagnose-command.md",
     "size": 16287,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/support/diagnose-command",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/tpc-differences": {
     "title": "Managed Service for Apache Spark in Cloud de Confiance versus Google Cloud",
     "filename": "managed-spark_tpc-differences.md",
     "size": 6894,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/tpc-differences",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/tutorials/bigquery-connector-mapreduce-example": {
     "title": "Write a MapReduce job with the BigQuery connector",
     "filename": "managed-spark_tutorials_bigquery-connector-mapreduce-example.md",
     "size": 21639,
     "url": "https://documentation.s3ns.fr/managed-spark/docs/tutorials/bigquery-connector-mapreduce-example",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-24"
   },
   "/managed-spark/docs/tutorials/gcs-connector-spark-tutorial": {
     "title": "Use the Cloud Storage connector with Apache Spark",
@@ -2482,7 +2482,7 @@
     "filename": "monitoring.md",
     "size": 2724,
     "url": "https://documentation.s3ns.fr/monitoring/docs",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/monitoring/docs/reference/libraries": {
     "title": "Monitoring client libraries",
@@ -2496,14 +2496,14 @@
     "filename": "monitoring_release-notes.md",
     "size": 3413,
     "url": "https://documentation.s3ns.fr/monitoring/docs/release-notes",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/monitoring/docs/tpc-differences": {
     "title": "Monitoring in Cloud de Confiance versus Google Cloud",
     "filename": "monitoring_tpc-differences.md",
     "size": 4132,
     "url": "https://documentation.s3ns.fr/monitoring/docs/tpc-differences",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-23"
   },
   "/nat/docs": {
     "title": "Cloud NAT documentation",
@@ -2711,9 +2711,9 @@
   "/release-notes": {
     "title": "Google Cloud release notes",
     "filename": "release-notes.md",
-    "size": 210265,
+    "size": 216788,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-24"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -3063,14 +3063,14 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-24"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",
     "filename": "sql_tpc-differences.md",
     "size": 7449,
     "url": "https://documentation.s3ns.fr/sql/docs/tpc-differences",
-    "last_updated": "2026-11-12"
+    "last_updated": "2026-11-24"
   },
   "/storage-transfer/docs": {
     "title": "Storage Transfer Service",
@@ -3180,9 +3180,9 @@
   "/storage/docs/troubleshooting": {
     "title": "Troubleshooting",
     "filename": "storage_troubleshooting.md",
-    "size": 35913,
+    "size": 37645,
     "url": "https://documentation.s3ns.fr/storage/docs/troubleshooting",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-23"
   },
   "/storage/docs/uploading-objects": {
     "title": "Upload objects from a file system",

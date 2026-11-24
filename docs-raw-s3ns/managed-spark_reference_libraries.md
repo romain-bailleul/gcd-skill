@@ -1,7 +1,7 @@
 # Dataproc client libraries
 
 Source: https://documentation.s3ns.fr/managed-spark/docs/reference/libraries
-Last updated: 2026-11-19
+Last updated: 2026-11-24
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 
@@ -1004,12 +1004,12 @@ try ( [ ClusterControllerClient ](https://documentation.s3ns.fr/java/docs/refere
 [ InstanceGroupConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.html) masterConfig = 
 [ InstanceGroupConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.html) . newBuilder () 
 . [ setMachineTypeUri ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.Builder.html#com_google_cloud_dataproc_v1_InstanceGroupConfig_Builder_setMachineTypeUri_java_lang_String_) ( "n1-standard-2" ) 
-. [ setNumInstances ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.Builder.html#com_google_cloud_dataproc_v1_InstanceGroupConfig_Builder_setNumInstances_int_) ( 1 ) 
+. setNumInstances ( 1 ) 
 . build (); 
 [ InstanceGroupConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.html) workerConfig = 
 [ InstanceGroupConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.html) . newBuilder () 
 . [ setMachineTypeUri ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.Builder.html#com_google_cloud_dataproc_v1_InstanceGroupConfig_Builder_setMachineTypeUri_java_lang_String_) ( "n1-standard-2" ) 
-. [ setNumInstances ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.InstanceGroupConfig.Builder.html#com_google_cloud_dataproc_v1_InstanceGroupConfig_Builder_setNumInstances_int_) ( 2 ) 
+. setNumInstances ( 2 ) 
 . build (); 
 [ ClusterConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.ClusterConfig.html) clusterConfig = 
 [ ClusterConfig ](https://documentation.s3ns.fr/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.ClusterConfig.html) . newBuilder () 

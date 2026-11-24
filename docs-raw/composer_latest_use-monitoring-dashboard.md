@@ -1,7 +1,7 @@
 # Use the monitoring dashboard
 
 Source: https://berlin.devsitetest.how/composer/docs/latest/use-monitoring-dashboard
-Last updated: 2026-11-10
+Last updated: 2026-11-24
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -582,7 +582,7 @@ See [Environment overview](#environment-overview). |
 Unacknowledged Celery tasks
 | 
 
-The number of unacknowledged tasks in the Celery broker queue. Unacknowledged tasks include Airflow task instances in the `queued` and `running` [task states](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html#task-instances). Both states are normal to Airflow task's execution. The Unacknowledged Celery tasks graph will output tasks in these states as unacknowledged while they are processed by Airflow. If an Airflow task instance is abnormally interrupted (for example, detected as a zombie), it will also remain unacknowledged until the [visibility_timeout](https://airflow.apache.org/docs/apache-airflow-providers-celery/stable/configurations-ref.html#visibility-timeout) is reached. In this case, the graph will display a task that consistently stays unacknowledged for a long time. The visibility timeout value is set to 7 days in Managed Airflow. After this period of time, the task will be redelivered and will have a possibility to be acknowledged. If it fails again, it might stay unacknowledged for another 7 days. | 
+The number of unacknowledged tasks in the Celery broker queue. Unacknowledged tasks include Airflow task instances in the `queued` and `running` [task states](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html#task-instances). Both states are normal to Airflow task's execution. The Unacknowledged Celery tasks graph will output tasks in these states as unacknowledged while they are processed by Airflow. If an Airflow task instance is abnormally interrupted (for example, detected as a zombie), it will also remain unacknowledged until the [visibility_timeout](https://airflow.apache.org/docs/apache-airflow-providers-celery/stable/configurations-ref.html#visibility-timeout) is reached. In this case, the graph will display a task that consistently stays unacknowledged for a long time. The visibility timeout value is set to 7 days in Managed Airflow. After this period of time, the task will be redelivered and will have a possibility to be acknowledged. If it fails again, it might [stay unacknowledged](/composer/docs/composer-3/troubleshooting-scheduling#unacknowledged) for another 7 days. | 
 |
 
 | 

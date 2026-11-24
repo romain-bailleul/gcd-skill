@@ -1,7 +1,7 @@
 # Managed Service for Apache Spark documentation
 
 Source: https://berlin.devsitetest.how/managed-spark/docs
-Last updated: 2026-11-19
+Last updated: 2026-11-24
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/managed-spark/docs/tpc-differences) for more details.
 

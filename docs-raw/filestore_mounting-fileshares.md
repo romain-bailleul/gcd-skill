@@ -1,7 +1,7 @@
 # Mounting file shares on Compute Engine clients
 
 Source: https://berlin.devsitetest.how/filestore/docs/mounting-fileshares
-Last updated: 2026-11-10
+Last updated: 2026-11-23
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/filestore/docs/tpc-differences) for more details.
 
@@ -342,13 +342,13 @@ Number of connections |
 
 | 
 Regional, zonal | 
-1-9.75 TiB | 
+100 GiB to 10,239 GiB | 
 `nconnect=2` | 
 |
 
 | 
 Regional, zonal | 
-10-100 TiB | 
+10 TiB to 100 TiB | 
 `nconnect=7` | 
 |
 
@@ -654,13 +654,13 @@ Number of connections |
 
 | 
 Regional, zonal | 
-1-9.75 TiB | 
+100 GiB to 10,239 GiB | 
 `nconnect=2` | 
 |
 
 | 
 Regional, zonal | 
-10-100 TiB | 
+10 TiB to 100 TiB | 
 `nconnect=7` | 
 |
 
@@ -945,13 +945,13 @@ Number of connections |
 
 | 
 Regional, zonal | 
-1-9.75 TiB | 
+100 GiB to 10,239 GiB | 
 `nconnect=2` | 
 |
 
 | 
 Regional, zonal | 
-10-100 TiB | 
+10 TiB to 100 TiB | 
 `nconnect=7` | 
 |
 

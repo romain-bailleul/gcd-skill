@@ -1,7 +1,7 @@
 # Create an instance
 
 Source: https://documentation.s3ns.fr/filestore/docs/creating-instances
-Last updated: 2026-11-10
+Last updated: 2026-11-23
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/filestore/docs/tpc-differences) for more details.
 
@@ -298,7 +298,10 @@ The format is as follows:
 ```
 
 
-The `--performance` flag is required when creating regional instances with capacity lower than 1024 GiB. For more information, see [small capacity Filestore instances](/filestore/docs/service-tiers#small-instances).
+When you create regional or zonal instances
+with capacity lower than 1,024 GiB, you must specify the
+`--performance` flag. For more information, see
+[Small capacity instances](/filestore/docs/service-tiers#small-instances).
 
 - 
 
@@ -517,8 +520,13 @@ to use. For example, `REGIONAL`.
 
 - 
 
-` PERFORMANCE ` is the [performance configuration](/filestore/docs/reference/rest/v1beta1/projects.locations.instances#performanceconfig)
-used to specify custom performance settings.
+` PERFORMANCE ` is the
+[performance configuration](/filestore/docs/reference/rest/v1/projects.locations.instances#PerformanceConfig)
+used to specify custom performance settings. When you
+create regional or zonal instances with
+capacity lower than 1,024 GiB, you must specify the
+`performanceConfig` field. For more information, see
+[Small capacity instances](/filestore/docs/service-tiers#small-instances).
 
 You can use only one of the provided options.
 
@@ -640,9 +648,9 @@ Incremental step size |
 
 | 
 Zonal | 
-1 TiB | 
-9.75 TiB | 
-256 GiB | 
+100 GiB | 
+10,239 GiB | 
+1 GiB | 
 |
 
 | 
@@ -697,6 +705,11 @@ with a higher capacity range include 10 TiB, 12.5 TiB, and 15 TiB.
 Once created, basic HDD and basic SSD instances can only scale up in size. All other service tiers can scale up or down in capacity. For more information, see
 [Edit instances](/filestore/docs/editing-instances) and [Scale capacity](/filestore/docs/scale).
 
+Regional and zonal instances with capacity lower
+than 1,024 GiB require custom performance. For more
+information, see the [Configure performance](#configure-performance) section of
+this document.
+
 ### Total capacity quota
 
 Every project is allocated a separate capacity quota, defined by region and
@@ -723,7 +736,11 @@ You can set an IOPS per TiB ratio which allows instance IOPS to scale with capac
 
 - 
 
-Creating Regional instances with capacity lower than 1024 GiB requires enabled custom performance. The minimum IOPS value for these instances is 2,000. For more information, see [low capacity Filestore instances](/filestore/docs/service-tiers#small-instances).
+To create regional or zonal instances with
+capacity lower than 1,024 GiB, you must enable
+custom performance with a minimum of 2,000 IOPS. For more
+information, see
+[Small capacity instances](/filestore/docs/service-tiers#small-instances).
 
 ### Basic SSD and basic HDD tiers
 
@@ -758,7 +775,12 @@ The following examples show how performance scales based on changed settings:
 
 ### Specify fixed number of IOPS
 
-If you clear the **Scale performance with capacity** checkbox, the **Performance** field specifies the number of IOPS you want to use. This number must be within the [performance range](/filestore/docs/custom-performance#custom-performance-limits) and a multiple of 1,000.
+If you clear the **Scale performance with capacity** checkbox, the
+**Performance** field specifies the number of IOPS you want to use. This number
+must be within the
+[performance range](/filestore/docs/performance#instance-performance). Specify a
+multiple of 100 for the lower capacity range (100 GiB to 10,239 GiB)
+or 1,000 for the higher capacity range (10 TiB to 100 TiB).
 
 Setting a fixed number of IOPS independently of capacity allows performance
 tuning. However, this option prevents automatic performance scaling with

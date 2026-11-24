@@ -10,7 +10,7 @@ All products share these platform-wide constraints:
 - **No Cloud Shell:** Install `gcloud` and CLI tools locally or on a sovereign cloud VM.
 
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:START -->
-> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-20`.
+> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-24`.
 
 <details>
 <summary>Tracked <code>tpc-differences</code> inventory (40 guides)</summary>
@@ -30,14 +30,14 @@ All products share these platform-wide constraints:
 | Cloud Interconnect | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-10 | `e8eefa543b` |
 | Cloud KMS | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-18 | `407d108d82` |
 | Cloud Load Balancing | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-10 | `0b3869431a` |
-| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-20 | `3c7ede3f89` |
-| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-20 | `64c4c68e30` |
+| Cloud Logging | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-23 | `3c7ede3f89` |
+| Cloud Monitoring | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-23 | `64c4c68e30` |
 | Cloud NAT | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-10 | `355f0cd2d2` |
 | Cloud NGFW | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-10 | `b038ad3e50` |
 | Cloud Quotas | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-10 | `8ab8f5aa35` |
 | Cloud Router | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-11-10 | `539f8b73c2` |
 | Cloud Run | Qualification en cours | `run_tpc-differences.md` | 2026-11-18 | `a9f3e4b762` |
-| Cloud SQL | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-12 | `7ceca2ae72` |
+| Cloud SQL | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-24 | `7ceca2ae72` |
 | Cloud Storage | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-17 | `f5a3d260b4` |
 | Cloud VPN | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-10 | `09d1827aa5` |
 | Compute Engine | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-20 | `ce63190ccb` |
@@ -46,7 +46,7 @@ All products share these platform-wide constraints:
 | Google Kubernetes Engine (GKE) | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-19 | `d79a61c00c` |
 | IAM | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-17 | `bc966fb7ef` |
 | Managed Airflow (Cloud Composer 3) | Qualification en cours | `composer_tpc-differences.md` | 2026-11-10 | `8b00656c51` |
-| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-19 | `4fd95170bf` |
+| Managed Service for Apache Spark (Dataproc) | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-24 | `4fd95170bf` |
 | Network Service Tiers | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-10 | `2dbc42433d` |
 | Organization Policy | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-11-10 | `4208565439` |
 | Pub/Sub | Qualifié SecNumCloud 3.2 | `pubsub_tpc-differences.md` | 2026-11-10 | `d649238759` |

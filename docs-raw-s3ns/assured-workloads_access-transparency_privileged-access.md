@@ -1,7 +1,7 @@
 # Privileged access at Cloud de Confiance by S3NS
 
 Source: https://documentation.s3ns.fr/assured-workloads/access-transparency/docs/privileged-access
-Last updated: 2026-11-10
+Last updated: 2026-11-23
 
 - 
 
