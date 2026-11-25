@@ -1,7 +1,7 @@
 # Managed Airflow overview
 
 Source: https://berlin.devsitetest.how/composer/docs/latest/composer-overview
-Last updated: 2026-11-10
+Last updated: 2026-11-25
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -375,6 +375,10 @@ Other Managed Airflow features include:
 - [Highly resilient environments](/composer/docs/composer-3/set-up-highly-resilient-environments)
 
 - [Environment snapshots](/composer/docs/composer-3/save-load-snapshots)
+
+- [Agentic capabilities](/composer/docs/composer-3/agentic-capabilities-overview), including workflow failure
+investigations and read-only pre-upgrade DAG compatibility checks with
+Managed Airflow Agent.
 
 - [Encryption with customer-managed encryption keys (CMEK)](/composer/docs/composer-3/configure-cmek-encryption)
 

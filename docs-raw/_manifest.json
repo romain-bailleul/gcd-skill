@@ -380,9 +380,9 @@
   "/bigquery/docs/quickstarts/query-public-dataset-console": {
     "title": "Try BigQuery using the sandbox",
     "filename": "bigquery_quickstarts_query-public-dataset-console.md",
-    "size": 9337,
+    "size": 9731,
     "url": "https://berlin.devsitetest.how/bigquery/docs/quickstarts/query-public-dataset-console",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-24"
   },
   "/bigquery/docs/quickstarts/quickstart-client-libraries": {
     "title": "Query a public dataset with the BigQuery client libraries",
@@ -688,9 +688,9 @@
   "/composer/docs/composer-3/composer-overview": {
     "title": "Managed Airflow overview",
     "filename": "composer_composer-3_composer-overview.md",
-    "size": 12760,
+    "size": 12965,
     "url": "https://berlin.devsitetest.how/composer/docs/composer-3/composer-overview",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/composer/docs/composer-3/set-up-highly-resilient-environments": {
     "title": "Set up highly resilient environments",
@@ -723,9 +723,9 @@
   "/composer/docs/latest/composer-overview": {
     "title": "Managed Airflow overview",
     "filename": "composer_latest_composer-overview.md",
-    "size": 12756,
+    "size": 12961,
     "url": "https://berlin.devsitetest.how/composer/docs/latest/composer-overview",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/composer/docs/latest/create-environments": {
     "title": "Create Managed Service for Apache Airflow environments",
@@ -1390,7 +1390,7 @@
     "filename": "networking.md",
     "size": 5876,
     "url": "https://berlin.devsitetest.how/docs/networking",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-24"
   },
   "/docs/observability": {
     "title": "Observability and monitoring",
@@ -2172,9 +2172,9 @@
   "/iam/docs/service-agents": {
     "title": "Service agents",
     "filename": "iam_service-agents.md",
-    "size": 111239,
+    "size": 111443,
     "url": "https://berlin.devsitetest.how/iam/docs/service-agents",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-24"
   },
   "/iam/docs/tpc-differences": {
     "title": "IAM in Google Cloud Dedicated versus Google Cloud",
@@ -2356,21 +2356,21 @@
     "filename": "logging_audit.md",
     "size": 20390,
     "url": "https://berlin.devsitetest.how/logging/docs/audit",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/buckets": {
     "title": "Configure log buckets",
     "filename": "logging_buckets.md",
     "size": 26063,
     "url": "https://berlin.devsitetest.how/logging/docs/buckets",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/reference/libraries": {
     "title": "Logging client libraries",
     "filename": "logging_reference_libraries.md",
-    "size": 27612,
+    "size": 27605,
     "url": "https://berlin.devsitetest.how/logging/docs/reference/libraries",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/reference/v2/rest": {
     "title": "Cloud Logging API",
@@ -2398,14 +2398,14 @@
     "filename": "logging_view_building-queries.md",
     "size": 22944,
     "url": "https://berlin.devsitetest.how/logging/docs/view/building-queries",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/view/logs-viewer-interface": {
     "title": "View and analyze log entries",
     "filename": "logging_view_logs-viewer-interface.md",
     "size": 39608,
     "url": "https://berlin.devsitetest.how/logging/docs/view/logs-viewer-interface",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/write-query-log-entries-gcloud": {
     "title": "Quickstart: Write and query log entries with the gcloud CLI",
@@ -2720,7 +2720,7 @@
     "filename": "release-notes.md",
     "size": 217927,
     "url": "https://berlin.devsitetest.how/release-notes",
-    "last_updated": "2026-11-24"
+    "last_updated": "2026-11-25"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -2739,9 +2739,9 @@
   "/resource-manager/docs/creating-managing-folders": {
     "title": "Create folders",
     "filename": "resource-manager_creating-managing-folders.md",
-    "size": 18797,
+    "size": 19181,
     "url": "https://berlin.devsitetest.how/resource-manager/docs/creating-managing-folders",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-24"
   },
   "/resource-manager/docs/creating-managing-projects": {
     "title": "Create projects",
@@ -3070,7 +3070,7 @@
     "filename": "sql_release-notes.md",
     "size": 65513,
     "url": "https://berlin.devsitetest.how/sql/docs/release-notes",
-    "last_updated": "2026-11-24"
+    "last_updated": "2026-11-25"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Google Cloud Dedicated versus Google Cloud",

@@ -380,9 +380,9 @@
   "/bigquery/docs/quickstarts/query-public-dataset-console": {
     "title": "Try BigQuery using the sandbox",
     "filename": "bigquery_quickstarts_query-public-dataset-console.md",
-    "size": 9263,
+    "size": 9657,
     "url": "https://documentation.s3ns.fr/bigquery/docs/quickstarts/query-public-dataset-console",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-24"
   },
   "/bigquery/docs/quickstarts/quickstart-client-libraries": {
     "title": "Query a public dataset with the BigQuery client libraries",
@@ -688,9 +688,9 @@
   "/composer/docs/composer-3/composer-overview": {
     "title": "Managed Airflow overview",
     "filename": "composer_composer-3_composer-overview.md",
-    "size": 12726,
+    "size": 12931,
     "url": "https://documentation.s3ns.fr/composer/docs/composer-3/composer-overview",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/composer/docs/composer-3/set-up-highly-resilient-environments": {
     "title": "Set up highly resilient environments",
@@ -723,9 +723,9 @@
   "/composer/docs/latest/composer-overview": {
     "title": "Managed Airflow overview",
     "filename": "composer_latest_composer-overview.md",
-    "size": 12722,
+    "size": 12927,
     "url": "https://documentation.s3ns.fr/composer/docs/latest/composer-overview",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/composer/docs/latest/create-environments": {
     "title": "Create Managed Service for Apache Airflow environments",
@@ -1390,7 +1390,7 @@
     "filename": "networking.md",
     "size": 5836,
     "url": "https://documentation.s3ns.fr/docs/networking",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-24"
   },
   "/docs/observability": {
     "title": "Observability and monitoring",
@@ -2165,9 +2165,9 @@
   "/iam/docs/service-agents": {
     "title": "Service agents",
     "filename": "iam_service-agents.md",
-    "size": 111544,
+    "size": 111749,
     "url": "https://documentation.s3ns.fr/iam/docs/service-agents",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-24"
   },
   "/iam/docs/tpc-differences": {
     "title": "IAM in Cloud de Confiance versus Google Cloud",
@@ -2349,21 +2349,21 @@
     "filename": "logging_audit.md",
     "size": 20207,
     "url": "https://documentation.s3ns.fr/logging/docs/audit",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/buckets": {
     "title": "Configure log buckets",
     "filename": "logging_buckets.md",
     "size": 25841,
     "url": "https://documentation.s3ns.fr/logging/docs/buckets",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/reference/libraries": {
     "title": "Logging client libraries",
     "filename": "logging_reference_libraries.md",
-    "size": 27440,
+    "size": 27433,
     "url": "https://documentation.s3ns.fr/logging/docs/reference/libraries",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/reference/v2/rest": {
     "title": "Cloud Logging API",
@@ -2391,14 +2391,14 @@
     "filename": "logging_view_building-queries.md",
     "size": 22844,
     "url": "https://documentation.s3ns.fr/logging/docs/view/building-queries",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/view/logs-viewer-interface": {
     "title": "View and analyze log entries",
     "filename": "logging_view_logs-viewer-interface.md",
     "size": 39500,
     "url": "https://documentation.s3ns.fr/logging/docs/view/logs-viewer-interface",
-    "last_updated": "2026-11-23"
+    "last_updated": "2026-11-25"
   },
   "/logging/docs/write-query-log-entries-gcloud": {
     "title": "Quickstart: Write and query log entries with the gcloud CLI",
@@ -2713,7 +2713,7 @@
     "filename": "release-notes.md",
     "size": 216788,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-24"
+    "last_updated": "2026-11-25"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -2732,9 +2732,9 @@
   "/resource-manager/docs/creating-managing-folders": {
     "title": "Create folders",
     "filename": "resource-manager_creating-managing-folders.md",
-    "size": 18728,
+    "size": 19112,
     "url": "https://documentation.s3ns.fr/resource-manager/docs/creating-managing-folders",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-24"
   },
   "/resource-manager/docs/creating-managing-projects": {
     "title": "Create projects",
@@ -3063,7 +3063,7 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-24"
+    "last_updated": "2026-11-25"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",

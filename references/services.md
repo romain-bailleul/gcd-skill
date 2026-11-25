@@ -254,7 +254,7 @@ Total scraped pages: **468** (Berlin GCD) / **467** (France S3NS).
 | Agent Platform (Gemini Enterprise Agent Platform) | 7 | 7 | Qualification en cours | `gemini-enterprise-agent-platform_tpc-differences.md` | 2026-11-20 |
 | API Keys | 4 | 4 | — | — | 2026-11-13 |
 | Artifact Registry | 6 | 6 | Qualifié SecNumCloud 3.2 | `artifact-registry_tpc-differences.md` | 2026-11-13 |
-| BigQuery | 16 | 16 | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-23 |
+| BigQuery | 16 | 16 | Qualifié SecNumCloud 3.2 | `bigquery_tpc-differences.md` | 2026-11-24 |
 | Bigtable | 14 | 14 | Qualification en cours | `bigtable_tpc-differences.md` | 2026-11-13 |
 | Cloud Armor | 3 | 3 | Qualifié SecNumCloud 3.2 | `armor_tpc-differences.md` | 2026-11-13 |
 | Cloud Asset Inventory | 17 | 17 | — | `asset-inventory_tpc-differences.md` | 2026-11-20 |
@@ -264,14 +264,14 @@ Total scraped pages: **468** (Berlin GCD) / **467** (France S3NS).
 | Cloud Interconnect | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_interconnect_tpc-differences.md` | 2026-11-13 |
 | Cloud KMS | 8 | 8 | Qualifié SecNumCloud 3.2 | `kms_tpc-differences.md` | 2026-11-18 |
 | Cloud Load Balancing | 3 | 3 | Qualifié SecNumCloud 3.2 | `load-balancing_tpc-differences.md` | 2026-11-16 |
-| Cloud Logging | 10 | 10 | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-23 |
+| Cloud Logging | 10 | 10 | Qualifié SecNumCloud 3.2 | `logging_tpc-differences.md` | 2026-11-25 |
 | Cloud Monitoring | 4 | 4 | Qualifié SecNumCloud 3.2 | `monitoring_tpc-differences.md` | 2026-11-23 |
 | Cloud NAT | 3 | 3 | Qualifié SecNumCloud 3.2 | `nat_tpc-differences.md` | 2026-11-13 |
 | Cloud NGFW | 3 | 3 | Qualifié SecNumCloud 3.2 | `firewall_tpc-differences.md` | 2026-11-13 |
 | Cloud Quotas | 29 | 29 | Qualification en cours | `quotas_tpc-differences.md` | 2026-11-17 |
 | Cloud Router | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_router_tpc-differences.md` | 2026-11-13 |
 | Cloud Run | 14 | 14 | Qualification en cours | `run_tpc-differences.md` | 2026-11-23 |
-| Cloud SQL | 3 | 3 | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-24 |
+| Cloud SQL | 3 | 3 | Qualifié SecNumCloud 3.2 | `sql_tpc-differences.md` | 2026-11-25 |
 | Cloud Storage | 10 | 10 | Qualifié SecNumCloud 3.2 | `storage_tpc-differences.md` | 2026-11-23 |
 | Cloud VPN | 2 | 2 | Qualifié SecNumCloud 3.2 | `network-connectivity_vpn_concepts_tpc-differences.md` | 2026-11-13 |
 | Compute Engine | 12 | 12 | Qualifié SecNumCloud 3.2 | `compute_tpc-differences.md` | 2026-11-20 |
@@ -279,13 +279,13 @@ Total scraped pages: **468** (Berlin GCD) / **467** (France S3NS).
 | Filestore | 16 | 16 | Qualification en cours | `filestore_tpc-differences.md` | 2026-11-23 |
 | Google Cloud CLI (gcloud SDK) | 2 | 2 | — | — | 2026-11-22 |
 | Google Kubernetes Engine (GKE) | 9 | 9 | Qualifié SecNumCloud 3.2 | `kubernetes-engine_tpc-differences.md` | 2026-11-23 |
-| IAM | 18 | 18 | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-18 |
-| Managed Airflow (Cloud Composer 3) | 18 | 18 | Qualification en cours | `composer_tpc-differences.md` | 2026-11-24 |
+| IAM | 18 | 18 | Qualifié SecNumCloud 3.2 | `iam_tpc-differences.md` | 2026-11-24 |
+| Managed Airflow (Cloud Composer 3) | 18 | 18 | Qualification en cours | `composer_tpc-differences.md` | 2026-11-25 |
 | Managed Service for Apache Spark (Dataproc) | 10 | 10 | Qualification en cours | `managed-spark_tpc-differences.md` | 2026-11-24 |
 | Network Service Tiers | 3 | 3 | Qualifié SecNumCloud 3.2 | `network-tiers_tpc-differences.md` | 2026-11-13 |
 | Organization Policy | 3 | 3 | Qualifié SecNumCloud 3.2 | `organization-policy_tpc-differences.md` | 2026-11-13 |
 | Pub/Sub | 11 | 11 | Qualifié SecNumCloud 3.2 | `pubsub_tpc-differences.md` | 2026-11-20 |
-| Resource Manager | 11 | 11 | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-13 |
+| Resource Manager | 11 | 11 | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-24 |
 | Secret Manager | 10 | 10 | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-11-13 |
 | Service Directory | 2 | 2 | Qualifié SecNumCloud 3.2 | — | 2026-11-13 |
 | Service Usage | 9 | 9 | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-11-13 |
