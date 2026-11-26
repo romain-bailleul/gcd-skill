@@ -163,14 +163,14 @@
   "/asset-inventory/docs/asset-names": {
     "title": "Asset names",
     "filename": "asset-inventory_asset-names.md",
-    "size": 59211,
+    "size": 59417,
     "url": "https://documentation.s3ns.fr/asset-inventory/docs/asset-names",
     "last_updated": "2026-11-20"
   },
   "/asset-inventory/docs/asset-types": {
     "title": "Asset types",
     "filename": "asset-inventory_asset-types.md",
-    "size": 55593,
+    "size": 55920,
     "url": "https://documentation.s3ns.fr/asset-inventory/docs/asset-types",
     "last_updated": "2026-11-20"
   },
@@ -310,9 +310,9 @@
   "/assured-workloads/access-transparency/docs/supported-services": {
     "title": "Supported services",
     "filename": "assured-workloads_access-transparency_supported-services.md",
-    "size": 18172,
+    "size": 18387,
     "url": "https://documentation.s3ns.fr/assured-workloads/access-transparency/docs/supported-services",
-    "last_updated": "2026-11-16"
+    "last_updated": "2026-11-25"
   },
   "/bigquery/docs": {
     "title": "BigQuery documentation",
@@ -709,9 +709,9 @@
   "/composer/docs/composer-versions": {
     "title": "Managed Service for Apache Airflow version list",
     "filename": "composer_composer-versions.md",
-    "size": 1676579,
+    "size": 1676719,
     "url": "https://documentation.s3ns.fr/composer/docs/composer-versions",
-    "last_updated": "2026-11-20"
+    "last_updated": "2026-11-26"
   },
   "/composer/docs/gcloud-installation": {
     "title": "Using Google Cloud CLI with Managed Airflow",
@@ -814,9 +814,9 @@
   "/compute/docs/gpus": {
     "title": "GPU machine types",
     "filename": "compute_gpus.md",
-    "size": 44097,
+    "size": 45663,
     "url": "https://documentation.s3ns.fr/compute/docs/gpus",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-25"
   },
   "/compute/docs/instances/create-start-instance": {
     "title": "Create and start a Compute Engine instance",
@@ -1362,7 +1362,7 @@
     "filename": "get-started_interact-with-resources.md",
     "size": 10015,
     "url": "https://documentation.s3ns.fr/docs/get-started/interact-with-resources",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/docs/get-started/learn-about-billing": {
     "title": "Learn about Cloud Billing",
@@ -1372,11 +1372,11 @@
     "last_updated": "2026-11-10"
   },
   "/docs/get-started/required-domains": {
-    "title": "Allow access to Cloud de Confiance console domains",
+    "title": "Allow access to Cloud de Confiance by S3NS domains",
     "filename": "get-started_required-domains.md",
-    "size": 2339,
+    "size": 2741,
     "url": "https://documentation.s3ns.fr/docs/get-started/required-domains",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/docs/iac": {
     "title": "Infrastructure as code",
@@ -1549,9 +1549,9 @@
   "/docs/quotas/quota-adjuster": {
     "title": "Use the quota adjuster",
     "filename": "quotas_quota-adjuster.md",
-    "size": 26209,
+    "size": 25989,
     "url": "https://documentation.s3ns.fr/docs/quotas/quota-adjuster",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/docs/quotas/quota-project": {
     "title": "Quota project overview",
@@ -1626,9 +1626,9 @@
   "/docs/quotas/troubleshoot": {
     "title": "Troubleshoot quota errors",
     "filename": "quotas_troubleshoot.md",
-    "size": 6667,
+    "size": 16237,
     "url": "https://documentation.s3ns.fr/docs/quotas/troubleshoot",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/docs/quotas/view-manage": {
     "title": "View and manage quotas",
@@ -1654,9 +1654,9 @@
   "/docs/storage": {
     "title": "Storage",
     "filename": "docs_storage.md",
-    "size": 1212,
+    "size": 1226,
     "url": "https://documentation.s3ns.fr/docs/storage",
-    "last_updated": "2026-11-13"
+    "last_updated": "2026-11-26"
   },
   "/docs/terraform": {
     "title": "Terraform on Google Cloud documentation",
@@ -2361,7 +2361,7 @@
   "/logging/docs/reference/libraries": {
     "title": "Logging client libraries",
     "filename": "logging_reference_libraries.md",
-    "size": 27433,
+    "size": 27440,
     "url": "https://documentation.s3ns.fr/logging/docs/reference/libraries",
     "last_updated": "2026-11-25"
   },
@@ -2487,7 +2487,7 @@
   "/monitoring/docs/reference/libraries": {
     "title": "Monitoring client libraries",
     "filename": "monitoring_reference_libraries.md",
-    "size": 38857,
+    "size": 38908,
     "url": "https://documentation.s3ns.fr/monitoring/docs/reference/libraries",
     "last_updated": "2026-11-13"
   },
@@ -2713,7 +2713,7 @@
     "filename": "release-notes.md",
     "size": 216788,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-25"
+    "last_updated": "2026-11-26"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -2942,9 +2942,9 @@
   "/secret-manager/docs/reference/libraries": {
     "title": "Secret Manager client libraries",
     "filename": "secret-manager_reference_libraries.md",
-    "size": 34051,
+    "size": 34840,
     "url": "https://documentation.s3ns.fr/secret-manager/docs/reference/libraries",
-    "last_updated": "2026-11-10"
+    "last_updated": "2026-11-25"
   },
   "/secret-manager/docs/reference/rest": {
     "title": "Secret Manager API",
@@ -3063,7 +3063,7 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-25"
+    "last_updated": "2026-11-26"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",
@@ -3082,9 +3082,9 @@
   "/storage-transfer/docs/create-transfers": {
     "title": "Create transfers",
     "filename": "storage-transfer_create-transfers.md",
-    "size": 43721,
+    "size": 43744,
     "url": "https://documentation.s3ns.fr/storage-transfer/docs/create-transfers",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-26"
   },
   "/storage-transfer/docs/libraries": {
     "title": "Storage Transfer Service client libraries",
@@ -3117,9 +3117,9 @@
   "/storage-transfer/docs/tpc-differences": {
     "title": "Storage Transfer Service in Cloud de Confiance versus Google Cloud",
     "filename": "storage-transfer_tpc-differences.md",
-    "size": 4268,
+    "size": 4681,
     "url": "https://documentation.s3ns.fr/storage-transfer/docs/tpc-differences",
-    "last_updated": "2026-11-19"
+    "last_updated": "2026-11-26"
   },
   "/storage-transfer/docs/transfer-options": {
     "title": "Data transfer options",
@@ -3189,7 +3189,7 @@
     "filename": "storage_uploading-objects.md",
     "size": 46267,
     "url": "https://documentation.s3ns.fr/storage/docs/uploading-objects",
-    "last_updated": "2026-11-17"
+    "last_updated": "2026-11-26"
   },
   "/storage/docs/xml-api/overview": {
     "title": "XML API overview",

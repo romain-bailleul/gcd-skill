@@ -1,7 +1,7 @@
 # Managed Service for Apache Airflow version list
 
 Source: https://berlin.devsitetest.how/composer/docs/composer-versions
-Last updated: 2026-11-20
+Last updated: 2026-11-26
 
 Some or all of the information on this page might not apply to Google Cloud Dedicated. See [Differences from Google Cloud](/composer/docs/tpc-differences) for more details.
 
@@ -327,7 +327,7 @@ composer-3-airflow-3.3.1-build.10 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-3-1-build-10) | 
 November 20, 2026 | 
 November 20, 2027 | 
-Latest build | 
+Latest build, Extended upgrade timeline version | 
 |
 
 | 
@@ -336,7 +336,7 @@ composer-3-airflow-3.2.2-build.14 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-3-2-2-build-14) | 
 November 20, 2026 | 
 November 20, 2027 | 
-Latest build | 
+Latest build, Extended upgrade timeline version | 
 |
 
 | 
@@ -345,7 +345,7 @@ composer-3-airflow-2.11.1-build.27 |
 [See packages](/composer/docs/versions-packages#composer-3-airflow-2-11-1-build-27) | 
 November 20, 2026 | 
 November 20, 2027 | 
-Latest build, Default build | 
+Latest build, Default build, Extended upgrade timeline version | 
 |
 
 | 
@@ -114591,7 +114591,7 @@ composer-2.18.2-airflow-2.11.1 |
 [See packages](/composer/docs/versions-packages#composer-2-18-2-airflow-2-11-1) | 
 November 20, 2026 | 
 November 20, 2027 | 
-Latest version, Default version | 
+Latest version, Default version, Extended upgrade timeline version | 
 |
 
 | 

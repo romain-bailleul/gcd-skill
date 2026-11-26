@@ -1,7 +1,7 @@
 # Storage
 
 Source: https://berlin.devsitetest.how/docs/storage
-Last updated: 2026-11-13
+Last updated: 2026-11-26
 
 - 
 
@@ -335,4 +335,4 @@ Storage Transfer Service
 ](/storage-transfer/docs/overview)
 
 
-Transfer data between Cloud Storage services such as AWS S3 and Cloud Storage.
+Transfer data between Cloud Storage buckets, on-premises storage, and other storage systems.

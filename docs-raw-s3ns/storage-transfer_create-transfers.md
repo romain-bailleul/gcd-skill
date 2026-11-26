@@ -1,7 +1,7 @@
 # Create transfers
 
 Source: https://documentation.s3ns.fr/storage-transfer/docs/create-transfers
-Last updated: 2026-11-19
+Last updated: 2026-11-26
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/storage-transfer/docs/overview/tpc-differences) for more details.
 
@@ -181,7 +181,7 @@ Choose a source:
 Your user account must have **storage.buckets.get** permission to select
 source and destination buckets. Alternatively, you can type the name of
 the bucket directly. For more information, see
-[Troubleshooting access](/iam/docs/troubleshooting-access).
+[IAM permissions for Cloud Storage](/storage/docs/access-control/iam-permissions).
 
 - 
 

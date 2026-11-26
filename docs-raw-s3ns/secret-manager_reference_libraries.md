@@ -1,7 +1,7 @@
 # Secret Manager client libraries
 
 Source: https://documentation.s3ns.fr/secret-manager/docs/reference/libraries
-Last updated: 2026-11-10
+Last updated: 2026-11-25
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/secret-manager/docs/tpc-differences) for more details.
 
@@ -675,6 +675,55 @@ $ gem install google-cloud-secret_manager
 For more information, see [Setting Up a Ruby Development Environment](/ruby/docs/setup).
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Rust 
+
+
+
+
+
+
+```
+$ cargo add google-cloud-secretmanager-v1
+```
+
+
+
+
+
+
+For more information, see [Get started with Rust](/rust/docs/quickstart).
 
 
 
@@ -1767,6 +1816,8 @@ end
 
 
 
+
+
 ## Additional resources
 
 
@@ -2166,4 +2217,55 @@ client library for Ruby:
 
 - [`google-secret-manager` on Stack Overflow](https://stackoverflow.com/search?q=%5Bgoogle-secret-manager%5D+%5Bruby%5D) 
 
-- [Source code](https://github.com/googleapis/google-cloud-ruby)
+- [Source code](https://github.com/googleapis/google-cloud-ruby) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Rust 
+
+
+
+
+
+
+The following list contains links to more resources related to the
+client library for Rust:
+
+- [API reference](https://docs.rs/google-cloud-secretmanager-v1/latest) 
+
+- [Client libraries best practices](/apis/docs/client-libraries-best-practices) 
+
+- [Issue tracker](https://github.com/googleapis/google-cloud-rust/issues) 
+
+- [`google-secret-manager` on Stack Overflow](https://stackoverflow.com/search?q=%5Bgoogle-secret-manager%5D+%5Brust%5D) 
+
+- [Source code](https://github.com/googleapis/google-cloud-rust/tree/main/src/generated/cloud/secretmanager/v1)

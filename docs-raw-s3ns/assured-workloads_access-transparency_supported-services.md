@@ -1,7 +1,7 @@
 # Supported services
 
 Source: https://documentation.s3ns.fr/assured-workloads/access-transparency/docs/supported-services
-Last updated: 2026-11-16
+Last updated: 2026-11-25
 
 Some or all of the information on this page might not apply to Cloud de Confiance by S3NS. See [Differences from Google Cloud](/assured-workloads/access-transparency/docs/tpc-differences) for more details.
 
@@ -1367,6 +1367,25 @@ None
 
 
 [Compute Engine](/compute-engine)
+| 
+
+
+
+GA
+| 
+
+
+
+None
+
+| 
+|
+
+
+| 
+
+
+[Connectivity Tests](/network-intelligence-center/docs/connectivity-tests/concepts/overview)
 | 
 
 
@@ -2877,6 +2896,25 @@ None
 
 
 [Service connectivity automation](/vpc/docs/about-service-connectivity-automation)
+| 
+
+
+
+GA
+| 
+
+
+
+None
+
+| 
+|
+
+
+| 
+
+
+[Service Extensions](/service-extensions/docs/overview)
 | 
 
 

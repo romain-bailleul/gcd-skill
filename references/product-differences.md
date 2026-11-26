@@ -10,7 +10,7 @@ All products share these platform-wide constraints:
 - **No Cloud Shell:** Install `gcloud` and CLI tools locally or on a sovereign cloud VM.
 
 <!-- AUTO-SYNC:TPC-DIFFERENCES-INDEX:START -->
-> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-24`.
+> **Auto-synced coverage:** 40 product-specific `tpc-differences` guides tracked across Berlin (`docs-raw/`) and S3NS (`docs-raw-s3ns/`), latest upstream update `2026-11-26`.
 
 <details>
 <summary>Tracked <code>tpc-differences</code> inventory (40 guides)</summary>
@@ -53,7 +53,7 @@ All products share these platform-wide constraints:
 | Resource Manager | Qualifié SecNumCloud 3.2 | `resource-manager_tpc-differences.md` | 2026-11-10 | `4ae45cb244` |
 | Secret Manager | Qualification en cours | `secret-manager_tpc-differences.md` | 2026-11-10 | `40aa632c10` |
 | Service Usage | Qualifié SecNumCloud 3.2 | `service-usage_tpc-differences.md` | 2026-11-10 | `c466abb91d` |
-| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-19 | `70383282c9` |
+| Storage Transfer Service | Qualification en cours | `storage-transfer_tpc-differences.md` | 2026-11-26 | `80ee70db02` |
 | Terraform | — | `terraform_tpc-differences.md` | 2026-11-10 | `bcb0fd2998` |
 | VPC | Qualifié SecNumCloud 3.2 | `vpc_tpc-differences.md` | 2026-11-10 | `06a8de4766` |
 | VPC Service Controls | Qualifié SecNumCloud 3.2 | `vpc-service-controls_tpc-differences.md` | 2026-11-10 | `1f38179c73` |
@@ -809,11 +809,13 @@ Features in preview are not available.
   - Event-driven transfers
 
 <!-- AUTO-SYNC:UPSTREAM-DIFFS:storage-transfer:START -->
-**Latest upstream documentation updates (`2026-11-19`):**
+**Latest upstream documentation updates (`2026-11-26`):**
 - Event-driven transfers and cross-bucket replication are unavailable.
 - Agentless transfers from Amazon S3 are unavailable. Agents are required for transfers from S3-compatible sources.
 - Transfers from Azure Blob Storage, HDFS, and URL lists are unavailable.
 - **Integrations — Data sources:** The following sources are unavailable: - Azure Blob Storage - Hadoop Distributed File System (HDFS) - URL lists Transfers from Amazon S3 and other S3-compatible storage must use transfer agents. Agentless transfers from Amazon S3 are unavailable.
+- **Integrations — Organization Policy Service:** Custom organization policy constraints for Storage Transfer Service resources are unavailable.
+- **Integrations — VPC Service Controls:** Standalone access levels and perimeter bridges are unavailable. Use [ingress and egress rules](https://documentation.s3ns.fr/vpc-service-controls/docs/ingress-egress-rules) instead. See [VPC Service Controls differences](https://documentation.s3ns.fr/vpc-service-controls/docs/tpc-differences).
 - **Workflows and tools — Event-driven transfers:** Event-driven transfers are unavailable.
 - **Workflows and tools — Cross-bucket replication:** Cross-bucket replication is unavailable. Use scheduled or one-time transfers between Cloud Storage buckets instead.
 - **Workflows and tools — Object filtering:** Filtering source objects by wildcard (glob pattern) or by Amazon S3 storage class is unavailable.

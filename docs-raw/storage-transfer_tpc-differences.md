@@ -1,7 +1,7 @@
 # Storage Transfer Service in Google Cloud Dedicated versus Google Cloud
 
 Source: https://berlin.devsitetest.how/storage-transfer/docs/tpc-differences
-Last updated: 2026-11-19
+Last updated: 2026-11-26
 
 - 
 
@@ -190,6 +190,25 @@ The following sources are unavailable:
 Transfers from Amazon S3 and other S3-compatible storage must use transfer
 agents. Agentless transfers from Amazon S3 are unavailable.
 
+| 
+|
+
+| 
+**Organization Policy Service**
+| 
+Custom organization policy constraints for Storage Transfer Service
+resources are unavailable.
+| 
+|
+
+| 
+**VPC Service Controls**
+| 
+Standalone access levels and perimeter bridges are unavailable. Use
+[ingress and
+egress rules](/vpc-service-controls/docs/ingress-egress-rules) instead. See
+[VPC Service Controls
+differences](/vpc-service-controls/docs/tpc-differences).
 | 
 |
 

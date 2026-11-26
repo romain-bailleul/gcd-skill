@@ -11586,6 +11586,78 @@ Service Usage asset change history might be incomplete. The `config` field in th
 
 
 
+| 
+
+
+
+
+**Storage Transfer Service**
+
+
+| 
+
+
+
+
+
+[API reference](https://storagetransfer.apis-berlin-build0.goog/$discovery/rest?version=v1)
+
+
+
+
+
+
+
+
+
+
+
+
+- 
+
+
+[
+`storagetransfer. googleapis. com/ TransferJob`
+](/storage-transfer/docs/reference/rest/v1/transferJobs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Not available in the analysis APIs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| 
+|
+
+
+
+
 
 
 
