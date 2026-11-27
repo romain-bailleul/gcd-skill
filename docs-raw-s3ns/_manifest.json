@@ -2272,7 +2272,7 @@
     "filename": "kubernetes-engine_concepts_machine-learning.md",
     "size": 8107,
     "url": "https://documentation.s3ns.fr/kubernetes-engine/docs/concepts/machine-learning",
-    "last_updated": "2026-11-18"
+    "last_updated": "2026-11-26"
   },
   "/kubernetes-engine/docs/how-to/cluster-access-for-kubectl": {
     "title": "Install kubectl and configure cluster access",
@@ -2713,7 +2713,7 @@
     "filename": "release-notes.md",
     "size": 216788,
     "url": "https://documentation.s3ns.fr/release-notes",
-    "last_updated": "2026-11-26"
+    "last_updated": "2026-11-27"
   },
   "/resource-manager/docs": {
     "title": "Resource Manager documentation",
@@ -3063,7 +3063,7 @@
     "filename": "sql_release-notes.md",
     "size": 65446,
     "url": "https://documentation.s3ns.fr/sql/docs/release-notes",
-    "last_updated": "2026-11-26"
+    "last_updated": "2026-11-27"
   },
   "/sql/docs/tpc-differences": {
     "title": "Cloud SQL in Cloud de Confiance versus Google Cloud",
