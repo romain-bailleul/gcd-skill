@@ -4196,18 +4196,3 @@ is protected with a CMEK, then you can use a different CMEK to encrypt the new
 snapshot.
 
 For more information, see [Create a CMEK-encrypted snapshot](/compute/docs/disks/customer-managed-encryption#create_snapshot).
-
-
-
-## September 28, 2026
-
-**Cloud Logging**
-
-Breaking 
-
-
-Only platform services can write log entries to billing accounts.
-These logs have names with the format
-`billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]`.
-For more information, see
-[`entries.write`](/logging/docs/reference/v2/rest/v2/entries/write).
